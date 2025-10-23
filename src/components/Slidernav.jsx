@@ -1,61 +1,63 @@
 import React from "react";
-import { CloseIcon } from "../common/Icons";
+import { X } from "lucide-react";
+import Logo from "../assets/images/favicon.webp";
+import { Bookmarks } from "../common/helper";
+import { useState } from "react";
 
 const Slidernav = ({ slidernav, setslidernav }) => {
+  const [Active, setActive] = useState("Home");
+
   return (
     <div
       className={` ${
-        slidernav ? "translate-x-0" : "translate-x-full"
-      } bg-violet1 w-fit h-full right-0 rounded-l-3xl border-3 transition-all duration-300 linear  border-l-lightpink border-t-lightpink border-b-lightpink absolute p-5`}
+        slidernav ? "translate-y-0" : "-translate-y-full"
+      } bg-mist w-full h-full transition-all duration-300 linear absolute flex flex-col`}
     >
-      <button
-        onClick={() => setslidernav(false)}
-        className={`absolute top-5 right-5`}
+      <div
+        className={`flex items-center justify-between p-4 w-full max-w-332 mx-auto `}
       >
-        <CloseIcon />
-      </button>
+        <div className={`flex items-center justify-center gap-2`}>
+          <img src={Logo} alt="logo" className={`max-w-[70px]`} />
+          <div className={`flex flex-col items-start justify-center`}>
+            <h1
+              className={`font-figtree font-extrabold leading-[120%] italic text-violet1 text-[32px]`}
+            >
+              MOVEXPRESS
+            </h1>
+            <p
+              className={`font-figtree font-medium text-base italic leading-[120%] text-violet1/80`}
+            >
+              Expressly Delivered
+            </p>
+          </div>
+        </div>
+        <button
+          onClick={() => setslidernav(false)}
+          className={`bg-violet1 p-2 hover:opacity-80 h-fit rounded-lg md:rounded-xl transition-all duration-300 linear`}
+        >
+          <X className={`text-mist `} size={40} />
+        </button>
+      </div>
 
-      <ul className={`flex item-centewr justify-center flex-col gap-5`}>
-        <li>
-          <a
-            href="#"
-            className={`font-inter font-medium text-3xl text-white/80 leading-[150%]`}
-          >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className={`font-inter font-medium text-3xl text-white/80 leading-[150%]`}
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className={`font-inter font-medium text-3xl text-white/80 leading-[150%]`}
-          >
-            Service
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className={`font-inter font-medium text-3xl text-white/80 leading-[150%]`}
-          >
-            Become a Driver
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className={`font-inter font-medium text-3xl text-white/80 leading-[150%]`}
-          >
-            Blog
-          </a>
-        </li>
+      <ul className={`flex items-center justify-center w-full flex-col grow`}>
+        {Bookmarks.map((obj, i) => {
+          return (
+            <li>
+              <a
+                key={i}
+                href="#"
+                onClick={() => setActive(obj.name)}
+                className={`${
+                  Active === obj.name
+                    ? "italic underline !font-bricolage cursor-default"
+                    : " hover:text-vinegar"
+                } font-figtree font-medium leading-[150%] text-3xl md:text-5xl lg:text-[64px] text-violet1`}
+              >
+                {obj.name}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

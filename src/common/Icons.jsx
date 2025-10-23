@@ -67,23 +67,3 @@ export const Slidericon = () => {
     </svg>
   );
 };
-
-export const CloseIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="42"
-      height="42"
-      viewBox="0 0 16 16"
-    >
-      <path
-        fill="none"
-        stroke="#f6c8f6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.5"
-        d="m11.25 4.75-6.5 6.5m0-6.5 6.5 6.5"
-      />
-    </svg>
-  );
-};

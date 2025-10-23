@@ -9,7 +9,9 @@ const Navbar = () => {
   return (
     <>
       <Slidernav slidernav={slidernav} setslidernav={setslidernav} />
-      <nav className={`flex items-centert justify-between px-18 py-[18.5px] `}>
+      <nav
+        className={`flex items-center justify-between py-[18.5px] max-w-324 mx-auto  `}
+      >
         <div className={`flex items-center justify-center gap-2`}>
           <img src={Logo} alt="logo" className={`max-w-[70px]`} />
           <div className={`flex flex-col items-start justify-center`}>
@@ -29,6 +31,7 @@ const Navbar = () => {
           <Slidericon />
         </button>
       </nav>
+      <hr className="border-1 border-white/10" />
     </>
   );
 };

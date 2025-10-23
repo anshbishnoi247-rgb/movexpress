@@ -2,7 +2,10 @@
 
 @theme {
   --font-figtree: "Figtree", sans-serif;
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
   --font-inter: "Inter", "sans-serif";
   --color-violet1: #4b014b;
-  --color-lightpink: #f6c8f6;
+  --color-mist: #f6c8f6;
+  --color-vinegar:#fa881e;
+  --color-whitelight:#f6f6f6;
 }
