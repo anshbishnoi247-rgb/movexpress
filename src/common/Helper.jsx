@@ -1,9 +1,13 @@
-import React from "react";
-
-export const Bookmarks = [
-  { name: "Home" },
-  { name: "About" },
-  { name: "Services" },
-  { name: "Blogs" },
-  { name: "Faqs" },
+export const navlist = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "About",
+    url: "/about-us",
+  },
+  { name: "Services", url: "/services" },
+  { name: "Blogs", url: "/" },
+  { name: "Faqs", url: "/" },
 ];

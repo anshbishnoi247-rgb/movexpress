@@ -67,3 +67,74 @@ export const Slidericon = () => {
     </svg>
   );
 };
+
+export const Truststar = () => {
+  return (
+    <svg
+      width="43"
+      height="40"
+      viewBox="0 0 43 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21.2121 30.5031L30.4293 28.1761L34.2803 40L21.2121 30.5031ZM42.4242 15.2201H26.1995L21.2121 0L16.2248 15.2201H0L13.1313 24.6541L8.14393 39.8742L21.2753 30.4403L29.3561 24.6541L42.4242 15.2201Z"
+        fill="#21CB5A"
+      />
+    </svg>
+  );
+};
+
+export const Trustrate = () => {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="40" height="40" fill="#21CB5A" />
+      <path
+        d="M20 27.3522L26.0833 25.7233L28.625 34L20 27.3522ZM34 16.6541H23.2917L20 6L16.7083 16.6541H6L14.6667 23.2579L11.375 33.9119L20.0417 27.3082L25.375 23.2579L34 16.6541Z"
+        fill="white"
+      />
+    </svg>
+  );
+};
+
+export const Truesthalf = () => {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="40" height="40" fill="url(#paint0_linear_1979_3484)" />
+      <path
+        d="M20 27.3522L26.0833 25.7233L28.625 34L20 27.3522ZM34 16.6541H23.2917L20 6L16.7083 16.6541H6L14.6667 23.2579L11.375 33.9119L20.0417 27.3082L25.375 23.2579L34 16.6541Z"
+        fill="white"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_1979_3484"
+          x1="0"
+          y1="20"
+          x2="40"
+          y2="20"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#21CB5A" />
+          <stop offset="0.5" stop-color="#21CB5A" />
+          <stop offset="0.5001" stop-color="#21CB5A" />
+          <stop offset="0.5002" stop-color="#D9D9D9" />
+          <stop offset="0.9998" stop-color="#D9D9D9" />
+          <stop offset="0.9999" stop-color="#21CB5A" stop-opacity="0" />
+          <stop offset="1" stop-color="#A5C2B2" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+};

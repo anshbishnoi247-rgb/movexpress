@@ -1,14 +1,15 @@
+import { Routes, Route } from "react-router";
 import "./App.css";
-import Hero from "./components/hero";
-import Navbar from "./components/Navbar";
+import AboutPage from "./pages/AboutPage";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
     <>
-      <div className={`bg-violet1`}>
-        <Navbar />
-        <Hero />
-      </div>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about-us" element={<AboutPage />} />
+      </Routes>
     </>
   );
 }

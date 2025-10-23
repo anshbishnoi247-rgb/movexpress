@@ -1,17 +1,19 @@
-import React from "react";
 import { X } from "lucide-react";
 import Logo from "../assets/images/favicon.webp";
-import { Bookmarks } from "../common/helper";
+import { navlist } from "../common/helper";
 import { useState } from "react";
+import { useLocation, useParams } from "react-router";
 
 const Slidernav = ({ slidernav, setslidernav }) => {
   const [Active, setActive] = useState("Home");
+  let location = useLocation();
+  console.log(location, "location");
 
   return (
     <div
       className={` ${
         slidernav ? "translate-y-0" : "-translate-y-full"
-      } bg-mist w-full h-full transition-all duration-300 linear absolute flex flex-col`}
+      } bg-mist w-full h-full transition-all duration-300 z-2 linear absolute flex flex-col`}
     >
       <div
         className={`flex items-center justify-between p-4 w-full max-w-332 mx-auto `}
@@ -40,12 +42,12 @@ const Slidernav = ({ slidernav, setslidernav }) => {
       </div>
 
       <ul className={`flex items-center justify-center w-full flex-col grow`}>
-        {Bookmarks.map((obj, i) => {
+        {navlist.map((obj, i) => {
           return (
-            <li>
+            <li key={i}>
               <a
                 key={i}
-                href="#"
+                href={obj.url}
                 onClick={() => setActive(obj.name)}
                 className={`${
                   Active === obj.name
