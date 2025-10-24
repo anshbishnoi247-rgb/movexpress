@@ -13,7 +13,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
     <div
       className={` ${
         slidernav ? "translate-y-0" : "-translate-y-full"
-      } bg-mist w-full h-full transition-all duration-300 z-2 linear absolute flex flex-col`}
+      } bg-mist w-full h-full transition-all duration-300 z-10 linear fixed flex flex-col`}
     >
       <div
         className={`flex items-center justify-between p-4 w-full max-w-332 mx-auto `}
@@ -50,7 +50,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
                 href={obj.url}
                 onClick={() => setActive(obj.name)}
                 className={`${
-                  Active === obj.name
+                  location === obj.url
                     ? "italic underline !font-bricolage cursor-default"
                     : " hover:text-vinegar"
                 } font-figtree font-medium leading-[150%] text-3xl md:text-5xl lg:text-[64px] text-violet1`}

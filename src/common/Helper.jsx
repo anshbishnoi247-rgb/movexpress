@@ -11,3 +11,8 @@ export const navlist = [
   { name: "Blogs", url: "/" },
   { name: "Faqs", url: "/" },
 ];
+
+export const inputbox = [
+  { label: "Pickup Address", holder: "Enter pickup address" },
+  { label: "Destination Address", holder: "Enter destination address" },
+];
