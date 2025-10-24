@@ -19,15 +19,19 @@ const Slidernav = ({ slidernav, setslidernav }) => {
         className={`flex items-center justify-between p-4 w-full max-w-332 mx-auto `}
       >
         <div className={`flex items-center justify-center gap-2`}>
-          <img src={Logo} alt="logo" className={`max-w-[70px]`} />
+          <img
+            src={Logo}
+            alt="logo"
+            className={`max-w-[50px] md:max-w-[70px]`}
+          />
           <div className={`flex flex-col items-start justify-center`}>
             <h1
-              className={`font-figtree font-extrabold leading-[120%] italic text-violet1 text-[32px]`}
+              className={`font-figtree font-extrabold leading-[120%] italic text-violet1 text-[28px] md:text-[32px]`}
             >
               MOVEXPRESS
             </h1>
             <p
-              className={`font-figtree font-medium text-base italic leading-[120%] text-violet1/80`}
+              className={`font-figtree font-medium text-sm md:text-base italic leading-[120%] text-violet1/80`}
             >
               Expressly Delivered
             </p>
@@ -37,7 +41,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
           onClick={() => setslidernav(false)}
           className={`bg-violet1 p-2 hover:opacity-80 h-fit rounded-lg md:rounded-xl transition-all duration-300 linear`}
         >
-          <X className={`text-mist `} size={40} />
+          <X className={`text-mist w-[30px] md:w-10 h-[30px] md:h-10 `} />
         </button>
       </div>
 
@@ -53,7 +57,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
                   location === obj.url
                     ? "italic underline !font-bricolage cursor-default"
                     : " hover:text-vinegar"
-                } font-figtree font-medium leading-[150%] text-3xl md:text-5xl lg:text-[64px] text-violet1`}
+                } font-figtree font-medium leading-[150%] text-4xl md:text-5xl lg:text-[64px] text-violet1`}
               >
                 {obj.name}
               </a>
