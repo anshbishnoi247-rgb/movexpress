@@ -1,10 +1,13 @@
-import Heading from "../common/Heading";
+import { Heading1 } from "../common/Heading";
 import React from "react";
 
 const Services = () => {
   return (
     <section>
-      <Heading head={"Our Top Rated  Services"} />
+      <div className={`flex flex-col items-center justify-center gap-[18px]`}>
+        <Heading1 head={"Our Top Rated Services"} />
+        <Para />
+      </div>
     </section>
   );
 };

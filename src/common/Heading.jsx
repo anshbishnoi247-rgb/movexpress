@@ -1,12 +1,15 @@
-import { Heading, Para } from "./Helper";
-
-const heading = () => {
+export const Heading1 = (head) => {
   return (
-    <div className={`flex flex-col items-center justify-center gap-[18px]`}>
-      <Heading />
-      <Para />
-    </div>
+    <h1
+      className={`font-medium text-5xl leading-[125%] font-figtree text-[#010528]`}
+    >
+      {head}
+    </h1>
   );
 };
 
-export default heading;
+export const Para = () => {
+  return (
+    <p className="text-[#3B3B3B] font-normal text-sx sm:text-base lg:text-lg leading-[170%] font-inter"></p>
+  );
+};
