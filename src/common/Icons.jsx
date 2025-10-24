@@ -70,8 +70,7 @@ export const Slidericon = () => {
 export const Truststar = () => {
   return (
     <svg
-      width="43"
-      height="40"
+      className={`w-[30px] md:w-[40px] h-[30px] md:h-[40px]`}
       viewBox="0 0 43 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -87,8 +86,7 @@ export const Truststar = () => {
 export const Trustrate = () => {
   return (
     <svg
-      width="40"
-      height="40"
+      className={`w-[30px] md:w-[40px] h-[30px] md:h-[40px]`}
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -105,8 +103,7 @@ export const Trustrate = () => {
 export const Truesthalf = () => {
   return (
     <svg
-      width="40"
-      height="40"
+      className={`w-[30px] md:w-[40px] h-[30px] md:h-[40px]`}
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

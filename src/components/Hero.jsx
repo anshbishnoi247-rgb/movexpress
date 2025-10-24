@@ -6,24 +6,24 @@ import map from "../assets/images/map.webp";
 const Hero = () => {
   return (
     <section
-      className={`max-w-332 mx-auto flex items-end justify-between mt-7 sm:mt-10 md:mt-12 xl:mt-16 px-4`}
+      className={`max-w-332 mx-auto flex flex-col-reverse md:flex-row justify-between items-center lg:items-end gap-5 md:gap-0 mt-7 sm:mt-10 md:mt-12 xl:mt-16 px-4`}
     >
-      <aside className={`max-w-[644px] w-full text-center lg:text-left`}>
+      <aside className={`max-w-[644px] w-full text-center md:text-left`}>
         <h1
           className={`font-bold flex flex-col font-figtree text-4xl sm:text-[40px] md:text-[50px] lg:text-[60px] xl:text-[74px]  text-white leading-[115%]`}
         >
-          <span className="mb-3">Move Smart.</span>
-          <span className="mb-3">Move Easy.</span>
+          <span className="md:mb-3">Move Smart.</span>
+          <span className="md:mb-3">Move Easy.</span>
           <span>MoveXpress.</span>
         </h1>
 
-        <p className="mt-3 text-base font-inter sm:text-lg text-whitelight max-w-[90%] lg:mx-0">
+        <p className="mt-6 md:mt-3 text-sm font-inter sm:text-base md:text-lg text-whitelight max-w-[90%] mx-auto md:mx-0">
           Book reliable, Stress - free <br className="sm:hidden" /> removals
           Nationwide. <br /> Get a quote in 60 seconds
         </p>
 
         <div
-          className={`flex items-center lg:justify-start flex-wrap gap-4 md:gap-5 sm:gap-8 lg:mt-[42px]`}
+          className={`flex items-center justify-center flex-col md:flex-row md:justify-start gap-4 md:gap-5 sm:gap-8 mt-6 lg:mt-[42px]`}
         >
           <div className={`flex items-center gap-3 md:gap-4`}>
             <BadgeCheck className="text-white" size={40} />
@@ -45,10 +45,10 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="mt-19 bg-vinegar w-full flex flex-col items-center gap-[10px] py-[28.5px] rounded-t-lg max-w-[318px] ">
+        <div className="mt-10 md:mt-19 bg-vinegar w-full flex flex-col items-center gap-[10px]  py-5 md:py-[28.5px] rounded-t-lg mx-auto md:mx-0 max-w-[318px] ">
           <div className={`flex items-center gap-1 justify-center`}>
             <Truststar />
-            <h2 className="font-inter font-semibold text-[40px] leading-[40px] text-white">
+            <h2 className="font-inter font-semibold text-3xl md:text-[40px] leading-[40px] text-white">
               Trustpilot
             </h2>
           </div>
@@ -64,17 +64,18 @@ const Hero = () => {
           </p>
         </div>
       </aside>
+
       <div className="relative max-w-[644px] w-full">
         <aside className="w-full py-6 px-7 bg-white z-5 relative rounded-3xl mb-2">
           <div className={`flex items-center justify-between`}>
             <div className={`flex flex-col items-start justify-center`}>
               <h2
-                className={`font-semibold font-figtree text-midnight text-[32px] leading-[140%]`}
+                className={`font-semibold font-figtree text-midnight text-2xl md:text-3xl lg:text-[32px] leading-[140%]`}
               >
                 Where to?
               </h2>
               <p
-                className={`text-inter text-base text-midnight/64 leading-[164%]`}
+                className={`text-inter text-sm sm:text-base text-midnight/64 leading-[130%] md:leading-[164%]`}
               >
                 Tell us your pickup and destination
               </p>
@@ -92,15 +93,15 @@ const Hero = () => {
 
           {inputbox.map((obj, i) => {
             return (
-              <div className={`mb-[34px]`}>
+              <div className={`mb-5 md:mb-[34px]`}>
                 <label
-                  className={`font-semibold font-base leading-6 font-inter mb-1`}
+                  className={`font-semibold text-sm sm:font-base leading-6 font-inter mb-1`}
                 >
                   {obj.label}
                 </label>
 
                 <div
-                  className={`flex items-center border-1 h-15 px-4 border-[#EEEFF3] justify-center gap-3 rounded-xl`}
+                  className={`flex items-center border-1 h-12 md:h-15 px-4 border-[#EEEFF3] justify-center gap-3 rounded-xl`}
                 >
                   <Gps />
                   <input
@@ -115,11 +116,11 @@ const Hero = () => {
           <img
             src={map}
             alt="map"
-            className={`h-[179px] w-full object-cover rounded-lg`}
+            className={`h-[100px] md:h-[179px] w-full object-cover rounded-lg`}
           />
 
           <div
-            className={`w-full p-3 bg-daygreen mb-8 mt-3 flex gap-2 items-center rounded-lg`}
+            className={`w-full p-3 bg-daygreen my-3 md:mb-8 md:mt-3 flex gap-2 items-center rounded-lg`}
           >
             <Alert />
             <div className={`grow-1 flex  flex-col items-start justify-center`}>
@@ -141,13 +142,13 @@ const Hero = () => {
 
           <div className="overflow-hidden group relative bg-vinegar rounded-xl">
             <button
-              className={`rounded-xl w-full group flex items-center text-white z-2 relative bg-transparent justify-center h-[61px] overflow-hidden font-medium text-base leading-[170%] font-inter`}
+              className={`rounded-xl w-full flex items-center text-white z-2 relative bg-transparent justify-center h-12 md:h-[61px] overflow-hidden font-medium text-sm sm:text-base leading-[170%] font-inter`}
             >
               Show Quote
             </button>
 
             <div
-              className={`absolute rounded-full bg-violet1 z-1 -translate-y-[120%] left-[50%] translate-x-[-50%] w-[600px] h-100 transition-all duration-1000 linear group-hover:translate-y-[-55%]`}
+              className={`absolute rounded-full bg-violet1 z-1 -translate-y-[120%] left-[50%] translate-x-[-50%] w-[600px] h-100 transition-all duration-1000 ease-in-out group-hover:translate-y-[-55%]`}
             ></div>
           </div>
         </aside>
