@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import Logo from "../assets/images/favicon.webp";
-import { navlist } from "../common/helper";
+import { navlist } from "../common/Helper";
 import { useState } from "react";
 import { useLocation, useParams } from "react-router";
 
@@ -52,7 +52,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
               <a
                 key={i}
                 href={obj.url}
-                onClick={() => setActive(obj.name)}
+                onClick={(() => setActive(obj.name), () => setslidernav(false))}
                 className={`${
                   location === obj.url
                     ? "italic underline !font-bricolage cursor-default"

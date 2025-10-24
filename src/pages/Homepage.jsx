@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import Services from "../components/Services";
 
 const Homepage = () => {
   return (
@@ -8,6 +9,7 @@ const Homepage = () => {
         <Navbar />
         <Hero />
       </div>
+      <Services />
     </>
   );
 };
