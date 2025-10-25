@@ -1,4 +1,4 @@
-import { House, Icetruck, Lamp, Table, Truck, Van } from "./Icons";
+import { Bag, House, Icetruck, Lamp, Table, Truck, Van } from "./Icons";
 
 export const navlist = [
   {
@@ -10,8 +10,8 @@ export const navlist = [
     url: "/about-us",
   },
   { name: "Services", url: "#services" },
-  { name: "Blogs", url: "/" },
-  { name: "Faqs", url: "/" },
+  { name: "Blogs", url: "/blogs" },
+  { name: "Faqs", url: "/faqs" },
 ];
 
 export const inputbox = [
@@ -49,5 +49,31 @@ export const services = [
     svg: <Table />,
     head: "Office Move",
     para: "Office move is the comprehensive process of moving a business from one physical location to another.",
+  },
+];
+
+export const worklist = [
+  {
+    svg: <Bag />,
+    name: "Get a Quote",
+    para: "Input your details for a tailored quotation",
+  },
+
+  {
+    svg: <Bag />,
+    name: "Schedule",
+    para: "Confirm a delivery date and time",
+  },
+
+  {
+    svg: <Bag />,
+    name: "Delivery",
+    para: "We’ll do all the heavy lifting",
+  },
+
+  {
+    svg: <Bag />,
+    name: "Sit Back",
+    para: "Enjoy your new space, stress-free",
   },
 ];

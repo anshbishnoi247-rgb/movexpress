@@ -6,8 +6,7 @@ import { useLocation, useParams } from "react-router";
 
 const Slidernav = ({ slidernav, setslidernav }) => {
   const [Active, setActive] = useState("Home");
-  let location = useLocation();
-  console.log(location, "location");
+  let location = useLocation().pathname;
 
   return (
     <div

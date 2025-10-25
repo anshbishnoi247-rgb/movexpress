@@ -1,13 +1,14 @@
-import { Heading1, Para } from "../common/Heading";
+import { Heading1, Heading2, Para } from "../common/Heading";
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "../common/Helper";
+import { Buttoncommon } from "../common/Button";
 
 const Services = () => {
   return (
     <section id="services" className="py-20 bg-commonbg">
       <div
-        className={`flex flex-col items-center justify-center gap-[18px] max-w-[898px] mx-auto text-center`}
+        className={`flex flex-col items-center justify-center gap-[18px] max-w-[898px] px-5 lg:px-0 mx-auto text-center`}
       >
         <Heading1 head={"Our Top Rated Services"} />
         <Para
@@ -16,13 +17,14 @@ const Services = () => {
           }
         />
       </div>
-
-      <div className={`grid grid-cols-3 gap-6 max-w-fit mx-auto mt-14`}>
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 sm:p-5 md:p-0 max-w-fit mx-auto mt-14`}
+      >
         {services.map((Obj, index) => {
           return (
             <div
               key={index}
-              className={`flex flex-col items-start justify-center max-w-[310px] gap-6 p-6 w-full rounded-2xl group bg-white`}
+              className={`flex flex-col items-start justify-center max-w-[310px] gap-3 md:gap-4 lg:gap-6 p-4 md:p-6 w-full rounded-2xl group bg-white`}
             >
               <div className={`flex items-center justify-between w-full `}>
                 <span
@@ -36,17 +38,16 @@ const Services = () => {
                 </span>
                 <ArrowUpRight
                   strokeWidth={1.5}
-                  className={`h-[40px] w-[40px] group-hover:rotate-45 transition-all duration-300 ease-in-out text-[#4B014B]`}
+                  className={`h-[30px] md:h-[40px] w-[30px] md:w-[40px] group-hover:rotate-45 transition-all duration-300 ease-in-out text-[#4B014B]`}
                 />
               </div>
-              <div className={`flex flex-col items-start gap-3 justify-center`}>
-                <h2
-                  className={`font-figtree font-semibold text-xl leading-[160%] text-black`}
-                >
-                  {Obj.head}
-                </h2>
+              <div
+                className={`flex flex-col items-start gap-2 md:gap-3 justify-center`}
+              >
+                <Heading2 head={Obj.head} />
+
                 <p
-                  className={`text-black/60 font-inter text-base leading-[170%]`}
+                  className={`text-black/60 font-inter text-sm md:text-base leading-[170%]`}
                 >
                   {Obj.para}
                 </p>
@@ -55,6 +56,7 @@ const Services = () => {
           );
         })}
       </div>
+      <Buttoncommon button={"Get a Qoute"} className={`w-[194px] mt-20`} />
     </section>
   );
 };
