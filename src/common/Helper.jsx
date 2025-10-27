@@ -98,9 +98,9 @@ export const worklist = [
 ];
 
 export const CustomerList = [
-  { name: "Zachary John", img: John },
-  { name: "Gail Amethyst", img: Gail },
-  { name: "Scott William", img: Sam },
+  { dataaos: "fade-right", name: "Zachary John", img: John },
+  { dataaos: "fade-up", name: "Gail Amethyst", img: Gail },
+  { dataaos: "fade-left", name: "Scott William", img: Sam },
 ];
 
 export const WhyList = [

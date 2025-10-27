@@ -26,6 +26,7 @@ const Why = () => {
         {WhyList.map((obj, index) => {
           return (
             <div
+              data-aos="fade-up"
               key={index}
               className={`flex flex-col items-center justify-center rounded-2xl text-center bg-white py-4 md:py-6 lg:py-8 px-4 md:px-6 gap-[18px] max-w-[301.5px]`}
             >

@@ -5,6 +5,7 @@ import Work from "../components/Work";
 import Customer from "../components/Customer";
 import Why from "../components/Why";
 import Faqs from "../components/Faqs";
+import Book from "../components/Book";
 
 const Homepage = () => {
   return (
@@ -19,8 +20,11 @@ const Homepage = () => {
       <Why />
       <Customer />
       <Faqs />
+      <Book />
     </>
   );
 };
 
 export default Homepage;
+
+

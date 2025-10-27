@@ -65,7 +65,7 @@ const Hero = () => {
         </div>
       </aside>
 
-      <div className="relative max-w-[644px] w-full">
+      <div data-aos="fade-left" className="relative max-w-[644px] w-full">
         <aside className="w-full py-6 px-7 bg-white z-5 relative rounded-3xl mb-2">
           <div className={`flex items-center justify-between`}>
             <div className={`flex flex-col items-start justify-center`}>
@@ -86,11 +86,9 @@ const Hero = () => {
               1 of 5
             </p>
           </div>
-
           <div className={`h-[6px] w-full rounded-full bg-[#D5D5D5] mt-4 mb-6`}>
             <div className={`h-full w-[111px] rounded-full bg-violet1`}></div>
           </div>
-
           {inputbox.map((obj, i) => {
             return (
               <div className={`mb-5 md:mb-[34px]`}>
@@ -99,7 +97,6 @@ const Hero = () => {
                 >
                   {obj.label}
                 </label>
-
                 <div
                   className={`flex items-center border-1 h-12 md:h-15 px-4 border-[#EEEFF3] justify-center gap-3 rounded-xl`}
                 >
@@ -118,7 +115,6 @@ const Hero = () => {
             alt="map"
             className={`h-[100px] md:h-[179px] w-full object-cover rounded-lg`}
           />
-
           <div
             className={`w-full p-3 bg-daygreen my-3 md:mb-8 md:mt-3 flex gap-2 items-center rounded-lg`}
           >
@@ -139,20 +135,17 @@ const Hero = () => {
               1<span className={`text-[10px]`}>miles</span>
             </p>
           </div>
-
           <div className="overflow-hidden group relative bg-vinegar rounded-xl">
             <button
               className={`rounded-xl w-full flex items-center text-white z-2 relative bg-transparent justify-center h-12 md:h-[61px] overflow-hidden font-medium text-sm sm:text-base leading-[170%] font-inter`}
             >
               Show Quote
             </button>
-
             <div
               className={`absolute rounded-full bg-violet1 z-1 -translate-y-[120%] left-[50%] translate-x-[-50%] w-[600px] h-100 transition-all duration-1000 ease-in-out group-hover:translate-y-[-55%]`}
             ></div>
           </div>
         </aside>
-
         <div
           className={`absolute w-[393px] h-[393px] top-5 -right-[22px] z-1 bg-vinegar blur-[141px] rounded-full`}
         ></div>

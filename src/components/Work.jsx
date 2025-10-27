@@ -25,6 +25,7 @@ const Work = () => {
         {worklist.map((obj, index) => {
           return (
             <div
+              data-aos="fade-up"
               className={`flex flex-col items-center jsutify-center max-w-[287px] w-full rounded-2xl bg-commonbg p-4 md:p-6 gap-4 md:gap-6`}
             >
               {obj.svg}

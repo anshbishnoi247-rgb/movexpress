@@ -24,7 +24,10 @@ const Customer = () => {
       >
         {CustomerList.map((obj, index) => {
           return (
-            <div
+            <d
+              iv
+              data-aos={obj.dataaos}
+              key={index}
               className={`flex flex-wrap lg:flex-col items-center justify-center gap-6 max-w-[413px] py-4 md:py-6 lg:py-7 px-4 md:px-6 lg:px-8 bg-[#F8F5F8] rounded-xl`}
             >
               <img src={obj.img} />
@@ -54,12 +57,14 @@ const Customer = () => {
                 service was top-notch. The team is friendly, professional, and
                 very.”
               </p>
-            </div>
+            </d>
           );
         })}
       </div>
 
-      <div className={`mt-10 lg:mt-14 flex items-center gap-4 flex-wrap p-5 justify-center`}>
+      <div
+        className={`mt-10 lg:mt-14 flex items-center gap-4 flex-wrap p-5 justify-center`}
+      >
         <p
           className={`font-inter font-medium leading-[150%] text-base md:text-lg lg:text-xl `}
         >
