@@ -6,7 +6,7 @@ import { Buttoncommon } from "../common/Button";
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-commonbg">
+    <section id="services" className="lg:py-20 md:py-15 py-10 bg-commonbg">
       <div
         className={`flex flex-col items-center justify-center gap-[18px] max-w-[898px] px-5 lg:px-0 mx-auto text-center`}
       >
@@ -59,7 +59,10 @@ const Services = () => {
           );
         })}
       </div>
-      <Buttoncommon button={"Get a Qoute"} className={`w-[194px] mt-20`} />
+      <Buttoncommon
+        button={"Get a Qoute"}
+        className={`w-[194px] mt-10 md:mt-15 lg:mt-20`}
+      />
     </section>
   );
 };

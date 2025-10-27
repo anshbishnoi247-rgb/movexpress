@@ -26,7 +26,7 @@ const Hero = () => {
           className={`flex items-center justify-center flex-col md:flex-row md:justify-start gap-4 md:gap-5 sm:gap-8 mt-6 lg:mt-[42px]`}
         >
           <div className={`flex items-center gap-3 md:gap-4`}>
-            <BadgeCheck className="text-white" size={40} />
+            <BadgeCheck className="text-white" strokeWidth={1} size={40} />
 
             <p
               className={`md:text-lg font-medium font-inter text-left max-w-[126px] text-white`}
@@ -35,7 +35,7 @@ const Hero = () => {
             </p>
           </div>
           <div className={`flex items-center gap-3 md:gap-4`}>
-            <ShieldCheck className="text-white" size={40} />
+            <ShieldCheck className="text-white" strokeWidth={1} size={40} />
 
             <p
               className={`md:text-lg font-medium font-inter text-left max-w-[125px] text-white`}

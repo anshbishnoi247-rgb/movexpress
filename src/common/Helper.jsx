@@ -1,12 +1,15 @@
 import {
   Bag,
   Clock,
+  CoinClock,
   Delivery,
+  HandShake,
   House,
   Icetruck,
   Lamp,
   SitBack,
   Table,
+  ThumbsUp,
   Truck,
   Van,
 } from "./Icons";
@@ -14,6 +17,7 @@ import {
 import John from "../assets/images/john.webp";
 import Gail from "../assets/images/gail.webp";
 import Sam from "../assets/images/sam.webp";
+import { BadgeCheck } from "lucide-react";
 
 export const navlist = [
   {
@@ -24,7 +28,7 @@ export const navlist = [
     name: "About",
     url: "/about-us",
   },
-  { name: "Services", url: "#services" },
+  { name: "Services", url: "/#services" },
   { name: "Blogs", url: "/blogs" },
   { name: "Faqs", url: "/faqs" },
 ];
@@ -97,4 +101,23 @@ export const CustomerList = [
   { name: "Zachary John", img: John },
   { name: "Gail Amethyst", img: Gail },
   { name: "Scott William", img: Sam },
+];
+
+export const WhyList = [
+  {
+    svg: <BadgeCheck className=" text-violet1" strokeWidth={1.5} size={56} />,
+    name: "Many Years of Experience",
+    para: "We are an established Company",
+  },
+  {
+    svg: <CoinClock />,
+    name: "Fixed Prices",
+    para: "No hidden fees, transparent prices",
+  },
+  {
+    svg: <HandShake />,
+    name: "Trustworthy",
+    para: "We are insured and lincensed",
+  },
+  { svg: <ThumbsUp />, name: "5-Star Rating", para: "Rated 4.9 on Trustpilot" },
 ];

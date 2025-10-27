@@ -6,9 +6,9 @@ import { Buttoncommon } from "../common/Button";
 
 const Customer = () => {
   return (
-    <section className={`py-20 bg-white`}>
+    <section className={`lg:py-20 md:py-15 py-10 bg-white`}>
       <div
-        className={`flex flex-col items-center justify-center gap-[18px] max-w-[760px] px-5 lg:px-0 mx-auto text-center`}
+        className={`flex flex-col  items-center justify-center gap-[18px] max-w-[760px] px-5 lg:px-0 mx-auto text-center`}
       >
         <Heading1
           className={`tracking-[-2px] leading-[120%]`}
@@ -20,17 +20,17 @@ const Customer = () => {
       </div>
 
       <div
-        className={`flex  items-center justify-center mt-14 gap-6 w-fit mx-auto`}
+        className={`flex flex-wrap items-center justify-center mt-14 gap-6 p-5 w-fit mx-auto`}
       >
         {CustomerList.map((obj, index) => {
           return (
             <div
-              className={`flex flex-col items-center justify-center gap-6 max-w-[413px] py-7 px-8 bg-[#F8F5F8] rounded-xl`}
+              className={`flex flex-wrap lg:flex-col items-center justify-center gap-6 max-w-[413px] py-4 md:py-6 lg:py-7 px-4 md:px-6 lg:px-8 bg-[#F8F5F8] rounded-xl`}
             >
               <img src={obj.img} />
               <div>
                 <h2
-                  className={`font-inter font-semibold text-lg leading-[150%] md:font-lg `}
+                  className={`font-inter font-semibold text-base md:text-lg leading-[150%] md:font-lg `}
                 >
                   {obj.name}
                 </h2>
@@ -48,7 +48,7 @@ const Customer = () => {
                 </div>
               </div>
               <p
-                className={`font-inter font-medium text-center italic leading-[150%] text-base md:text-lg lg:text-xl `}
+                className={`font-inter font-medium text-center italic leading-[150%] text-sm sm:text-base md:text-lg lg:text-xl `}
               >
                 “From the first contact to the completion of the cleaning, the
                 service was top-notch. The team is friendly, professional, and
