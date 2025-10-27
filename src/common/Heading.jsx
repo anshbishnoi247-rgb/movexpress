@@ -1,7 +1,7 @@
-export const Heading1 = ({ head }) => {
+export const Heading1 = ({ head, className }) => {
   return (
     <h1
-      className={`font-medium text-3xl md:text-4xl lg:text-5xl leading-[125%] font-figtree text-[#010528]`}
+      className={`${className} font-medium text-3xl md:text-4xl lg:text-5xl font-figtree text-[#010528]`}
     >
       {head}
     </h1>

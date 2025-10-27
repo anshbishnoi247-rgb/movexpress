@@ -1,0 +1,74 @@
+import { Star } from "../common/Icons";
+
+import { Para, Heading1 } from "../common/Heading";
+import { CustomerList } from "../common/Helper";
+import { Buttoncommon } from "../common/Button";
+
+const Customer = () => {
+  return (
+    <section className={`py-20 bg-white`}>
+      <div
+        className={`flex flex-col items-center justify-center gap-[18px] max-w-[760px] px-5 lg:px-0 mx-auto text-center`}
+      >
+        <Heading1
+          className={`tracking-[-2px] leading-[120%]`}
+          head={"Trusted by 12,000+ Happy Customers"}
+        />
+        <Para
+          para={`Our Recent Projects section showcases some of the exceptional work we've done for our clients. From residential homes to commercial spaces.          `}
+        />
+      </div>
+
+      <div
+        className={`flex  items-center justify-center mt-14 gap-6 w-fit mx-auto`}
+      >
+        {CustomerList.map((obj, index) => {
+          return (
+            <div
+              className={`flex flex-col items-center justify-center gap-6 max-w-[413px] py-7 px-8 bg-[#F8F5F8] rounded-xl`}
+            >
+              <img src={obj.img} />
+              <div>
+                <h2
+                  className={`font-inter font-semibold text-lg leading-[150%] md:font-lg `}
+                >
+                  {obj.name}
+                </h2>
+                <p
+                  className={`font-normal font-inter text-sm leading-[150%] mt-2 mb-[14px] text-[#3D3F40] `}
+                >
+                  Regular Customar
+                </p>
+                <div className={`flex  items-center justify-center gap-2`}>
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                </div>
+              </div>
+              <p
+                className={`font-inter font-medium text-center italic leading-[150%] text-base md:text-lg lg:text-xl `}
+              >
+                “From the first contact to the completion of the cleaning, the
+                service was top-notch. The team is friendly, professional, and
+                very.”
+              </p>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className={`mt-14 flex items-center gap-4 justify-center`}>
+        <p
+          className={`font-inter font-medium leading-[150%] text-base md:text-lg lg:text-xl `}
+        >
+          Have you moved with us?
+        </p>
+        <Buttoncommon button={"Leave a review"} className={`w-[194px] !mx-0`} />
+      </div>
+    </section>
+  );
+};
+
+export default Customer;

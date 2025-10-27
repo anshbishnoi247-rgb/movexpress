@@ -6,7 +6,7 @@ export const Buttoncommon = ({ button, className }) => {
       className={`overflow-hidden ${className} mx-auto group relative bg-vinegar rounded-xl`}
     >
       <button
-        className={`rounded-xl w-full flex items-center text-white z-2 relative bg-transparent justify-center  h-12 md:h-[61px] overflow-hidden font-medium text-sm sm:text-base leading-[170%] font-inter`}
+        className={`rounded-xl w-full flex items-center text-white z-2 relative bg-transparent justify-center h-12 md:h-[61px] overflow-hidden font-medium text-sm sm:text-base leading-[170%] font-inter`}
       >
         {button}
       </button>

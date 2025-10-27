@@ -1,4 +1,19 @@
-import { Bag, House, Icetruck, Lamp, Table, Truck, Van } from "./Icons";
+import {
+  Bag,
+  Clock,
+  Delivery,
+  House,
+  Icetruck,
+  Lamp,
+  SitBack,
+  Table,
+  Truck,
+  Van,
+} from "./Icons";
+
+import John from "../assets/images/john.webp";
+import Gail from "../assets/images/gail.webp";
+import Sam from "../assets/images/sam.webp";
 
 export const navlist = [
   {
@@ -60,20 +75,26 @@ export const worklist = [
   },
 
   {
-    svg: <Bag />,
+    svg: <Clock />,
     name: "Schedule",
     para: "Confirm a delivery date and time",
   },
 
   {
-    svg: <Bag />,
+    svg: <Delivery />,
     name: "Delivery",
     para: "We’ll do all the heavy lifting",
   },
 
   {
-    svg: <Bag />,
+    svg: <SitBack />,
     name: "Sit Back",
     para: "Enjoy your new space, stress-free",
   },
+];
+
+export const CustomerList = [
+  { name: "Zachary John", img: John },
+  { name: "Gail Amethyst", img: Gail },
+  { name: "Scott William", img: Sam },
 ];

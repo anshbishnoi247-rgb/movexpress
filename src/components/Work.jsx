@@ -9,7 +9,10 @@ const Work = () => {
       <div
         className={`flex flex-col items-center justify-center gap-[18px] max-w-[898px] px-5 lg:px-0 mx-auto text-center`}
       >
-        <Heading1 head={"Our Work Process"} />
+        <Heading1
+          className={`tracking-[-1px] leading-[125%]`}
+          head={"Our Work Process"}
+        />
         <Para
           para={
             "Count on us as your dependable partner for exceptional Moving solutions that turn spaces into pristine havens. Our dedicated team offers a wide array of services tailored to your unique requirements."
