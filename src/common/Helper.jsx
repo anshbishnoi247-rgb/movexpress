@@ -121,3 +121,26 @@ export const WhyList = [
   },
   { svg: <ThumbsUp />, name: "5-Star Rating", para: "Rated 4.9 on Trustpilot" },
 ];
+
+export const faqlist = [
+  {
+    question: " What services do you offer?",
+    answer:
+      "We offer a wide range of cleaning services including residential cleaning, commercial cleaning, deep cleaning, move-in/move-out cleaning, eco-friendly cleaning.",
+  },
+  {
+    question: " What can I expect during a therapy session?",
+    answer:
+      "We offer a wide range of cleaning services including residential cleaning, commercial cleaning, deep cleaning, move-in/move-out cleaning, eco-friendly cleaning.",
+  },
+  {
+    question: " Are your cleaners insured and bonded?",
+    answer:
+      "We offer a wide range of cleaning services including residential cleaning, commercial cleaning, deep cleaning, move-in/move-out cleaning, eco-friendly cleaning.",
+  },
+  {
+    question: " Are your cleaners insured and bonded?",
+    answer:
+      "We offer a wide range of cleaning services including residential cleaning, commercial cleaning, deep cleaning, move-in/move-out cleaning, eco-friendly cleaning.",
+  },
+];

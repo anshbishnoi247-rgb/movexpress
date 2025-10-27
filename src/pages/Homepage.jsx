@@ -4,6 +4,7 @@ import Services from "../components/Services";
 import Work from "../components/Work";
 import Customer from "../components/Customer";
 import Why from "../components/Why";
+import Faqs from "../components/Faqs";
 
 const Homepage = () => {
   return (
@@ -12,10 +13,12 @@ const Homepage = () => {
         <Navbar />
         <Hero />
       </div>
+
       <Services />
       <Work />
       <Why />
       <Customer />
+      <Faqs />
     </>
   );
 };

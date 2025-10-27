@@ -1,5 +1,4 @@
 import { Heading1, Heading2, Para } from "../common/Heading";
-import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "../common/Helper";
 import { Buttoncommon } from "../common/Button";

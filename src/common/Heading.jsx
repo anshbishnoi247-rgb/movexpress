@@ -16,8 +16,6 @@ export const Para = ({ para }) => {
   );
 };
 
-import React from 'react'
-
 export const Heading2 = ({ head }) => {
   return (
     <h2
@@ -27,7 +25,6 @@ export const Heading2 = ({ head }) => {
     </h2>
   );
 };
-
 
 export const Para2 = ({ para, className }) => {
   return (

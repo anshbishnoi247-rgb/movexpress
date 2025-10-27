@@ -21,7 +21,7 @@ const Why = () => {
       </div>
 
       <div
-        className={`mt-15 flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-[30px] p-5 w-fit mx-auto`}
+        className={`mt-15 flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-[30px] px-5 w-fit mx-auto`}
       >
         {WhyList.map((obj, index) => {
           return (
@@ -52,7 +52,10 @@ const Why = () => {
         })}
       </div>
 
-      <Buttoncommon button={"Get a Qoute"} className={`w-[194px] mt-20`} />
+      <Buttoncommon
+        button={"Get a Qoute"}
+        className={`w-[194px] mt-10 md:mt-15 lg:mt-20`}
+      />
     </section>
   );
 };

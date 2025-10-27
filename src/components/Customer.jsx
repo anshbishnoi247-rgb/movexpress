@@ -59,7 +59,7 @@ const Customer = () => {
         })}
       </div>
 
-      <div className={`mt-14 flex items-center gap-4 justify-center`}>
+      <div className={`mt-10 lg:mt-14 flex items-center gap-4 flex-wrap p-5 justify-center`}>
         <p
           className={`font-inter font-medium leading-[150%] text-base md:text-lg lg:text-xl `}
         >
