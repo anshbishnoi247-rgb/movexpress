@@ -1,6 +1,6 @@
 import { Star } from "../common/Icons";
 
-import { Para, Heading1 } from "../common/Heading";
+import { Paragraph, HeadingPrimary } from "../common/Heading";
 import { CustomerList } from "../common/Helper";
 import { Buttoncommon } from "../common/Button";
 
@@ -10,11 +10,11 @@ const Customer = () => {
       <div
         className={`flex flex-col  items-center justify-center gap-[18px] max-w-[760px] px-5 lg:px-0 mx-auto text-center`}
       >
-        <Heading1
+        <HeadingPrimary
           className={`tracking-[-2px] leading-[120%]`}
           head={"Trusted by 12,000+ Happy Customers"}
         />
-        <Para
+        <Paragraph
           para={`Our Recent Projects section showcases some of the exceptional work we've done for our clients. From residential homes to commercial spaces.          `}
         />
       </div>

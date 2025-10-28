@@ -1,4 +1,4 @@
-export const Heading1 = ({ head, className }) => {
+export const HeadingPrimary = ({ head, className }) => {
   return (
     <h1
       data-aos="fade-up"
@@ -9,7 +9,7 @@ export const Heading1 = ({ head, className }) => {
   );
 };
 
-export const Para = ({ para }) => {
+export const Paragraph = ({ para }) => {
   return (
     <p
       data-aos="fade-up"
@@ -20,7 +20,7 @@ export const Para = ({ para }) => {
   );
 };
 
-export const Heading2 = ({ head }) => {
+export const Headingsecondary = ({ head }) => {
   return (
     <h2
       className={`font-figtree font-semibold text-lg md:text-xl leading-[160%] text-black`}
@@ -30,12 +30,23 @@ export const Heading2 = ({ head }) => {
   );
 };
 
-export const Para2 = ({ para, className }) => {
+export const Paragraphsub = ({ para, className }) => {
   return (
     <p
       className={`${className} text-black/60 font-normal text-sm md:text-base leading-[170%] font-inter`}
     >
       {para}
     </p>
+  );
+};
+
+
+export const SubHeading = ({ head, className }) => {
+  return (
+    <h1
+      className={`font-inter ${className} font-medium text-lg sm:text-xl md:text-2xl tracking-[-1px] leading-[150%] text-[#1E1E1E]`}
+    >
+      {head}
+    </h1>
   );
 };

@@ -2,6 +2,7 @@
 
 @theme {
   --font-figtree: "Figtree", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
   --font-bricolage: "Bricolage Grotesque", sans-serif;
   --font-inter: "Inter", "sans-serif";
   --font-wix: "Wix Madefor Display", sans-serif;
@@ -13,4 +14,23 @@
   --color-daygreen: #24c68226;
   --color-midgreen: #1bb172;
   --color-commonbg: #f6f7f9;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-mist);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-violet1);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-vinegar);
 }

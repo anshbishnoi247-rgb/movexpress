@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading1, Para } from "../common/Heading";
+import { HeadingPrimary, Paragraph } from "../common/Heading";
 import { BadgeCheck } from "lucide-react";
 import { Buttoncommon } from "../common/Button";
 import { WhyList } from "../common/Helper";
@@ -11,11 +11,11 @@ const Why = () => {
       <div
         className={`flex flex-col items-center justify-center gap-[18px] max-w-[806px] px-5 lg:px-0 mx-auto text-center`}
       >
-        <Heading1
+        <HeadingPrimary
           className={`tracking-[-2px] leading-[120%]`}
           head={"Why Customer Trust MoveXpress"}
         />
-        <Para
+        <Paragraph
           para={`Our customers trust MoveXpress because we treat every move like it’s our own. With a dedicated team, secure handling, and reliable service, we ensure your belongings are in safe hands from start to finish.          `}
         />
       </div>

@@ -1,4 +1,4 @@
-import { Heading1, Heading2, Para } from "../common/Heading";
+import { HeadingPrimary, Headingsecondary, Paragraph } from "../common/Heading";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "../common/Helper";
 import { Buttoncommon } from "../common/Button";
@@ -9,11 +9,11 @@ const Services = () => {
       <div
         className={`flex flex-col items-center justify-center gap-[18px] max-w-[898px] px-5 lg:px-0 mx-auto text-center`}
       >
-        <Heading1
+        <HeadingPrimary
           className={`tracking-[-1px] leading-[125%]`}
           head={"Our Top Rated Services"}
         />
-        <Para
+        <Paragraph
           para={
             "Count on us as your dependable partner for exceptional Moving solutions that turn spaces into pristine havens. Our dedicated team offers a wide array of services tailored to your unique requirements. "
           }
@@ -47,7 +47,7 @@ const Services = () => {
               <div
                 className={`flex flex-col items-start gap-2 md:gap-3 justify-center`}
               >
-                <Heading2 head={Obj.head} />
+                <Headingsecondary head={Obj.head} />
 
                 <p
                   className={`text-black/60 font-inter text-sm md:text-base leading-[170%]`}

@@ -1,8 +1,9 @@
 import { X } from "lucide-react";
-import Logo from "../assets/images/favicon.webp";
+
 import { navlist } from "../common/Helper";
 import { useState } from "react";
 import { useLocation, useParams } from "react-router";
+import Logopamplate from "../common/Logopamplate";
 
 const Slidernav = ({ slidernav, setslidernav }) => {
   const [Active, setActive] = useState("Home");
@@ -17,25 +18,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
       <div
         className={`flex items-center justify-between p-4 w-full max-w-332 mx-auto `}
       >
-        <div className={`flex items-center justify-center gap-2`}>
-          <img
-            src={Logo}
-            alt="logo"
-            className={`max-w-[50px] md:max-w-[70px]`}
-          />
-          <div className={`flex flex-col items-start justify-center`}>
-            <h1
-              className={`font-figtree font-extrabold leading-[120%] italic text-violet1 text-[28px] md:text-[32px]`}
-            >
-              MOVEXPRESS
-            </h1>
-            <p
-              className={`font-figtree font-medium text-sm md:text-base italic leading-[120%] text-violet1/80`}
-            >
-              Expressly Delivered
-            </p>
-          </div>
-        </div>
+        <Logopamplate />
         <button
           onClick={() => setslidernav(false)}
           className={`bg-violet1 p-2 hover:opacity-80 h-fit rounded-lg md:rounded-xl transition-all duration-300 linear`}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Para, Heading1 } from "../common/Heading";
+import { Paragraph, HeadingPrimary, SubHeading } from "../common/Heading";
 import { Minus } from "lucide-react";
 import { faqlist } from "../common/Helper";
 
@@ -10,11 +10,11 @@ const Faqs = () => {
       <div
         className={`flex flex-col items-center justify-center gap-[18px] max-w-[806px] px-5 lg:px-0 mx-auto text-center`}
       >
-        <Heading1
+        <HeadingPrimary
           className={`tracking-[-2px] leading-[120%]`}
           head={"Frequently Asked Questions"}
         />
-        <Para
+        <Paragraph
           para={`We understand that moving can feel overwhelming. That’s why we’ve compiled answers to the most frequently asked questions to help you plan your move with confidence.`}
         />
       </div>
@@ -35,10 +35,7 @@ const Faqs = () => {
                 } transition-all duration-300 ease-in-out w-full flex flex-col items-start rounded-xl justify-center p-4 md:p-6 lg:px-8 lg:py-[26px]`}
               >
                 <div className={`flex items-center justify-between w-full`}>
-                  <h1 className="font-inter font-medium text-lg sm:text-xl md:text-2xl tracking-[-1px] leading-[150%] text-[#1E1E1E]">
-                    {""}
-                    {obj.question}
-                  </h1>
+                  <SubHeading head={obj.question} />
                   <div className={`relative`}>
                     <Minus />
                     <Minus
