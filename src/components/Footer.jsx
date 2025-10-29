@@ -9,7 +9,7 @@ import { listcontact, listdicription, navlist } from "../common/Helper";
 
 const Footer = () => {
   return (
-    <footer className="pt-[130px] bg-mist">
+    <footer className="pt-10 md:pt-15 lg:pt-25 xl:pt-[130px] bg-mist">
       <div
         className={`flex flex-col items-center max-w-[1319px] gap-15 lg:gap-20 xl:gap-[130px] mx-auto p-5`}
       >

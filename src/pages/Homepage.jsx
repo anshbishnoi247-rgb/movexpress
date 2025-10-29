@@ -22,7 +22,7 @@ const Homepage = () => {
       <Why />
       <Customer />
       <Faqs />
-      <Blogs />
+      <Blogs max={3} />
       <Book />
       <Footer />
     </>

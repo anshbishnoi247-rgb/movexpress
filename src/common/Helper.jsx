@@ -167,6 +167,30 @@ export const blogs = [
       "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
     img: Moving,
   },
+  {
+    heading: "How To Pack Fragile Items for Moving?",
+    paragraph:
+      "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires.....",
+    img: Pack,
+  },
+  {
+    heading: `How to Make a Booking with Us?`,
+    paragraph:
+      "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
+    img: Booking,
+  },
+  {
+    heading: "How to Declutter Before Moving?",
+    paragraph:
+      "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
+    img: Moving,
+  },
+  {
+    heading: "How To Pack Fragile Items for Moving?",
+    paragraph:
+      "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires.....",
+    img: Pack,
+  },
 ];
 
 export const listdicription = [

@@ -15,7 +15,11 @@ const ServicesPages = () => {
       {" "}
       <div className={`bg-violet1`}>
         <Navbar />
-        <Herocommon content="MoveXpress Services" button="Get a Quote" />
+        <Herocommon
+          content="MoveXpress Services"
+          button="Get a Quote"
+          para="Reliable, Affordable & Stress-Free Relocations"
+        />
       </div>
       <Services />
       <Work />
