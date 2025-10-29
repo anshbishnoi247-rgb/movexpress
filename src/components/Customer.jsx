@@ -2,7 +2,7 @@ import { Star } from "../common/Icons";
 
 import { Paragraph, HeadingPrimary } from "../common/Heading";
 import { CustomerList } from "../common/Helper";
-import { Buttoncommon } from "../common/Button";
+import Button from "../common/Button";
 
 const Customer = () => {
   return (
@@ -70,7 +70,7 @@ const Customer = () => {
         >
           Have you moved with us?
         </p>
-        <Buttoncommon button={"Leave a review"} className={`w-[194px] !mx-0`} />
+        <Button button={"Leave a review"} className={`w-[194px] !mx-0`} />
       </div>
     </section>
   );

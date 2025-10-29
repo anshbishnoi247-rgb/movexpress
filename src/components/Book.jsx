@@ -1,5 +1,5 @@
 import React from "react";
-import { Buttoncommon } from "../common/Button";
+import Button from "../common/Button";
 
 const Book = () => {
   return (
@@ -12,7 +12,7 @@ const Book = () => {
         >
           Ready to book your Man & Van Service ?
         </h1>
-        <Buttoncommon
+        <Button
           button="Get Instant Quote Now"
           className={`w-[250px] md:w-[309px]`}
           subsubclassName={`!bg-mist`}

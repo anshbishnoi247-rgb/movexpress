@@ -1,7 +1,7 @@
 import { HeadingPrimary, Headingsecondary, Paragraph } from "../common/Heading";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "../common/Helper";
-import { Buttoncommon } from "../common/Button";
+import Button from "../common/Button";
 
 const Services = () => {
   return (
@@ -59,7 +59,7 @@ const Services = () => {
           );
         })}
       </div>
-      <Buttoncommon
+      <Button
         button={"Get a Qoute"}
         className={`w-[194px] mt-10 md:mt-15 lg:mt-20`}
       />

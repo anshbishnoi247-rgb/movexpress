@@ -14,8 +14,12 @@
   --color-daygreen: #24c68226;
   --color-midgreen: #1bb172;
   --color-commonbg: #f6f7f9;
+  --color-textsecondary: #363636;
 }
 
+.paragraph-text-style {
+  @apply text-[#3B3B3B] font-normal text-sm sm:text-base lg:text-lg leading-[170%] font-inter;
+}
 ::-webkit-scrollbar {
   width: 6px;
 }

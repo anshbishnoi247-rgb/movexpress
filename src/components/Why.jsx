@@ -1,7 +1,7 @@
 import React from "react";
 import { HeadingPrimary, Paragraph } from "../common/Heading";
 import { BadgeCheck } from "lucide-react";
-import { Buttoncommon } from "../common/Button";
+import Button from "../common/Button";
 import { WhyList } from "../common/Helper";
 import { HandShake } from "../common/Icons";
 
@@ -53,7 +53,7 @@ const Why = () => {
         })}
       </div>
 
-      <Buttoncommon
+      <Button
         button={"Get a Qoute"}
         className={`w-[194px] mt-10 md:mt-15 lg:mt-20`}
       />

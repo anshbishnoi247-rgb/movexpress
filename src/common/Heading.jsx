@@ -9,12 +9,9 @@ export const HeadingPrimary = ({ head, className }) => {
   );
 };
 
-export const Paragraph = ({ para }) => {
+export const Paragraph = ({ para, className }) => {
   return (
-    <p
-      data-aos="fade-up"
-      className="text-[#3B3B3B] font-normal text-sm sm:text-base lg:text-lg leading-[170%] font-inter"
-    >
+    <p data-aos="fade-up" className={`${className} paragraph-text-style`}>
       {para}
     </p>
   );
@@ -40,7 +37,6 @@ export const Paragraphsub = ({ para, className }) => {
   );
 };
 
-
 export const SubHeading = ({ head, className }) => {
   return (
     <h1
@@ -48,5 +44,29 @@ export const SubHeading = ({ head, className }) => {
     >
       {head}
     </h1>
+  );
+};
+
+export const ListHeading = ({ content }) => {
+  return (
+    <h3
+      className={`font-inter font-semibold text-lg leading-[150%] text-violet1`}
+    >
+      {content}
+    </h3>
+  );
+};
+
+export const ListLink = ({ content, href }) => {
+  return (
+    <a
+      href={href}
+      className={`font-inter font-medium text-sm md:text-base lg:text-lg  leading-[150%] relative after:absolute 
+        after:content-[] after:w-0 after:bg-black after:h-[2px] after:rounded-full 
+        hover:after:w-full after:bottom-0 after:left-[50%] after:translate-x-[-50%]  after:transition-all after:duartion-600
+         after:ease-in-out`}
+    >
+      {content}
+    </a>
   );
 };

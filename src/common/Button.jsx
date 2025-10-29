@@ -1,14 +1,12 @@
-import React from "react";
-
-export const Buttoncommon = ({ button, className , subclassName,subsubclassName }) => {
+const Button = ({ icon, button, className, subclassName, subsubclassName }) => {
   return (
     <div
-      className={`overflow-hidden ${className} mx-auto group relative bg-vinegar rounded-xl`}
+      className={`overflow-hidden ${className} hover:shadow-[0px_0px_20px_5px_#00000026] transition-all duration-300 ease-in-out mx-auto group relative bg-vinegar rounded-xl`}
     >
       <button
         className={`rounded-xl w-full flex items-center ${subclassName} transition-all duration-600 ease-in-out text-white z-2 relative bg-transparent justify-center h-12 md:h-[61px] overflow-hidden font-medium text-sm sm:text-base leading-[170%] font-inter`}
       >
-        {button}
+        {button}&nbsp; {icon ? icon : null}
       </button>
 
       <div
@@ -17,3 +15,5 @@ export const Buttoncommon = ({ button, className , subclassName,subsubclassName 
     </div>
   );
 };
+
+export default Button;

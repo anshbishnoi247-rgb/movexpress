@@ -168,3 +168,28 @@ export const blogs = [
     img: Moving,
   },
 ];
+
+export const listdicription = [
+  {
+    name: "Terms Of Service",
+    url: "/",
+  },
+  {
+    name: "Privacy & Policies",
+    url: "/",
+  },
+  { name: "Movers Conduct Policy", url: "/" },
+  { name: "Damaged or Missing Items Policy", url: "/" },
+  { name: "How Pay Works", url: "/" },
+];
+
+export const listcontact = [
+  {
+    name: "6566 Union Street, San Francisco CA 65456, United States",
+    url: "/",
+  },
+  {
+    name: "(555) 123-4567",
+    url: "/",
+  },
+];
