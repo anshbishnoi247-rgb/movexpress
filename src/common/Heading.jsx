@@ -2,6 +2,7 @@ export const HeadingPrimary = ({ head, className }) => {
   return (
     <h1
       data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
       className={`${className} font-medium text-3xl md:text-4xl lg:text-5xl font-figtree text-[#010528]`}
     >
       {head}
@@ -11,7 +12,11 @@ export const HeadingPrimary = ({ head, className }) => {
 
 export const Paragraph = ({ para, className }) => {
   return (
-    <p data-aos="fade-up" className={`${className} paragraph-text-style`}>
+    <p
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      className={`${className} paragraph-text-style`}
+    >
       {para}
     </p>
   );

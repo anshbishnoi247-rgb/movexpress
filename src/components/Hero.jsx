@@ -8,7 +8,11 @@ const Hero = () => {
     <section
       className={`max-w-332 mx-auto flex flex-col-reverse md:flex-row justify-between items-center lg:items-end gap-5 md:gap-0 mt-7 sm:mt-10 md:mt-12 xl:mt-16 px-4`}
     >
-      <aside className={`max-w-[644px] w-full text-center md:text-left`}>
+      <aside
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        className={`max-w-[644px] w-full text-center md:text-left`}
+      >
         <h1
           className={`font-bold flex flex-col font-figtree text-4xl sm:text-[40px] md:text-[50px] lg:text-[60px] xl:text-[74px]  text-white leading-[115%]`}
         >
@@ -65,7 +69,11 @@ const Hero = () => {
         </div>
       </aside>
 
-      <div data-aos="fade-left" className="relative max-w-[644px] w-full">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+        className="relative max-w-[644px] w-full"
+      >
         <aside className="w-full py-6 px-7 bg-white z-5 relative rounded-3xl mb-2">
           <div className={`flex items-center justify-between`}>
             <div className={`flex flex-col items-start justify-center`}>

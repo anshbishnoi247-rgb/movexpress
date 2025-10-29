@@ -21,6 +21,7 @@ const Blogs = () => {
 
       <div
         data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
         className={`xl:pt-18 pt-14 flex flex-wrap items-center gap-6 px-5 justify-center w-fit mx-auto`}
       >
         {blogs.map((obj, index) => {

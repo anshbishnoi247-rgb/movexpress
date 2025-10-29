@@ -27,6 +27,7 @@ const Services = () => {
             <div
               key={index}
               data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
               className={`flex flex-col items-start justify-center max-w-[310px] gap-3 md:gap-4 lg:gap-6 p-4 md:p-6 w-full rounded-2xl group bg-white`}
             >
               <div className={`flex items-center justify-between w-full `}>
