@@ -31,7 +31,7 @@ export const navlist = [
     name: "About",
     url: "/about-us",
   },
-  { name: "Services", url: "/#services" },
+  { name: "Services", url: "/services" },
   { name: "Blogs", url: "/blogs" },
   { name: "Faqs", url: "/faqs" },
 ];
@@ -192,4 +192,17 @@ export const listcontact = [
     name: "(555) 123-4567",
     url: "/",
   },
+];
+
+export const slidecontent = [
+  "Professional & Friendly Team",
+  "Safety First",
+  "On-Time Delivery",
+  "Transparent Pricing",
+  "Stress-Free Experience",
+  "Professional & Friendly Team",
+  "Safety First",
+  "On-Time Delivery",
+  "Transparent Pricing",
+  "Stress-Free Experience",
 ];
