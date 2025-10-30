@@ -68,10 +68,23 @@ export const ListLink = ({ content, href }) => {
       href={href}
       className={`font-inter font-medium text-sm md:text-base lg:text-lg  leading-[150%] relative after:absolute 
         after:content-[] after:w-0 after:bg-black after:h-[2px] after:rounded-full 
-        hover:after:w-full after:bottom-0 after:left-[50%] after:translate-x-[-50%]  after:transition-all after:duartion-600
+        hover:after:w-full after:bottom-0 after:left-[50%] after:translate-x-[-50%] after:transition-all after:duration-500
          after:ease-in-out`}
     >
       {content}
     </a>
+  );
+};
+
+export const SubHeadingSecondary = ({ content, className, span }) => {
+  return (
+    <section className="py-10 md:py-15 lg:py-20 px-5 bg-commonbg">
+      <h1
+        className={`font-bricolage font-medium text-3xl md:text-4xl xl:text-5xl leading-[132%] tracking-[-1px] mx-auto max-w-[1296px] text-blackolive`}
+      >
+        {content}
+        <span className={`${className}`}>{span}</span>
+      </h1>
+    </section>
   );
 };

@@ -1,12 +1,17 @@
 import {
+  Affordable,
   Bag,
+  Certified,
   Clock,
   CoinClock,
   Delivery,
+  Expert,
   HandShake,
   House,
   Icetruck,
   Lamp,
+  LongDistance,
+  Saftey,
   SitBack,
   Table,
   ThumbsUp,
@@ -229,4 +234,56 @@ export const slidecontent = [
   "On-Time Delivery",
   "Transparent Pricing",
   "Stress-Free Experience",
+];
+
+export const bestlist = [
+  {
+    svg: <House />,
+    name: "Residential Moves",
+    para: "Helping families relocate without stress.",
+  },
+
+  {
+    svg: <Table />,
+    name: "Office Relocations",
+    para: "Smooth transitions with minimal downtime.",
+  },
+
+  {
+    svg: <Lamp />,
+    name: "Furniture Handling",
+    para: "Special care for fragile, heavy, or oversized items.",
+  },
+
+  {
+    svg: <LongDistance />,
+    name: "Long-Distance Moves",
+    para: "Reliable transportation wherever you’re headed.",
+  },
+];
+
+export const bestlistsecondary = [
+  {
+    svg: <Affordable />,
+    name: "Affordable Price",
+    para: "we offer competitive and transparent pricing to fit your budget. No hidden fees, no surprises — just affordable rates.",
+  },
+
+  {
+    svg: <Expert />,
+    name: "Expert Team",
+    para: "From packing delicate items to lifting heavy furniture, our experts ensure every step of your move is handled flawlessly.",
+  },
+
+  {
+    svg: <Saftey />,
+    name: "Safety & Protection",
+    para: "We know your possessions are valuable both financially and emotionally. That’s why we take extra precautions to their safety.",
+  },
+
+  {
+    svg: <Certified />,
+    name: "100% Certified",
+    para: "Our certifications reflect our commitment to quality, reliability, and industry standards, so you can trust us",
+  },
 ];

@@ -1,0 +1,55 @@
+import React from "react";
+import {
+  HeadingPrimary,
+  Headingsecondary,
+  Paragraph,
+  Paragraphsub,
+  SubHeadingSecondary,
+} from "../common/Heading";
+import { bestlist, bestlistsecondary } from "../common/Helper";
+
+const Best = ({ classNamebox, classNamehead, classNameparent, list }) => {
+  return (
+    <section className="lg:py-20 md:py-15 py-10 bg-white">
+      <div
+        className={`flex flex-col ${classNamehead} items-center justify-center gap-[18px] max-w-[898px] px-5 lg:px-0 mx-auto text-center`}
+      >
+        <HeadingPrimary
+          className={`tracking-[-1px] leading-[125%]`}
+          head={"What We Do Best"}
+        />
+        <Paragraph
+          para={
+            "We offer a complete range of moving services designed to suit your needs"
+          }
+        />
+      </div>
+      <div
+        className={`flex items-center flex-wrap ${classNameparent} justify-center mt-14 gap-6 sm:gap-8 md:gap-12 px-5 w-fit mx-auto`}
+      >
+        {list &&
+          list.map((obj, index) => {
+            return (
+              <div
+                key={index}
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                className={`flex flex-col items-center jsutify-center max-w-[287px] w-full rounded-2xl ${classNamebox} p-4 md:p-6 gap-4 md:gap-6`}
+              >
+                {obj.svg}
+                <div
+                  className={`flex flex-col text-center gap-4 items-center justify-center 
+                `}
+                >
+                  <Headingsecondary head={obj.name} />
+                  <Paragraphsub para={obj.para} />
+                </div>
+              </div>
+            );
+          })}
+      </div>
+    </section>
+  );
+};
+
+export default Best;
