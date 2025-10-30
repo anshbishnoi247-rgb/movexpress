@@ -48,31 +48,37 @@ export const inputbox = [
 
 export const services = [
   {
+    url: "/van",
     svg: <Van />,
     head: "Man & Van Services",
     para: "A convenient and flexible moving solution typically offered by a single professional or a small team with a van",
   },
   {
+    url: "#",
     svg: <House />,
     head: "House Removals",
     para: "House removals refer to the process of moving (packing, loading, transporting, unloading) from one residence to another",
   },
   {
+    url: "#",
     svg: <Lamp />,
     head: "Furniture & Large Items",
     para: "Furniture delivery is a service focused on transporting furniture items from sellers or retailers to customers homes.",
   },
   {
+    url: "#",
     svg: <Truck />,
     head: "Piano Transport",
     para: "Piano transport involves the specialized and meticulous relocation of pianos from one location to another.",
   },
   {
+    url: "#",
     svg: <Icetruck />,
     head: "Storage Removals",
     para: "Storage removal refers to the process of relocating items to or from a storage facility. This service is designed to assist",
   },
   {
+    url: "#",
     svg: <Table />,
     head: "Office Move",
     para: "Office move is the comprehensive process of moving a business from one physical location to another.",
@@ -285,5 +291,31 @@ export const bestlistsecondary = [
     svg: <Certified />,
     name: "100% Certified",
     para: "Our certifications reflect our commitment to quality, reliability, and industry standards, so you can trust us",
+  },
+];
+
+export const bestlistvanservies = [
+  {
+    svg: <Affordable />,
+    name: "Home & Office Removals",
+    para: "Relocating your home or workspace? We ensure a smooth, secure, and organized move with minimal disruption.",
+  },
+
+  {
+    svg: <Expert />,
+    name: "Student Moves",
+    para: "Perfect for students relocating between accommodations. Budget-friendly and convenient solutions for smaller moves.",
+  },
+
+  {
+    svg: <Saftey />,
+    name: "Furniture & Large Items",
+    para: "Need to transport bulky furniture or oversized parcels? Our vans are fully equipped to handle heavy and delicate items safely.",
+  },
+
+  {
+    svg: <Certified />,
+    name: "Single-Item & Bulk Transport",
+    para: "From a single sofa to an entire flat, we provide customized transport solutions based on your needs.",
   },
 ];

@@ -2,8 +2,10 @@ import { HeadingPrimary, Headingsecondary, Paragraph } from "../common/Heading";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "../common/Helper";
 import Button from "../common/Button";
+import { useNavigate } from "react-router";
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <section id="services" className="lg:py-20 md:py-15 py-10 bg-commonbg">
       <div
@@ -28,6 +30,7 @@ const Services = () => {
               key={index}
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
+              onClick={() => navigate("/van")}
               className={`flex flex-col items-start justify-center max-w-[310px] gap-3 md:gap-4 lg:gap-6 p-4 md:p-6 w-full rounded-2xl group bg-white`}
             >
               <div className={`flex items-center justify-between w-full `}>

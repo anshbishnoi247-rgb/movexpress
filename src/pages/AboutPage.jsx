@@ -32,7 +32,12 @@ const AboutPage = () => {
         span="is more than a moving company — we’re your transition partners. We manage everything from packing your valuables to transporting and unloading them at your new place. Our skilled team treats your belongings with care, ensuring that everything, from delicate antiques to bulky furniture, arrives safely and on time."
       />
 
-      <Best classNamebox="bg-commonbg" list={bestlist} />
+      <Best
+        classNamebox="bg-commonbg"
+        list={bestlist}
+        head="What We Do Best"
+        para="We offer a complete range of moving services designed to suit your needs"
+      />
       <Slides />
       <Faqs />
       <Blogs max={3} />

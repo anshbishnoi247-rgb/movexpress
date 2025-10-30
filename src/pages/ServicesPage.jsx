@@ -25,7 +25,7 @@ const ServicesPages = () => {
       <Work />
       <Slides />
       <Faqs />
-      <Blogs />
+      <Blogs max={3} />
       <Book />
       <Footer />
     </>
