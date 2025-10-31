@@ -296,26 +296,57 @@ export const bestlistsecondary = [
 
 export const bestlistvanservies = [
   {
-    svg: <Affordable />,
+    svg: <House />,
     name: "Home & Office Removals",
     para: "Relocating your home or workspace? We ensure a smooth, secure, and organized move with minimal disruption.",
   },
 
   {
-    svg: <Expert />,
+    svg: <Van />,
     name: "Student Moves",
     para: "Perfect for students relocating between accommodations. Budget-friendly and convenient solutions for smaller moves.",
   },
 
   {
-    svg: <Saftey />,
+    svg: <Lamp />,
     name: "Furniture & Large Items",
     para: "Need to transport bulky furniture or oversized parcels? Our vans are fully equipped to handle heavy and delicate items safely.",
   },
 
   {
-    svg: <Certified />,
+    svg: <Lamp />,
     name: "Single-Item & Bulk Transport",
     para: "From a single sofa to an entire flat, we provide customized transport solutions based on your needs.",
+  },
+];
+
+export const bestlistwhyvan = [
+  {
+    svg: <Affordable />,
+    name: "Affordable & Transparent Pricing",
+    para: "Moving services starting from just £25.",
+  },
+
+  {
+    svg: <Expert />,
+    name: "Professional Movers & Drivers",
+    para: "Experienced teams handle every item",
+  },
+
+  {
+    svg: <Saftey />,
+    name: "Hassle-Free Experience",
+    para: "We load, transport, and unload you do nothing.",
+  },
+
+  {
+    svg: <LongDistance />,
+    name: "Local & Nationwide Coverage",
+    para: "Whether around the corner or across the UK",
+  },
+  {
+    svg: <Certified />,
+    name: "Flexible Booking Options",
+    para: "Service to suit your schedule.",
   },
 ];

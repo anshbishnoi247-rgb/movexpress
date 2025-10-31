@@ -16,9 +16,10 @@ const Best = ({
   head,
   para,
   classNameboxhead,
+  classNamesection,
 }) => {
   return (
-    <section className="lg:py-20 md:py-15 py-10 bg-white">
+    <section className={`lg:py-20 md:py-15 py-10 bg-white ${classNamesection}`}>
       <div
         className={`flex flex-col ${classNamehead} items-center justify-center gap-[18px] max-w-[898px] px-5 lg:px-0 mx-auto text-center`}
       >
