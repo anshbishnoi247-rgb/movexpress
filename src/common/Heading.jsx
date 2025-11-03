@@ -88,3 +88,31 @@ export const SubHeadingSecondary = ({ content, className, span }) => {
     </section>
   );
 };
+
+export const DownloadHeading = ({ content, className }) => {
+  return (
+    <h4 className={`${className} text-white font-inter text-sm leading-[100%]`}>
+      {content}
+    </h4>
+  );
+};
+
+export const HeadingStore = ({ content }) => {
+  return (
+    <h3 className="font-inter font-medium text-white text-lg md:text-2xl leading-[100%]">
+      {content}
+    </h3>
+  );
+};
+
+import React from "react";
+
+export const SignupHeading = ({ content }) => {
+  return (
+    <h2
+      className={`font-semibold font-inter text-violet1 text-3xl md:text-4xl lg:text-5xl leading-[140%]`}
+    >
+      {content}
+    </h2>
+  );
+};

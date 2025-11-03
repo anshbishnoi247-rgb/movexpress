@@ -1,5 +1,6 @@
 import {
   Affordable,
+  Apple,
   Bag,
   Certified,
   Clock,
@@ -11,6 +12,7 @@ import {
   Icetruck,
   Lamp,
   LongDistance,
+  PlayStore,
   Saftey,
   SitBack,
   Table,
@@ -39,6 +41,20 @@ export const navlist = [
   { name: "Services", url: "/services" },
   { name: "Blogs", url: "/blogs" },
   { name: "Faqs", url: "/faqs" },
+];
+
+export const footerlist = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "About",
+    url: "/about-us",
+  },
+  { name: "Services", url: "/services" },
+  { name: "Become a Driver", url: "/sign-up" },
+  { name: "Blogs", url: "/blogs" },
 ];
 
 export const inputbox = [
@@ -349,4 +365,9 @@ export const bestlistwhyvan = [
     name: "Flexible Booking Options",
     para: "Service to suit your schedule.",
   },
+];
+
+export const download = [
+  { svg: <Apple />, name: "App Store", head: "Download on the" },
+  { svg: <PlayStore />, name: "Google Play", head: "GET IT ON" },
 ];

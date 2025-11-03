@@ -5,7 +5,12 @@ import Button from "../common/Button";
 import Logopamplate from "../common/Logopamplate";
 import { ListHeading, ListLink, Paragraph } from "../common/Heading";
 import { Twitter, Facebook, Instagram, Message } from "../common/Icons";
-import { listcontact, listdicription, navlist } from "../common/Helper";
+import {
+  footerlist,
+  listcontact,
+  listdicription,
+  navlist,
+} from "../common/Helper";
 
 const Footer = () => {
   return (
@@ -41,7 +46,7 @@ const Footer = () => {
             <li>
               <ListHeading content="Quick Link" />
             </li>
-            {navlist.map((obj, index) => {
+            {footerlist.map((obj, index) => {
               return (
                 <li
                   key={index}
