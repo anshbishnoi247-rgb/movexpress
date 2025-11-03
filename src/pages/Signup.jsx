@@ -8,17 +8,22 @@ import {
 } from "../common/Heading";
 import { download } from "../common/Helper";
 import { Apple } from "../common/Icons";
+import Personalinfo from "../components/Personalinfo";
+import Navbar from "../components/Navbar";
 
 const Signup = () => {
   return (
     <section class={`max-w-full overflow-hidden mx-auto`}>
+      <div className={`bg-violet1`}>
+        <Navbar />
+      </div>
       <img
         src={signupbg}
-        className="min-w-[1543px] -mt-77 h-[606px] w-fit mx-auto position-center"
+        className="min-w-[1543px] -z-1 relative -mt-74 h-[606px] w-fit mx-auto position-center"
       />
 
       <div className="flex flex-col xl:flex-row items-center xl:items-start justify-center w-full mx-auto px-5  gap-[50px]">
-        <aside className="p-4 md:p-6 lg:p-8 xl:p-12 flex flex-col items-center justify-center max-w-[745px] w-full">
+        <aside className="p-4 md:p-6 lg:p-8 xl:p-12 flex flex-col items-center bg-white -mt-46 justify-center max-w-[745px] w-full mx-">
           <div className={`flex items-center w-full justify-between`}>
             <div className={`flex flex-col items-start gap-3 justify-center`}>
               <SignupHeading content="Sign Up as a Driver" />
@@ -39,10 +44,11 @@ const Signup = () => {
           <div className="w-full h-2 my-8 bg-mist rounded-full overflow-hidden">
             <div className="w-[50%] h-full bg-violet1 rounded-full"></div>
           </div>
+          <Personalinfo />
         </aside>
 
         <aside
-          className={`max-w-[501px] text-center flex flex-col items-center justify-center gap-10`}
+          className={`max-w-[501px] text-center flex flex-col items-center justify-center gap-10 mt-10 xl:mt-[75px]`}
         >
           <div className="flex flex-col items-center justify-center gap-7">
             <Paragraph

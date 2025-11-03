@@ -12,8 +12,8 @@ const Services = () => {
         className={`flex flex-col items-center justify-center gap-[18px] max-w-[898px] px-5 lg:px-0 mx-auto text-center`}
       >
         <HeadingPrimary
-          className={`tracking-[-1px] leading-[125%]`}
-          head={"Our Top Rated Services"}
+          className="tracking-[-1px] leading-[125%]"
+          head="Our Top Rated Services"
         />
         <Paragraph
           para={
