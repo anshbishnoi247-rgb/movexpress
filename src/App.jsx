@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import ServicesPage from "./pages/ServicesPage";
 import BlogsPage from "./pages/BlogsPage";
 import VanservicesPage from "./pages/VanservicesPage";
-import Signup from "./pages/Signup";
+import SignupPage from "./pages/SignupPage";
 
 function App() {
   useEffect(() => {
@@ -22,7 +22,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/blogs" element={<BlogsPage />} />
         <Route path="/van" element={<VanservicesPage />} />
-        <Route path="/sign-up" element={<Signup />} />
+        <Route path="/sign-up" element={<SignupPage />} />
       </Routes>
     </>
   );

@@ -10,8 +10,12 @@ import { download } from "../common/Helper";
 import { Apple } from "../common/Icons";
 import Personalinfo from "../components/Personalinfo";
 import Navbar from "../components/Navbar";
+import Vehicleinfo from "../components/Vehicleinfo";
+import { useState } from "react";
 
 const Signup = () => {
+  const [filled, setFilled] = useState(null);
+
   return (
     <section class={`max-w-full overflow-hidden mx-auto`}>
       <div className={`bg-violet1`}>
@@ -37,14 +41,18 @@ const Signup = () => {
             <p
               className={`font-inter text-xs text-violet1 leading-6 font-semibold px-4 py-[6px] bg-violet1/12 rounded-full`}
             >
-              1 Personal Info
+              {!filled ? "1 Personal Info" : "1 Vehicle info"}
             </p>
           </div>
 
           <div className="w-full h-2 my-8 bg-mist rounded-full overflow-hidden">
-            <div className="w-[50%] h-full bg-violet1 rounded-full"></div>
+            <div
+              className={`${
+                !filled ? "w-[50%]" : "w-full"
+              } h-full bg-violet1 rounded-full`}
+            ></div>
           </div>
-          <Personalinfo />
+          {!filled ? <Personalinfo setFilled={setFilled} /> : <Vehicleinfo />}
         </aside>
 
         <aside

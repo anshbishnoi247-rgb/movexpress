@@ -1,6 +1,14 @@
-const Button = ({ icon, button, className, subclassName, subsubclassName }) => {
+const Button = ({
+  icon,
+  button,
+  type,
+  className,
+  subclassName,
+  subsubclassName,
+}) => {
   return (
     <div
+      type={type}
       className={`overflow-hidden ${className} hover:shadow-[0px_0px_20px_5px_#00000026] transition-all duration-300 ease-in-out mx-auto group relative bg-vinegar rounded-xl`}
     >
       <button
@@ -10,7 +18,7 @@ const Button = ({ icon, button, className, subclassName, subsubclassName }) => {
       </button>
 
       <div
-        className={`absolute rounded-xl ${subsubclassName} bg-violet1 z-1  left-[50%] top-[50%] translate-[-50%] w-0 h-0 transition-all duration-500 ease-in-out group-hover:w-81 group-hover:h-16`}
+        className={`absolute rounded-xl ${subsubclassName} bg-violet1 z-1 left-[50%] top-[50%] translate-[-50%] w-0 h-0 transition-all duration-500 ease-in-out group-hover:w-81 group-hover:h-16`}
       ></div>
     </div>
   );
