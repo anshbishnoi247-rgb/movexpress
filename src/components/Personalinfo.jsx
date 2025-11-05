@@ -1,10 +1,20 @@
-import { ArrowRight, ArrowUpLeft, ArrowUpRight, Check } from "lucide-react";
-import { AddImage } from "../common/Icons";
-import React, { useState } from "react";
+import { ArrowRight, Check } from "lucide-react";
+import { useState } from "react";
 import Button from "../common/Button";
+import { AddImage } from "../common/Icons";
 
 const Personalinfo = ({ filled, setFilled }) => {
   const [check, setCheck] = useState(null);
+
+  const [firstname, setFirstname] = useState(null);
+  const [surname, setSurname] = useState(null);
+  const [contactno, setContactno] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [language, setLanguage] = useState(null);
+  const [address, setAddress] = useState(null);
+  const [postcode, setPostcode] = useState(null);
+  const [birthday, setBirthady] = useState(null);
+  const [selfie, setSelfie] = useState(null);
 
   return (
     <>
@@ -16,155 +26,143 @@ const Personalinfo = ({ filled, setFilled }) => {
         className="flex flex-col gap-6 items-start justify-center w-full"
       >
         {/* input name */}
-        <aritcle className="flex items-center justify-between gap-4 w-full">
+        <aritcle className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
           <div
             className={`flex flex-col gap-1 items-start justify-center w-full`}
           >
-            <label
-              htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
-            >
+            <label htmlFor="firtname" className="label-style">
               First name*
             </label>
             <input
               required
               type="text"
+              value={firstname}
+              onChange={(e) => setFirstname(e.target.value)}
               placeholder="Firstname"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              className="input-style-common"
             />
           </div>
           <div
             className={`flex flex-col gap-1 items-start justify-center w-full`}
           >
-            <label
-              htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
-            >
+            <label htmlFor="firtname" className="label-style">
               Surname*
             </label>
             <input
               required
               type="text"
+              value={surname}
               placeholder="surname"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              onChange={(e) => setSurname(e.target.value)}
+              className="input-style-common"
             />
           </div>
         </aritcle>
 
         {/* input contact */}
-        <article className="flex items-center justify-between gap-4 w-full">
+        <article className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
           <div
             className={`flex flex-col gap-1 items-start justify-center w-full`}
           >
-            <label
-              htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
-            >
+            <label htmlFor="firtname" className="label-style">
               Phone No *
             </label>
             <input
               required
               type="number"
+              value={contactno}
               placeholder="contact"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              onChange={(e) => setContactno(e.target.value)}
+              className="input-style-common"
             />
           </div>
           <div
             className={`flex flex-col gap-1 items-start justify-center w-full`}
           >
-            <label
-              htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
-            >
+            <label htmlFor="firtname" className="label-style">
               E-mail *
             </label>
             <input
               required
               type="e-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="e-mail"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              className="input-style-common"
             />
           </div>
         </article>
 
         {/* input dob */}
-        <article className="flex items-center justify-between gap-4 w-full">
+        <article className="flex flex-col md:flex-row items-center justify-between gap-4 w-full"> 
           <div
             className={`flex flex-col gap-1 items-start justify-center w-full`}
           >
-            <label
-              htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
-            >
+            <label htmlFor="firtname" className="label-style">
               Date of Birth *
             </label>
             <input
               required
               type="date"
+              onChange={(e) => setBirthady(e.target.value)}
+              value={birthday}
               placeholder="name"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              className="input-style-common"
             />
           </div>
           <div
             className={`flex flex-col gap-1 items-start justify-center w-full`}
           >
-            <label
-              htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
-            >
+            <label htmlFor="firtname" className="label-style">
               Language of preference in english *
             </label>
             <input
               required
               type="text"
+              value={language}
+              onChange={(e) => setLanguage(e.target.value)}
               placeholder="name"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              className="input-style-common"
             />
           </div>
         </article>
 
         {/* input adreess */}
-        <article className="flex items-center justify-between gap-4 w-full">
+        <article className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
           <div
             className={`flex flex-col gap-1 items-start justify-center w-full`}
           >
-            <label
-              htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
-            >
+            <label htmlFor="firtname" className="label-style">
               Address *
             </label>
             <input
               required
               type="text"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
               placeholder="address"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              className="input-style-common"
             />
           </div>
           <div
             className={`flex flex-col gap-1 items-start justify-center w-full`}
           >
-            <label
-              htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
-            >
+            <label htmlFor="firtname" className="label-style">
               Postcode *
             </label>
             <input
               required
               type="number"
-              placeholder="Postcode"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              placeholder={postcode}
+              onChange={(e) => setPostcode(e.target.value)}
+              className="input-style-common"
             />
           </div>
         </article>
 
         {/* checkbox */}
         <article className="flex flex-col items-start gap-3 justify-center w-full">
-          <label
-            htmlFor="firstname"
-            className="font-inter font-medium text-base leading-6 text-violet1"
-          >
+          <label htmlFor="firstname" className="label-style">
             Do you have any previous criminal convictions? *
           </label>
 
@@ -227,10 +225,7 @@ const Personalinfo = ({ filled, setFilled }) => {
         </article>
 
         <article className="w-full flex flex-col gap-2 items-start justify-center">
-          <label
-            htmlFor="firstname"
-            className="font-inter font-medium text-base leading-6 text-violet1"
-          >
+          <label htmlFor="firstname" className="label-style">
             Photo of your selfie *
           </label>
 
@@ -238,6 +233,8 @@ const Personalinfo = ({ filled, setFilled }) => {
             <input
               type="file"
               required
+              value={selfie}
+              onChange={(e) => setSelfie(e.target.value)}
               className="absolute top-0 left-0 z-2 w-full h-full opacity-0"
             />
 
@@ -261,10 +258,8 @@ const Personalinfo = ({ filled, setFilled }) => {
           button="Next"
           type="submit"
           subclassName="!h-16 !w-[134px] md:text-lg"
-          className="!mx-0 mt-2"
-          icon={
-            <ArrowRight className="group-hover:translate-x-5 transition-all duration-300 ease-in-out" />
-          }
+          className="md:!mx-0 mt-2"
+          icon={<ArrowRight className="button-sign-up-style" />}
         />
       </form>
     </>

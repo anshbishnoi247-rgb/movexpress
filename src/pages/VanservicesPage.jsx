@@ -1,15 +1,14 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import Herocommon from "../components/Herocommon";
-import Footer from "../components/Footer";
+import { SubHeadingSecondary } from "../common/Heading";
+import { bestlistvanservies, bestlistwhyvan } from "../common/Helper";
+import Best from "../components/Best";
 import Blogs from "../components/Blogs";
-import Faqs from "../components/Faqs";
 import Book from "../components/Book";
 import Customer from "../components/Customer";
+import Faqs from "../components/Faqs";
+import Footer from "../components/Footer";
+import Herocommon from "../components/Herocommon";
+import Navbar from "../components/Navbar";
 import Slides from "../components/Slides";
-import Best from "../components/Best";
-import { bestlistvanservies, bestlistwhyvan } from "../common/Helper";
-import { SubHeadingSecondary } from "../common/Heading";
 
 const VanservicesPage = () => {
   return (

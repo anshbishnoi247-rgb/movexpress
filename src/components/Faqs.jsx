@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Paragraph, HeadingPrimary, SubHeading } from "../common/Heading";
 import { Minus } from "lucide-react";
+import { useState } from "react";
+import { HeadingPrimary, Paragraph, SubHeading } from "../common/Heading";
 import { faqlist } from "../common/Helper";
 
 const Faqs = () => {

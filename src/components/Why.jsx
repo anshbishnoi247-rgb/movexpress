@@ -1,9 +1,6 @@
-import React from "react";
-import { HeadingPrimary, Paragraph } from "../common/Heading";
-import { BadgeCheck } from "lucide-react";
 import Button from "../common/Button";
-import { WhyList } from "../common/Helper";
-import { HandShake } from "../common/Icons";
+import { HeadingPrimary, Paragraph } from "../common/Heading";
+import { whylist } from "../common/Helper";
 
 const Why = () => {
   return (
@@ -23,7 +20,7 @@ const Why = () => {
       <div
         className={`mt-15 flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-[30px] px-5 w-fit mx-auto`}
       >
-        {WhyList.map((obj, index) => {
+        {whylist.map((obj, index) => {
           return (
             <div
               data-aos="fade-up"

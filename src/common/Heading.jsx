@@ -105,8 +105,6 @@ export const HeadingStore = ({ content }) => {
   );
 };
 
-import React from "react";
-
 export const SignupHeading = ({ content }) => {
   return (
     <h2
@@ -114,5 +112,13 @@ export const SignupHeading = ({ content }) => {
     >
       {content}
     </h2>
+  );
+};
+
+export const LabelHeading = ({ content }) => {
+  return (
+    <h3 className="font-normal font-inter text-sm leading-[164%] text-violet1 text-nowrap px-4">
+      {content}
+    </h3>
   );
 };

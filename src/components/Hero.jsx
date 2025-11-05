@@ -1,7 +1,7 @@
-import { BadgeCheck, CircleAlert, ShieldCheck } from "lucide-react";
-import { Alert, Gps, Truesthalf, Trustrate, Truststar } from "../common/Icons";
-import { inputbox } from "../common/Helper";
+import { BadgeCheck, ShieldCheck } from "lucide-react";
 import map from "../assets/images/map.webp";
+import { inputbox } from "../common/Helper";
+import { Alert, Gps, Truesthalf, Trustrate, Truststar } from "../common/Icons";
 
 const Hero = () => {
   return (

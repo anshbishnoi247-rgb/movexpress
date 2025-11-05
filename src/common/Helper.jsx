@@ -127,13 +127,13 @@ export const worklist = [
   },
 ];
 
-export const CustomerList = [
+export const customerlist = [
   { dataaos: "fade-right", name: "Zachary John", img: John },
   { dataaos: "fade-up", name: "Gail Amethyst", img: Gail },
   { dataaos: "fade-left", name: "Scott William", img: Sam },
 ];
 
-export const WhyList = [
+export const whylist = [
   {
     svg: <BadgeCheck className=" text-violet1" strokeWidth={1.5} size={56} />,
     name: "Many Years of Experience",

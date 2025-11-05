@@ -1,4 +1,3 @@
-import React from "react";
 
 const Subfooter = () => {
   const currentDate = new Date();

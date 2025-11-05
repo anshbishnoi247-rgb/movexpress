@@ -1,7 +1,7 @@
 import { Star } from "../common/Icons";
 
 import { Paragraph, HeadingPrimary } from "../common/Heading";
-import { CustomerList } from "../common/Helper";
+import { customerlist } from "../common/Helper";
 import Button from "../common/Button";
 
 const Customer = () => {
@@ -22,7 +22,7 @@ const Customer = () => {
       <div
         className={`flex flex-wrap items-center justify-center mt-14 gap-6 p-5 w-fit mx-auto`}
       >
-        {CustomerList.map((obj, index) => {
+        {customerlist.map((obj, index) => {
           return (
             <div
               data-aos={obj.dataaos}

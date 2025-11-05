@@ -1,12 +1,9 @@
-import React from "react";
 import {
   HeadingPrimary,
   Headingsecondary,
   Paragraph,
-  Paragraphsub,
-  SubHeadingSecondary,
+  Paragraphsub
 } from "../common/Heading";
-import { bestlist, bestlistsecondary } from "../common/Helper";
 
 const Best = ({
   classNamebox,

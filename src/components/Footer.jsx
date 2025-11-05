@@ -1,16 +1,14 @@
-import React from "react";
-import Subfooter from "./Subfooter";
 import Button from "../common/Button";
+import Subfooter from "./Subfooter";
 
-import Logopamplate from "../common/Logopamplate";
 import { ListHeading, ListLink, Paragraph } from "../common/Heading";
-import { Twitter, Facebook, Instagram, Message } from "../common/Icons";
 import {
   footerlist,
   listcontact,
-  listdicription,
-  navlist,
+  listdicription
 } from "../common/Helper";
+import { Facebook, Instagram, Message, Twitter } from "../common/Icons";
+import Logopamplate from "../common/Logopamplate";
 
 const Footer = () => {
   return (

@@ -25,6 +25,19 @@
 .paragraph-text-style {
   @apply text-[#3B3B3B] font-normal text-sm sm:text-base lg:text-lg leading-[170%] font-inter;
 }
+
+.button-sign-up-style {
+  @apply group-hover:translate-x-5 transition-all duration-300 ease-in-out;
+}
+
+.label-style {
+  @apply font-inter font-medium text-base leading-6 text-violet1;
+}
+
+.input-style-common {
+  @apply outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }

@@ -1,13 +1,12 @@
-import React from "react";
+import Blogs from "../components/Blogs";
+import Book from "../components/Book";
+import Faqs from "../components/Faqs";
+import Footer from "../components/Footer";
+import Herocommon from "../components/Herocommon";
 import Navbar from "../components/Navbar";
 import Services from "../components/Services";
-import Work from "../components/Work";
-import Faqs from "../components/Faqs";
-import Book from "../components/Book";
-import Footer from "../components/Footer";
-import Blogs from "../components/Blogs";
-import Herocommon from "../components/Herocommon";
 import Slides from "../components/Slides";
+import Work from "../components/Work";
 
 const ServicesPages = () => {
   return (
