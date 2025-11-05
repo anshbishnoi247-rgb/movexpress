@@ -1,10 +1,10 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Book from "../components/Book";
+import ReadyToBook from "../components/ReadyToBook";
 import Blogs from "../components/Blogs";
 import Slides from "../components/Slides";
 import Faqs from "../components/Faqs";
-import Herocommon from "../components/Herocommon";
+import HeroCommon from "../components/HeroCommon";
 import Best from "../components/Best";
 import { SubHeadingSecondary } from "../common/Heading";
 import { bestlist, bestlistsecondary } from "../common/Helper";
@@ -14,7 +14,7 @@ const AboutPage = () => {
     <>
       <div className={`bg-violet1`}>
         <Navbar />
-        <Herocommon
+        <HeroCommon
           content="About Us"
           para="Your Trusted Partner for Stress-Free Moving"
         />
@@ -41,7 +41,7 @@ const AboutPage = () => {
       <Slides />
       <Faqs />
       <Blogs max={3} />
-      <Book />
+      <ReadyToBook />
       <Footer />
     </>
   );

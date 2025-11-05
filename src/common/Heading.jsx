@@ -122,3 +122,13 @@ export const LabelHeading = ({ content }) => {
     </h3>
   );
 };
+
+import React from "react";
+
+export const TimeHeading = ({ content }) => {
+  return (
+    <p className="font-inter font-normal text-base text-white leading-[170%] tracking-[-0.5px]">
+      {content}
+    </p>
+  );
+};

@@ -6,7 +6,7 @@ import Customer from "../components/Customer";
 import Why from "../components/Why";
 import Faqs from "../components/Faqs";
 import Blogs from "../components/Blogs";
-import Book from "../components/Book";
+import ReadyToBook from "../components/ReadyToBook";
 import Footer from "../components/Footer";
 
 const Homepage = () => {
@@ -23,7 +23,7 @@ const Homepage = () => {
       <Customer />
       <Faqs />
       <Blogs max={3} />
-      <Book />
+      <ReadyToBook />
       <Footer />
     </>
   );

@@ -33,7 +33,7 @@ const Signupfooter = () => {
           }
         />
       </div>
-      <div className={`flex flex-col items-center jutify-center gap-6`}>
+      <div className={`flex flex-col items-center justify-center gap-6`}>
         <Paragraphsub
           para="Get the apps for a better experience"
           className="!text-eerieblack !font-medium"
@@ -44,10 +44,10 @@ const Signupfooter = () => {
             return (
               <div
                 key={index}
-                className="flex items-center jsutify-center bg-[#0A0A0A] rounded-full py-4 px-8 gap-[11px]"
+                className="flex items-center justify-center bg-[#0A0A0A] rounded-full py-4 px-8 gap-[11px]"
               >
                 {obj.svg}
-                <div className="flex items-start flex-col jsutify-center gap-1">
+                <div className="flex items-start flex-col justify-center gap-1">
                   <DownloadHeading
                     content={obj.head}
                     className={`${index === 1 && "font-bold tracking-[-1px]"}`}

@@ -2,11 +2,11 @@ import { SubHeadingSecondary } from "../common/Heading";
 import { bestlistvanservies, bestlistwhyvan } from "../common/Helper";
 import Best from "../components/Best";
 import Blogs from "../components/Blogs";
-import Book from "../components/Book";
+import ReadyToBook from "../components/ReadyToBook";
 import Customer from "../components/Customer";
 import Faqs from "../components/Faqs";
 import Footer from "../components/Footer";
-import Herocommon from "../components/Herocommon";
+import HeroCommon from "../components/HeroCommon";
 import Navbar from "../components/Navbar";
 import Slides from "../components/Slides";
 
@@ -15,7 +15,7 @@ const VanservicesPage = () => {
     <>
       <div className={`bg-violet1`}>
         <Navbar />
-        <Herocommon
+        <HeroCommon
           content="Man and Van Services"
           para="Fast, Reliable & Affordable Moving Solutions"
           button="Get a Quote"
@@ -42,7 +42,7 @@ const VanservicesPage = () => {
       <Customer />
       <Blogs max={3} />
       <Faqs />
-      <Book />
+      <ReadyToBook />
       <Footer />
     </>
   );

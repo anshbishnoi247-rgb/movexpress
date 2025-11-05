@@ -24,7 +24,7 @@ const Faqs = () => {
       >
         {faqlist.map((obj, index) => {
           return (
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" key={index}>
               <div
                 key={index}
                 onClick={() => {

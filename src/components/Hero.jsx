@@ -1,6 +1,5 @@
 import { BadgeCheck, ShieldCheck } from "lucide-react";
 import map from "../assets/images/map.webp";
-import { inputbox } from "../common/Helper";
 import { Alert, Gps, Truesthalf, Trustrate, Truststar } from "../common/Icons";
 
 const Hero = () => {
@@ -22,8 +21,8 @@ const Hero = () => {
         </h1>
 
         <p className="mt-6 md:mt-3 text-sm font-inter sm:text-base md:text-lg text-whitelight max-w-[90%] mx-auto md:mx-0">
-          Book reliable, Stress - free <br className="sm:hidden" /> removals
-          Nationwide. <br /> Get a quote in 60 seconds
+          ReadyToBook reliable, Stress - free <br className="sm:hidden" />{" "}
+          removals Nationwide. <br /> Get a quote in 60 seconds
         </p>
 
         <div
@@ -97,27 +96,42 @@ const Hero = () => {
           <div className={`h-[6px] w-full rounded-full bg-[#D5D5D5] mt-4 mb-6`}>
             <div className={`h-full w-[111px] rounded-full bg-violet1`}></div>
           </div>
-          {inputbox.map((obj, i) => {
-            return (
-              <div className={`mb-5 md:mb-[34px]`}>
-                <label
-                  className={`font-semibold text-sm sm:font-base leading-6 font-inter mb-1`}
-                >
-                  {obj.label}
-                </label>
-                <div
-                  className={`flex items-center border-1 h-12 md:h-15 px-4 border-[#EEEFF3] justify-center gap-3 rounded-xl`}
-                >
-                  <Gps />
-                  <input
-                    type="text"
-                    className={`w-full outline-none`}
-                    placeholder={obj.holder}
-                  />
-                </div>
-              </div>
-            );
-          })}
+
+          <div className={`mb-5 md:mb-[33px]`}>
+            <label
+              className={`font-semibold text-sm sm:font-base leading-6 font-inter `}
+            >
+              Pickup Address
+            </label>
+            <div
+              className={`flex items-center border-1 h-12 md:h-15 px-4 mt-1 border-[#EEEFF3] justify-center gap-3 rounded-xl`}
+            >
+              <Gps />
+              <input
+                type="text"
+                className={`w-full outline-none`}
+                placeholder="Enter pickup address"
+              />
+            </div>
+          </div>
+          <div className={`mb-5 md:mb-[33px]`}>
+            <label
+              className={`font-semibold text-sm sm:font-base leading-6 font-inter`}
+            >
+              Destination Address
+            </label>
+            <div
+              className={`flex items-center border-1 h-12 md:h-15 mt-1 px-4 border-[#EEEFF3] justify-center gap-3 rounded-xl`}
+            >
+              <Gps />
+              <input
+                type="text"
+                className={`w-full outline-none`}
+                placeholder="Enter destination address"
+              />
+            </div>
+          </div>
+
           <img
             src={map}
             alt="map"

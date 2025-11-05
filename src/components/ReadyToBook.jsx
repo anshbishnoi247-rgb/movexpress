@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../common/Button";
 
-const Book = () => {
+const ReadyToBook = () => {
   return (
     <section className={`py-[100px] md:py-[150px] lg:py-[177px]  bg-violet1`}>
       <div
@@ -23,4 +23,4 @@ const Book = () => {
   );
 };
 
-export default Book;
+export default ReadyToBook;

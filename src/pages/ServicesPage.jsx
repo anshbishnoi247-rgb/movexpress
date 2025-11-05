@@ -1,8 +1,8 @@
 import Blogs from "../components/Blogs";
-import Book from "../components/Book";
+import ReadyToBook from "../components/ReadyToBook";
 import Faqs from "../components/Faqs";
 import Footer from "../components/Footer";
-import Herocommon from "../components/Herocommon";
+import HeroCommon from "../components/HeroCommon";
 import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import Slides from "../components/Slides";
@@ -14,7 +14,7 @@ const ServicesPages = () => {
       {" "}
       <div className={`bg-violet1`}>
         <Navbar />
-        <Herocommon
+        <HeroCommon
           content="MoveXpress Services"
           button="Get a Quote"
           para="Reliable, Affordable & Stress-Free Relocations"
@@ -25,7 +25,7 @@ const ServicesPages = () => {
       <Slides />
       <Faqs />
       <Blogs max={3} />
-      <Book />
+      <ReadyToBook />
       <Footer />
     </>
   );

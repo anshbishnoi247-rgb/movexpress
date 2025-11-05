@@ -57,11 +57,6 @@ export const footerlist = [
   { name: "Blogs", url: "/blogs" },
 ];
 
-export const inputbox = [
-  { label: "Pickup Address", holder: "Enter pickup address" },
-  { label: "Destination Address", holder: "Enter destination address" },
-];
-
 export const services = [
   {
     url: "/van",

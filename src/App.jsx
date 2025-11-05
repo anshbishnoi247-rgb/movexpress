@@ -9,6 +9,8 @@ import ServicesPage from "./pages/ServicesPage";
 import BlogsPage from "./pages/BlogsPage";
 import VanservicesPage from "./pages/VanservicesPage";
 import SignupPage from "./pages/SignupPage";
+import ScrollToTop from "./common/ScrollToTop";
+import BookWithUs from "./pages/BookWithUs";
 
 function App() {
   useEffect(() => {
@@ -16,6 +18,7 @@ function App() {
   }, []);
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about-us" element={<AboutPage />} />
@@ -23,6 +26,7 @@ function App() {
         <Route path="/blogs" element={<BlogsPage />} />
         <Route path="/van" element={<VanservicesPage />} />
         <Route path="/sign-up" element={<SignupPage />} />
+        <Route path="/booking-with-us" element={<BookWithUs />} />
       </Routes>
     </>
   );
