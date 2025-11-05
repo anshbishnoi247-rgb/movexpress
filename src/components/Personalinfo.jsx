@@ -4,17 +4,17 @@ import Button from "../common/Button";
 import { AddImage } from "../common/Icons";
 
 const Personalinfo = ({ filled, setFilled }) => {
-  const [check, setCheck] = useState(null);
+  const [check, setCheck] = useState(false);
 
-  const [firstname, setFirstname] = useState(null);
-  const [surname, setSurname] = useState(null);
-  const [contactno, setContactno] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [language, setLanguage] = useState(null);
-  const [address, setAddress] = useState(null);
-  const [postcode, setPostcode] = useState(null);
-  const [birthday, setBirthady] = useState(null);
-  const [selfie, setSelfie] = useState(null);
+  const [firstname, setFirstname] = useState("");
+  const [surname, setSurname] = useState("");
+  const [contactno, setContactno] = useState("");
+  const [email, setEmail] = useState("");
+  const [language, setLanguage] = useState("");
+  const [address, setAddress] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [birthday, setBirthady] = useState("");
+  const [selfie, setSelfie] = useState("");
 
   return (
     <>

@@ -36,7 +36,7 @@ const Blogs = ({ hide, max }) => {
               />
             </div>
             <div className={`flex flex-col items-center justify-center`}>
-              <div class="pr-[37px]">
+              <div className="pr-[37px]">
                 <SubHeading
                   className={`mb-4 max-w-[321px]
                  `}

@@ -1,4 +1,9 @@
-import { DownloadHeading, HeadingStore, Paragraph, Paragraphsub } from "../common/Heading";
+import {
+  DownloadHeading,
+  HeadingStore,
+  Paragraph,
+  Paragraphsub,
+} from "../common/Heading";
 import { download } from "../common/Helper";
 
 const Signupfooter = () => {
@@ -37,7 +42,10 @@ const Signupfooter = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
           {download.map((obj, index) => {
             return (
-              <div className="flex items-center jsutify-center bg-[#0A0A0A] rounded-full py-4 px-8 gap-[11px]">
+              <div
+                key={index}
+                className="flex items-center jsutify-center bg-[#0A0A0A] rounded-full py-4 px-8 gap-[11px]"
+              >
                 {obj.svg}
                 <div className="flex items-start flex-col jsutify-center gap-1">
                   <DownloadHeading

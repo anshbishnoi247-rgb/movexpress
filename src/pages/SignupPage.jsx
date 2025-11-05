@@ -10,7 +10,7 @@ const Signup = () => {
   const [filled, setFilled] = useState(null);
 
   return (
-    <section class={`max-w-full mx-auto`}>
+    <section className={`max-w-full mx-auto`}>
       <div className={`bg-violet1`}>
         <Navbar />
       </div>

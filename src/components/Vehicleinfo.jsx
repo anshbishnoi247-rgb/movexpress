@@ -11,8 +11,18 @@ const Vehicleinfo = ({ filled, setFilled }) => {
   const [registration, setRegistration] = useState(null);
   const [frontdrivinglicense, setFrontDrivingLicense] = useState(null);
   const [backdrivinglicense, setBackDrivingLicense] = useState(null);
-  const [backinsurancecopy, setBackInsuranceCopy] = useState(null);
   const [frontinsurancecopy, setFrontInsuranceCopy] = useState(null);
+  const [insurancestartdate, setInsuranceStartDate] = useState(null);
+  const [insuranceenddate, setInsuranceEndDate] = useState(null);
+  const [transitinsurance, setTransitInsurance] = useState(null);
+  const [transitinsurancestartdate, setTransitInsuranceStartDate] =
+    useState(null);
+  const [transitinsuranceenddate, setTransitInsuranceEndDate] = useState(null);
+  const [liabilityinsurance, setLiablityInsurance] = useState(null);
+  const [liabiltyinsurancestartdate, setLiabilityInsuranceStartDate] =
+    useState(null);
+  const [liabilityinsuranceenddate, setLiabilityInsuranceEndDate] =
+    useState(null);
 
   return (
     <form
@@ -64,14 +74,14 @@ const Vehicleinfo = ({ filled, setFilled }) => {
       <article className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
         <article className="w-full flex flex-col gap-2 items-start justify-center">
           <label htmlFor="firstname" className="label-style">
-            Front Of Driving Licence *
+            Van Insurance Copy *
           </label>
           <article className="flex items-center justify-center relative border-1 border-dashed border-violet1 rounded-xl h-[124px] w-full">
             <input
               type="file"
               required
               value={frontdrivinglicense}
-              onChange={(e) => setFrontdrivinglicense(e.target.value)}
+              onChange={(e) => setFrontDrivingLicense(e.target.value)}
               className="absolute top-0 left-0 z-2 w-full h-full opacity-0"
             />
             <img />
@@ -97,7 +107,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
               type="file"
               required
               value={backdrivinglicense}
-              onChange={(e) => setBackdrivinglicense(e.target.value)}
+              onChange={(e) => setBackDrivingLicense(e.target.value)}
               className="absolute top-0 left-0 z-2 w-full h-full opacity-0"
             />
             <img />
@@ -118,18 +128,21 @@ const Vehicleinfo = ({ filled, setFilled }) => {
       {/* van insurance */}
       <article className="flex flex-col items-center gap-5 justify-center w-full">
         <article className="flex items-center justify-center w-full">
-          <div class="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violet1 w-full"></div>
           <LabelHeading content="Van Service" />
-          <div class="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violet1 w-full"></div>
         </article>
 
         <article className="w-full flex flex-col gap-2 items-start justify-center">
           <label htmlFor="firstname" className="label-style">
             Front Of Driving Licence *
           </label>
+
           <article className="flex items-center justify-center relative border-1 border-dashed border-violet1 rounded-xl h-[124px] w-full">
             <input
               type="file"
+              value={frontinsurancecopy}
+              onChange={(e) => setFrontInsuranceCopy(e.target.value)}
               required
               className="absolute top-0 left-0 z-2 w-full h-full opacity-0"
             />
@@ -160,6 +173,8 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <input
               required
               type="date"
+              value={insurancestartdate}
+              onChange={(e) => setInsuranceStartDate(e.target.value)}
               placeholder="Enter vehicle registration no"
               className="input-style-common"
             />
@@ -176,6 +191,8 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <input
               required
               type="date"
+              value={insuranceenddate}
+              onChange={(e) => setInsuranceEndDate(e.target.value)}
               placeholder="Enter vehicle registration no"
               className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
             />
@@ -186,19 +203,22 @@ const Vehicleinfo = ({ filled, setFilled }) => {
       {/* Transit insurance */}
       <article className="flex flex-col items-center gap-5 justify-center w-full">
         <article className="flex items-center justify-center w-full">
-          <div class="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violet1 w-full"></div>
           <LabelHeading content="Goods In Transit Insurance" />
-          <div class="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violet1 w-full"></div>
         </article>
 
         <article className="w-full flex flex-col gap-2 items-start justify-center">
           <label htmlFor="firstname" className="label-style">
             Goods In Transit Insurance Copy *
           </label>
+
           <article className="flex items-center justify-center relative border-1 border-dashed border-violet1 rounded-xl h-[124px] w-full">
             <input
               type="file"
               required
+              value={transitinsurance}
+              onChange={(e) => setTransitInsurance(e.target.value)}
               className="absolute top-0 left-0 z-2 w-full h-full opacity-0"
             />
             <img />
@@ -225,6 +245,8 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <input
               required
               type="date"
+              value={transitinsurancestartdate}
+              onChange={(e) => setTransitInsuranceStartDate(e.target.value)}
               placeholder="Enter vehicle registration no"
               className="input-style-common"
             />
@@ -241,6 +263,8 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <input
               required
               type="date"
+              value={transitinsuranceenddate}
+              onChange={(e) => setTransitInsuranceEndDate(e.target.value)}
               placeholder="Enter vehicle registration no"
               className="input-style-common"
             />
@@ -251,9 +275,9 @@ const Vehicleinfo = ({ filled, setFilled }) => {
       {/* liability insurance */}
       <article className="flex flex-col items-center gap-5 justify-center w-full">
         <article className="flex items-center justify-center w-full">
-          <div class="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violet1 w-full"></div>
           <LabelHeading content="Public Liability Insurance" />
-          <div class="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violet1 w-full"></div>
         </article>
 
         <article className="w-full flex flex-col gap-2 items-start justify-center">
@@ -266,6 +290,8 @@ const Vehicleinfo = ({ filled, setFilled }) => {
           <article className="flex items-center justify-center relative border-1 border-dashed border-violet1 rounded-xl h-[124px] w-full">
             <input
               type="file"
+              value={liabilityinsurance}
+              onChange={(e) => setLiablityInsurance(e.target.value)}
               required
               className="absolute top-0 left-0 z-2 w-full h-full opacity-0"
             />
@@ -296,6 +322,8 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <input
               required
               type="date"
+              value={liabiltyinsurancestartdate}
+              onChange={(e) => setLiabilityInsuranceStartDate(e.target.value)}
               placeholder="Enter vehicle registration no"
               className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
             />
@@ -312,6 +340,8 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <input
               required
               type="date"
+              value={liabilityinsuranceenddate}
+              onChange={(e) => setLiabilityInsuranceEndDate(e.target.value)}
               placeholder="Enter vehicle registration no"
               className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
             />
@@ -319,6 +349,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
         </aritcle>
       </article>
 
+      {/* checkbox */}
       <article className="flex items-start gap-2 justify-center w-full">
         <div
           onClick={() => setAgree(!agree)}
@@ -340,6 +371,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
           <span className="font-semibold">Terms And Conditions</span>
         </label>
       </article>
+
       <Button
         button="Submit Application"
         subclassName="!w-[230px]"
