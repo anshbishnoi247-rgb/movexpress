@@ -366,3 +366,111 @@ export const download = [
   { svg: <Apple />, name: "App Store", head: "Download on the" },
   { svg: <PlayStore />, name: "Google Play", head: "GET IT ON" },
 ];
+
+export const pickuplist = [
+  {
+    head: "Pickup Postcode",
+    para: "This is the postcode of the place where you want the van picked up.",
+  },
+  {
+    head: "Drop-off Postcode",
+    para: "Enter the latitude and longitude of the drop-off location.",
+  },
+];
+
+export const chooselist = [
+  {
+    head: "Small Van",
+    para: "This van is ideal for small moves, a few boxes, or single large items (from £60).",
+  },
+  {
+    head: "Drop-off Postcode",
+    para: "Suitable for small furniture and several boxes (from £70).",
+  },
+  {
+    head: "Large Van",
+    para: "Ideal for transporting big furniture or several oversized pieces (starting from £80).",
+  },
+  {
+    head: "Luton Van",
+    para: "Best for big house moves or office relocations (from £90).",
+  },
+];
+
+export const selectlist = [
+  {
+    head: "No Help Needed",
+    para: "You load and unload the van, and nobody helps.",
+  },
+  {
+    head: "Driver + 1 Helper",
+    para: "The driver will be accompanied by an assistant to assist loading and unloading",
+  },
+  {
+    head: "Driver + 2 Assistants",
+    para: "They will help transport your items, taking less time.",
+  },
+];
+
+export const movinglist = [
+  {
+    head: "Today's Price",
+    para: "Looking to lease a van right now? Book for today at the displayed rate.",
+  },
+  {
+    head: "Next day",
+    para: "If you plan to move the following day, you can get a slightly reduced price.",
+  },
+  {
+    head: "Custom Date & Time",
+    para: "Choose the date to move at your convenience.",
+  },
+];
+
+export const reviewlist = [
+  {
+    head: "Estimated travel time",
+  },
+  {
+    head: "Load & unload time",
+  },
+  {
+    head: "Total duration of the job",
+  },
+  {
+    head: "Final price",
+  },
+
+  {
+    head: "First name & surname",
+  },
+
+  {
+    head: "Email address",
+  },
+  {
+    head: "Phone number",
+  },
+];
+
+export const registartionlist = [
+  {
+    head: "Registration",
+    para: "Enter your data and plan your next trip; use the application to track your driver.",
+  },
+  {
+    head: "Become a guest",
+    para: "Make a reservation without creating a new account.",
+  },
+];
+
+export const blogssecondarylist = [
+  {
+    head: "How to Make a Booking with Us?",
+    para: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
+  },
+  {
+    head: "How to Make a Booking with Us?",
+    para: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
+  },
+];

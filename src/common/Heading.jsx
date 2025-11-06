@@ -123,12 +123,36 @@ export const LabelHeading = ({ content }) => {
   );
 };
 
-import React from "react";
-
 export const TimeHeading = ({ content }) => {
   return (
-    <p className="font-inter font-normal text-base text-white leading-[170%] tracking-[-0.5px]">
+    <p className="font-inter font-normal text-sm md:text-base text-white leading-[170%] tracking-[-0.5px]">
       {content}
     </p>
+  );
+};
+
+export const WithParagraph = ({ content, className }) => {
+  return (
+    <p
+      className={`text-inter ${className} font-normal text-paragray text-sm md:text-base leading-[170%]`}
+    >
+      {content}
+    </p>
+  );
+};
+
+export const WithHeading = ({ content }) => {
+  return (
+    <h2 className="font-figtree font-medium text-headingblue text-2xl leading-[140%]">
+      {content}
+    </h2>
+  );
+};
+
+export const WithCardHeading = ({ content }) => {
+  return (
+    <h2 className="font-figtree text-base md:text-xl lg:text-xl leading-[160%] font-semibold">
+      {content}
+    </h2>
   );
 };

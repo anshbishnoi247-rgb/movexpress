@@ -56,10 +56,9 @@ const Hero = () => {
             </h2>
           </div>
           <div className={`flex items-center gap-1 justify-center`}>
-            <Trustrate />
-            <Trustrate />
-            <Trustrate />
-            <Trustrate />
+            {[0, 1, 2, 3].map((obj, index) => (
+              <Trustrate key={index} />
+            ))}
             <Truesthalf />
           </div>
           <p className="font-inter font-medium text-xl leading-[170%] text-white">
