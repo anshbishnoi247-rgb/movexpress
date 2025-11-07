@@ -6,7 +6,7 @@ import Slides from "../components/Slides";
 import Faqs from "../components/Faqs";
 import HeroCommon from "../components/HeroCommon";
 import Best from "../components/Best";
-import { SubHeadingSecondary } from "../common/Heading";
+import { TextScrollTrigger } from "../common/Heading";
 import { bestlist, bestlistsecondary } from "../common/Helper";
 
 const AboutPage = () => {
@@ -26,10 +26,9 @@ const AboutPage = () => {
         list={bestlistsecondary}
       />
 
-      <SubHeadingSecondary
-        content="MoveXpress"
-        className="text-philippine"
-        span="is more than a moving company — we’re your transition partners. We manage everything from packing your valuables to transporting and unloading them at your new place. Our skilled team treats your belongings with care, ensuring that everything, from delicate antiques to bulky furniture, arrives safely and on time."
+      <TextScrollTrigger
+        content="MoveXpress is more than a moving company — we’re your transition partners. We manage everything from packing your valuables to transporting and unloading them at your new place. Our skilled team treats your belongings with care, ensuring that everything, from delicate antiques to bulky furniture, arrives safely and on time."
+        className="text-philippine "
       />
 
       <Best

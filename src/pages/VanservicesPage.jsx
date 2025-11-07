@@ -1,4 +1,4 @@
-import { SubHeadingSecondary } from "../common/Heading";
+import { TextScrollTrigger } from "../common/Heading";
 import { bestlistvanservies, bestlistwhyvan } from "../common/Helper";
 import Best from "../components/Best";
 import Blogs from "../components/Blogs";
@@ -21,7 +21,7 @@ const VanservicesPage = () => {
           button="Get a Quote"
         />
       </div>
-      <SubHeadingSecondary content="Looking for professional man and van services near you? At MoveXpress, we make moving simple, stress-free, and cost-effective. Whether you’re relocating your home, shifting your office, delivering furniture, or transporting large parcels, our expert movers and well-equipped vans are here to handle everything for you." />
+      <TextScrollTrigger content="Looking for professional man and van services near you? At MoveXpress, we make moving simple, stress-free, and cost-effective. Whether you’re relocating your home, shifting your office, delivering furniture, or transporting large parcels, our expert movers and well-equipped vans are here to handle everything for you." />
       <Best
         classNamebox="!max-w-[239px] !mt-10 md:!mt-15 lg:!mt-20 !bg-customgray"
         classNameparent="!gap-6"

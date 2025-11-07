@@ -161,6 +161,7 @@ export const WithCardBlogSecondary = () => {
                 head={obj.head}
               />
               <Paragraph para={obj.para} />
+              
               <a
                 href={`#`}
                 className={`text-violet1 mt-4 lg:mt-6 text-inter font-semibold text-base leading-[150%] transcking-[-0.3px] flex items-center`}
