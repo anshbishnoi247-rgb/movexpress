@@ -3,6 +3,7 @@ import { HeadingPrimary, Paragraph, SubHeading } from "../common/Heading";
 
 import { ArrowRight } from "lucide-react";
 import { blogs } from "../common/Helper";
+import { Link } from "react-router";
 
 const Blogs = ({ hide, max, className }) => {
   return (
@@ -25,7 +26,7 @@ const Blogs = ({ hide, max, className }) => {
         className={`xl:pt-18 pt-14 flex ${className} flex-wrap gap-y-10 md:gap-y-14 lg:gap-y-18 items-center gap-x-6 px-5 justify-center max-w-[1333px] w-fit mx-auto`}
       >
         {blogs.slice(0, max).map((obj, index) => (
-          <a href="/booking-with-us" key={index}>
+          <Link to={{ pathname: "/booking-with-us" }} key={index}>
             <div
               className={`max-w-[415px] group flex flex-col items-center justify-center gap-6`}
             >
@@ -45,8 +46,8 @@ const Blogs = ({ hide, max, className }) => {
                   />
 
                   <Paragraph para={obj.paragraph} />
-                  <a
-                    href={`#`}
+                  <Link
+                    to={{ pathname: "/booking-with-us" }}
                     className={`text-violet1 mt-4 lg:mt-6 text-inter font-semibold text-base leading-[150%] transcking-[-0.3px] flex items-center`}
                   >
                     {" "}
@@ -54,11 +55,11 @@ const Blogs = ({ hide, max, className }) => {
                     <ArrowRight
                       className={`group-hover:translate-x-3 transition-all duration-300 linear`}
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

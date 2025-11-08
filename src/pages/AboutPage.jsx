@@ -6,8 +6,8 @@ import Slides from "../components/Slides";
 import Faqs from "../components/Faqs";
 import HeroCommon from "../components/HeroCommon";
 import Best from "../components/Best";
-import { TextScrollTrigger } from "../common/Heading";
 import { bestlist, bestlistsecondary } from "../common/Helper";
+import { ColorScroll } from "../common/Gsap";
 
 const AboutPage = () => {
   return (
@@ -26,7 +26,7 @@ const AboutPage = () => {
         list={bestlistsecondary}
       />
 
-      <TextScrollTrigger
+      <ColorScroll
         content="MoveXpress is more than a moving company — we’re your transition partners. We manage everything from packing your valuables to transporting and unloading them at your new place. Our skilled team treats your belongings with care, ensuring that everything, from delicate antiques to bulky furniture, arrives safely and on time."
         className="text-philippine "
       />

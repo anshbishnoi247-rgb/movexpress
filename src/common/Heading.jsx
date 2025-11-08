@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export const HeadingPrimary = ({ head, className }) => {
   return (
     <h1
@@ -64,75 +66,9 @@ export const ListHeading = ({ content }) => {
 
 export const ListLink = ({ content, href }) => {
   return (
-    <a
-      href={href}
-      className={`font-inter font-medium text-sm md:text-base lg:text-lg  leading-[150%] relative after:absolute 
-        after:content-[] after:w-0 after:bg-black after:h-[2px] after:rounded-full 
-        hover:after:w-full after:bottom-0 after:left-[50%] after:translate-x-[-50%] after:transition-all after:duration-500
-         after:ease-in-out`}
-    >
+    <Link to={{ pathname: href }} className={`link-list-style`}>
       {content}
-    </a>
-  );
-};
-
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-export const TextScrollTrigger = ({ content }) => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const el = containerRef.current;
-    const words = el.querySelectorAll("span");
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: el,
-        start: "top 80%", // start animating when top of section hits 80% of viewport
-        toggleActions: "play none none reverse",
-      },
-    });
-
-    tl.fromTo(
-      words,
-      { y: 40, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        ease: "power3.out",
-        stagger: 0.06, // delay between each word
-      }
-    );
-
-    return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
-    };
-  }, []);
-
-  return (
-    <section className="py-20 px-5 bg-commonbg flex flex-col items-center justify-center min-h-screen">
-      <p
-        ref={containerRef}
-        className="font-bricolage font-medium text-xl md:text-2xl xl:text-3xl leading-[160%] tracking-[-0.5px] mx-auto max-w-[900px] text-blackolive text-center"
-      >
-        {content
-          ? content.split(" ").map((word, i) => (
-              <span
-                key={i}
-                className="inline-block opacity-0 font-bricolage font-medium text-xl md:text-2xl xl:text-3xl leading-[160%] tracking-[-0.5px] mx-auto max-w-[900px] text-blackolive text-center "
-              >
-                {word}
-              </span>
-            ))
-          : null}
-      </p>
-    </section>
+    </Link>
   );
 };
 

@@ -2,7 +2,7 @@ import { X } from "lucide-react";
 
 import { navlist } from "../common/Helper";
 import { useState } from "react";
-import { useLocation, useParams } from "react-router";
+import { Link, useLocation, useParams } from "react-router";
 import Logopamplate from "../common/Logopamplate";
 
 const Slidernav = ({ slidernav, setslidernav }) => {
@@ -31,9 +31,9 @@ const Slidernav = ({ slidernav, setslidernav }) => {
         {navlist.map((obj, i) => {
           return (
             <li key={i}>
-              <a
+              <Link
+                to={{ pathname: obj.url }}
                 key={i}
-                href={obj.url}
                 onClick={(() => setActive(obj.name), () => setslidernav(false))}
                 className={`${
                   location === obj.url
@@ -42,7 +42,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
                 } font-figtree font-medium leading-[150%] text-4xl md:text-5xl lg:text-[64px] text-violet1`}
               >
                 {obj.name}
-              </a>
+              </Link>
             </li>
           );
         })}

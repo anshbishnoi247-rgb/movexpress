@@ -43,7 +43,7 @@ const Signup = () => {
           <div className="w-full h-2 my-8 bg-mist rounded-full overflow-hidden">
             <div
               className={`${
-                !filled ? "w-[50%]" : "w-full"
+                !filled ? "w-1/2" : "w-full"
               } h-full bg-violet1 rounded-full`}
             ></div>
           </div>

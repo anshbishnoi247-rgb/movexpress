@@ -11,7 +11,6 @@ import Work from "../components/Work";
 const ServicesPages = () => {
   return (
     <>
-      {" "}
       <div className={`bg-violet1`}>
         <Navbar />
         <HeroCommon

@@ -1,13 +1,13 @@
-import { TextScrollTrigger } from "../common/Heading";
+import { ColorScroll } from "../common/Gsap";
 import { bestlistvanservies, bestlistwhyvan } from "../common/Helper";
 import Best from "../components/Best";
 import Blogs from "../components/Blogs";
-import ReadyToBook from "../components/ReadyToBook";
 import Customer from "../components/Customer";
 import Faqs from "../components/Faqs";
 import Footer from "../components/Footer";
 import HeroCommon from "../components/HeroCommon";
 import Navbar from "../components/Navbar";
+import ReadyToBook from "../components/ReadyToBook";
 import Slides from "../components/Slides";
 
 const VanservicesPage = () => {
@@ -21,7 +21,7 @@ const VanservicesPage = () => {
           button="Get a Quote"
         />
       </div>
-      <TextScrollTrigger content="Looking for professional man and van services near you? At MoveXpress, we make moving simple, stress-free, and cost-effective. Whether you’re relocating your home, shifting your office, delivering furniture, or transporting large parcels, our expert movers and well-equipped vans are here to handle everything for you." />
+      <ColorScroll content="Looking for professional man and van services near you? At MoveXpress, we make moving simple, stress-free, and cost-effective. Whether you’re relocating your home, shifting your office, delivering furniture, or transporting large parcels, our expert movers and well-equipped vans are here to handle everything for you." />
       <Best
         classNamebox="!max-w-[239px] !mt-10 md:!mt-15 lg:!mt-20 !bg-customgray"
         classNameparent="!gap-6"
