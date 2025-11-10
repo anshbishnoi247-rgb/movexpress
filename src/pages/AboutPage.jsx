@@ -8,8 +8,14 @@ import HeroCommon from "../components/HeroCommon";
 import Best from "../components/Best";
 import { bestlist, bestlistsecondary } from "../common/Helper";
 import { ColorScroll } from "../common/Gsap";
+import { useEffect } from "react";
 
 const AboutPage = () => {
+  
+  useEffect(() => {
+
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       <div className={`bg-violet1`}>

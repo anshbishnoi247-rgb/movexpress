@@ -8,12 +8,17 @@ import Faqs from "../components/Faqs";
 import Blogs from "../components/Blogs";
 import ReadyToBook from "../components/ReadyToBook";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 const Homepage = () => {
+  
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       <div className={`bg-violet1`}>
-        <Navbar />
+        <Navbar   />
         <Hero />
       </div>
 

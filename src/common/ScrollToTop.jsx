@@ -1,5 +1,5 @@
 import { ChevronUp } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(null);
@@ -13,7 +13,10 @@ const ScrollToTop = () => {
       onClick={() => window.scroll(0, 0)}
       className={`${visible > 300 ? "flex" : "hidden"} scrolltotop-style`}
     >
-      <ChevronUp size={30} className="text-white" />
+      <ChevronUp
+        size={30}
+        className="text-white hover:text-vinegar transition-all duration-300 ease-in-out"
+      />
     </button>
   );
 };

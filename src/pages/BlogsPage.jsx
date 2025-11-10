@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import HeroCommon from "../components/HeroCommon";
@@ -11,6 +11,10 @@ import { Paragraph, SubHeading } from "../common/Heading";
 import { ArrowRight } from "lucide-react";
 
 const BlogsPage = ({ max }) => {
+  
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       {" "}

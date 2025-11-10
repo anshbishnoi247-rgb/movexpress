@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import signupbg from "../assets/images/signupbg.webp";
 import { SignupHeading } from "../common/Heading";
 import Navbar from "../components/Navbar";
@@ -8,6 +8,11 @@ import Vehicleinfo from "../components/Vehicleinfo";
 
 const Signup = () => {
   const [filled, setFilled] = useState(null);
+
+  
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <section className={`max-w-full mx-auto`}>

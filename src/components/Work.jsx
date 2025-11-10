@@ -32,9 +32,11 @@ const Work = () => {
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
               key={index}
-              className={`flex flex-col items-center justify-center max-w-[287px] w-full rounded-2xl bg-commonbg p-4 md:p-6 gap-4 md:gap-6`}
+              className={`flex flex-col group items-center hover:shadow-lg transition-all duration-300 ease-in-out justify-center max-w-[287px] w-full rounded-2xl bg-commonbg p-4 md:p-6 gap-4 md:gap-6`}
             >
-              {obj.svg}
+              <span className="group-hover:scale-105 transition-all duration-300 ease-in-out">
+                {obj.svg}
+              </span>
               <div
                 className={`flex flex-col text-center items-center justify-center ${
                   index == 0 ? "px-7" : "px-11"

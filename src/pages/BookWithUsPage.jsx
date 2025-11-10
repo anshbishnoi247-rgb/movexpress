@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   WithCard,
   WithCardBlogSecondary,
@@ -15,6 +16,11 @@ import Navbar from "../components/Navbar";
 import ReadyToBook from "../components/ReadyToBook";
 
 const BookWithUsPage = () => {
+  
+  useEffect(() => {
+
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       <div className={`bg-violet1`}>

@@ -94,7 +94,7 @@ const Personalinfo = ({ filled, setFilled }) => {
         </article>
 
         {/* input dob */}
-        <article className="flex flex-col md:flex-row items-center justify-between gap-4 w-full"> 
+        <article className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
           <div
             className={`flex flex-col gap-1 items-start justify-center w-full`}
           >

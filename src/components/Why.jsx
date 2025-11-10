@@ -3,6 +3,7 @@ import { HeadingPrimary, Paragraph } from "../common/Heading";
 import { whylist } from "../common/Helper";
 
 const Why = () => {
+  
   return (
     <section className={`xl:py-25 lg:py-20 md:py-15 py-10 bg-commonbg`}>
       <div
@@ -26,9 +27,11 @@ const Why = () => {
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
               key={index}
-              className={`flex flex-col items-center justify-center rounded-2xl text-center bg-white py-4 md:py-6 lg:py-8 px-4 md:px-6 gap-[18px] max-w-[301.5px]`}
+              className={`flex flex-col items-center justify-center group hover:shadow-lg transition-all duration-500 ease-in-out rounded-2xl text-center bg-white py-4 md:py-6 lg:py-8 px-4 md:px-6 gap-[18px] max-w-[301.5px]`}
             >
-              {obj.svg}
+              <span className="group-hover:scale-105 transition-all duration-300 ease-in-out">
+                {obj.svg}
+              </span>
 
               <h2
                 className={`font-figtree ${

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ColorScroll } from "../common/Gsap";
 import { bestlistvanservies, bestlistwhyvan } from "../common/Helper";
 import Best from "../components/Best";
@@ -11,6 +12,9 @@ import ReadyToBook from "../components/ReadyToBook";
 import Slides from "../components/Slides";
 
 const VanservicesPage = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       <div className={`bg-violet1`}>

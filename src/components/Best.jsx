@@ -2,7 +2,7 @@ import {
   HeadingPrimary,
   Headingsecondary,
   Paragraph,
-  Paragraphsub
+  Paragraphsub,
 } from "../common/Heading";
 
 const Best = ({
@@ -36,9 +36,11 @@ const Best = ({
                 key={index}
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
-                className={`flex flex-col items-center justify-center max-w-[287px] text-center w-full rounded-2xl ${classNamebox} p-4 md:p-6 gap-4 md:gap-6`}
+                className={`flex flex-col items-center group justify-center hover:shadow-md transition-all durtation-300 ease-in-out max-w-[287px] text-center w-full rounded-2xl ${classNamebox} p-4 md:p-6 gap-4 md:gap-6`}
               >
-                {obj.svg}
+                <span className="group-hover:translate-x-2 transition-all duratiion-300 ease-in-out">
+                  {obj.svg}
+                </span>
                 <div
                   className={`flex flex-col ${classNameboxhead} gap-4 items-center justify-center 
                 `}

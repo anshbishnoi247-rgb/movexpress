@@ -7,8 +7,14 @@ import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import Slides from "../components/Slides";
 import Work from "../components/Work";
+import { useEffect } from "react";
 
 const ServicesPages = () => {
+  
+  useEffect(() => {
+
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       <div className={`bg-violet1`}>
