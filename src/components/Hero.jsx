@@ -168,7 +168,7 @@ const Hero = () => {
           </div>
         </aside>
         <div
-          className={`absolute w-[393px] h-[393px] top-5 -right-[22px] z-1 bg-vinegar blur-[141px] rounded-full`}
+          className={`absolute w-[393px] h-[393px] top-5 -right-[22px] z-1 bg-vinegar hidden md:block blur-[141px] rounded-full`}
         ></div>
       </div>
     </section>

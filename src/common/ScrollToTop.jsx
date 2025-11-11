@@ -11,11 +11,11 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={() => window.scroll(0, 0)}
-      className={`${visible > 300 ? "flex" : "hidden"} scrolltotop-style`}
+      className={`${visible > 300 ? "flex" : "hidden"} group scrolltotop-style`}
     >
       <ChevronUp
         size={30}
-        className="text-white hover:text-vinegar transition-all duration-300 ease-in-out"
+        className="text-white group-hover:text-vinegar transition-all duration-300 ease-in-out"
       />
     </button>
   );

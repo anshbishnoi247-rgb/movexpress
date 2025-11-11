@@ -31,10 +31,7 @@ export const ColorScroll = ({ content }) => {
       data-aos="fade-up"
       className="py-20 px-5 bg-commonbg flex flex-col items-center justify-center"
     >
-      <p
-        ref={containerRef}
-        className="font-bricolage font-medium text-3xl md:text-4xl xl:text-5xl leading-[132%] tracking-[-0.1%] max-w-310 text-philippine"
-      >
+      <p ref={containerRef} className="paragraph-gsap-style">
         {content.split(" ").map((word, i) => (
           <span key={i} className="word inline-block w-fit mr-2">
             {word}

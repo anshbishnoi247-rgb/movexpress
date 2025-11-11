@@ -61,6 +61,13 @@
   @apply font-inter font-medium text-sm md:text-base lg:text-lg leading-[150%] relative after:absolute after:content-[""] after:w-0 after:bg-black after:h-[2px] after:rounded-full  hover:after:w-full after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:transition-all after:duration-500 after:ease-in-out;
 }
 
+.cards-style-div {
+  @apply flex flex-col w-full rounded-2xl hover:bg-commonbg transition-all duration-300 ease-in-out gap-3 p-6 items-start border-1 border-violet1/18;
+}
+.paragraph-gsap-style{
+  @apply font-bricolage font-medium text-3xl md:text-4xl xl:text-5xl leading-[132%] tracking-[-0.1%] max-w-310 text-philippine
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }

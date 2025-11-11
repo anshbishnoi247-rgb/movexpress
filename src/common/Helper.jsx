@@ -123,9 +123,9 @@ export const worklist = [
 ];
 
 export const customerlist = [
-  { dataaos: "fade-right", name: "Zachary John", img: John },
+  { dataaos: "fade-up", name: "Zachary John", img: John },
   { dataaos: "fade-up", name: "Gail Amethyst", img: Gail },
-  { dataaos: "fade-left", name: "Scott William", img: Sam },
+  { dataaos: "fade-up", name: "Scott William", img: Sam },
 ];
 
 export const whylist = [

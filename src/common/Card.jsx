@@ -151,17 +151,14 @@ export const WithCardBlogSecondary = () => {
       <div className="flex flex-col items-start w-full justify-center gap-3">
         {blogssecondarylist.map((obj, index) => {
           return (
-            <div
-              key={index}
-              className="flex flex-col w-full rounded-2xl group hover:bg-commonbg transition-all duration-300 ease-in-out gap-3 p-6 items-start border-1 border-violet1/18"
-            >
+            <div key={index} className="group cards-style-div">
               <SubHeading
                 className={`mb-4 max-w-[321px]
                               `}
                 head={obj.head}
               />
               <Paragraph para={obj.para} />
-              
+
               <a
                 href={`#`}
                 className={`text-violet1 mt-4 lg:mt-6 text-inter font-semibold text-base leading-[150%] transcking-[-0.3px] flex items-center`}
