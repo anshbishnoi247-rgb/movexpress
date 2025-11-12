@@ -20,13 +20,13 @@ const Blogs = ({ hide, max, className }) => {
         />
       </div>
 
-      <div
+      <article
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         className={`xl:pt-18 pt-14 flex ${className} flex-wrap gap-y-10 md:gap-y-14 lg:gap-y-18 items-center gap-x-6 px-5 justify-center max-w-[1333px] w-fit mx-auto`}
       >
         {blogs.slice(0, max).map((obj, index) => (
-          <Link to={{ pathname: "/booking-with-us" }} key={index}>
+          <Link to={`/blog/${obj.url}`} key={index}>
             <div
               className={`max-w-[415px] group flex flex-col items-center justify-center gap-6`}
             >
@@ -46,8 +46,7 @@ const Blogs = ({ hide, max, className }) => {
                   />
 
                   <Paragraph para={obj.paragraph} />
-                  <Link
-                    to={{ pathname: "/booking-with-us" }}
+                  <div
                     className={`text-violet1 mt-4 lg:mt-6 text-inter font-semibold text-base leading-[150%] transcking-[-0.3px] flex items-center`}
                   >
                     {" "}
@@ -55,13 +54,13 @@ const Blogs = ({ hide, max, className }) => {
                     <ArrowRight
                       className={`group-hover:translate-x-3 transition-all duration-300 linear`}
                     />
-                  </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </Link>
         ))}
-      </div>
+      </article>
     </section>
   );
 };

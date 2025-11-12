@@ -1,23 +1,17 @@
-import React, { useEffect } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import HeroCommon from "../components/HeroCommon";
-import ReadyToBook from "../components/ReadyToBook";
-import Faqs from "../components/Faqs";
-import Slides from "../components/Slides";
+import { useEffect } from "react";
 import Blogs from "../components/Blogs";
-import { blogs } from "../common/Helper";
-import { Paragraph, SubHeading } from "../common/Heading";
-import { ArrowRight } from "lucide-react";
+import Footer from "../components/Footer";
+import HeroCommon from "../components/HeroCommon";
+import Navbar from "../components/Navbar";
+import ReadyToBook from "../components/ReadyToBook";
 
-const BlogsPage = ({ max }) => {
-  
+const BlogsPage = () => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+
   return (
     <>
-      {" "}
       <div className={`bg-violet1`}>
         <Navbar />
         <HeroCommon

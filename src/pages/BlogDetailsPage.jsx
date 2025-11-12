@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   WithCard,
   WithCardBlogSecondary,
@@ -14,13 +14,23 @@ import Footer from "../components/Footer";
 import HeroCommon from "../components/HeroCommon";
 import Navbar from "../components/Navbar";
 import ReadyToBook from "../components/ReadyToBook";
+import { useParams } from "react-router";
+import { blogs } from "../common/Helper";
 
-const BookWithUsPage = () => {
-  
+const BlogDetailsPage = () => {
+  const [blogsDetails, setblogsDetails] = useState(null);
+
+  let params = useParams();
+
   useEffect(() => {
+    const filterblog = blogs.filter((obj) => obj.url === params.blogid);
+    setblogsDetails(filterblog);
+  }, []);
 
+  useEffect(() => {
     window.scroll(0, 0);
   }, []);
+
   return (
     <>
       <div className={`bg-violet1`}>
@@ -104,4 +114,4 @@ const BookWithUsPage = () => {
   );
 };
 
-export default BookWithUsPage;
+export default BlogDetailsPage;

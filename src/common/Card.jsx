@@ -159,10 +159,7 @@ export const WithCardBlogSecondary = () => {
               />
               <Paragraph para={obj.para} />
 
-              <a
-                href={`#`}
-                className={`text-violet1 mt-4 lg:mt-6 text-inter font-semibold text-base leading-[150%] transcking-[-0.3px] flex items-center`}
-              >
+              <a href={`#`} className={`button-up-style`}>
                 {" "}
                 Learn more{" "}
                 <ArrowRight
