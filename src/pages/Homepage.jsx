@@ -11,14 +11,13 @@ import Footer from "../components/Footer";
 import { useEffect } from "react";
 
 const Homepage = () => {
-  
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
   return (
     <>
-      <div className={`bg-violet1`}>
-        <Navbar   />
+      <div className={`bg-violetprimary`}>
+        <Navbar />
         <Hero />
       </div>
 

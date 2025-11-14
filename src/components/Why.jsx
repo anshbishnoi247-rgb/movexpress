@@ -3,7 +3,6 @@ import { HeadingPrimary, Paragraph } from "../common/Heading";
 import { whylist } from "../common/Helper";
 
 const Why = () => {
-  
   return (
     <section className={`xl:py-25 lg:py-20 md:py-15 py-10 bg-commonbg`}>
       <div
@@ -38,7 +37,7 @@ const Why = () => {
                   (index == 1 || index == 3) && "px-10"
                 } ${
                   index == 2 && "md:h-20"
-                } text-violet1 text-2xl md:text-[28px] lg:text-[32px] font-semibold leading-[125%]`}
+                } text-violetprimary text-2xl md:text-[28px] lg:text-[32px] font-semibold leading-[125%]`}
               >
                 {obj.name}
               </h2>

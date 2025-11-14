@@ -12,12 +12,12 @@ const Logopamplate = ({ className, classNameImg, classNameParagraph }) => {
         />
         <div className={`flex flex-col items-start justify-center`}>
           <h1
-            className={`font-figtree ${className} font-extrabold leading-[120%] italic text-violet1 text-[28px] md:text-[32px]`}
+            className={`font-figtree ${className} font-extrabold leading-[120%] italic text-violetprimary text-[28px] md:text-[32px]`}
           >
             MOVEXPRESS
           </h1>
           <p
-            className={`font-figtree ${classNameParagraph} font-medium text-sm md:text-base italic leading-[120%] text-violet1/80`}
+            className={`font-figtree ${classNameParagraph} font-medium text-sm md:text-base italic leading-[120%] text-violetprimary/80`}
           >
             Expressly Delivered
           </p>

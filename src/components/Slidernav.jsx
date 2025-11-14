@@ -21,7 +21,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
         <Logopamplate />
         <button
           onClick={() => setslidernav(false)}
-          className={`bg-violet1 p-2 hover:opacity-80 h-fit rounded-lg md:rounded-xl transition-all duration-300 linear`}
+          className={`bg-violetprimary p-2 hover:opacity-80 h-fit rounded-lg md:rounded-xl transition-all duration-300 linear`}
         >
           <X className={`text-mist w-[30px] md:w-10 h-[30px] md:h-10 `} />
         </button>
@@ -39,7 +39,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
                   location === obj.url
                     ? "italic underline !font-bricolage cursor-default"
                     : " hover:text-vinegar"
-                } font-figtree font-medium leading-[150%] text-4xl md:text-5xl lg:text-[64px] text-violet1`}
+                } font-figtree font-medium leading-[150%] text-4xl md:text-5xl lg:text-[64px] text-violetprimary`}
               >
                 {obj.name}
               </Link>

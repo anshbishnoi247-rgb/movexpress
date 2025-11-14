@@ -16,15 +16,14 @@ import Navbar from "../components/Navbar";
 import ReadyToBook from "../components/ReadyToBook";
 import { useParams } from "react-router";
 import { blogs } from "../common/Helper";
-
 const BlogDetailsPage = () => {
-  const [blogsDetails, setblogsDetails] = useState(null);
+  const [blogsDetails, setBlogsDetails] = useState(null);
 
   let params = useParams();
 
   useEffect(() => {
-    const filterblog = blogs.filter((obj) => obj.url === params.blogid);
-    setblogsDetails(filterblog);
+    const filterblog = blogs.find((obj) => obj.url === params.blogid);
+    setBlogsDetails(filterblog);
   }, []);
 
   useEffect(() => {
@@ -33,10 +32,10 @@ const BlogDetailsPage = () => {
 
   return (
     <>
-      <div className={`bg-violet1`}>
+      <div className={`bg-violetprimary`}>
         <Navbar />
         <HeroCommon
-          content="How to Make a Booking with Us?"
+          content={blogsDetails?.data?.head}
           classNameHeading="max-w-[706px]"
           time={true}
         />

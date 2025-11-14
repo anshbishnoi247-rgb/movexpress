@@ -47,7 +47,7 @@ const Blogs = ({ hide, max, className }) => {
 
                   <Paragraph para={obj.paragraph} />
                   <div
-                    className={`text-violet1 mt-4 lg:mt-6 text-inter font-semibold text-base leading-[150%] transcking-[-0.3px] flex items-center`}
+                    className={`text-violetprimary mt-4 lg:mt-6 text-inter font-semibold text-base leading-[150%] transcking-[-0.3px] flex items-center`}
                   >
                     {" "}
                     Learn more{" "}

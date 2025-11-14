@@ -8,7 +8,7 @@ const Slides = () => {
       gap={100}
       direction="right"
       gradient={false}
-      className="bg-violet1 p-6 md:py-8"
+      className="bg-violetprimary p-6 md:py-8"
     >
       {slidecontent.map((obj, index) => {
         return (

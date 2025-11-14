@@ -9,14 +9,13 @@ import Vehicleinfo from "../components/Vehicleinfo";
 const Signup = () => {
   const [filled, setFilled] = useState(null);
 
-  
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
 
   return (
     <section className={`max-w-full mx-auto`}>
-      <div className={`bg-violet1`}>
+      <div className={`bg-violetprimary`}>
         <Navbar />
       </div>
       <img
@@ -34,12 +33,12 @@ const Signup = () => {
             >
               <SignupHeading content="Sign Up as a Driver" />
 
-              <p className="text-inter text-sm sm:text-base text-violet1/72 leading-[130%] md:leading-[164%];">
+              <p className="text-inter text-sm sm:text-base text-violetprimary/72 leading-[130%] md:leading-[164%];">
                 Tell us your pickup and destination
               </p>
             </div>
             <p
-              className={`font-inter text-xs text-violet1 leading-6 font-semibold px-4 py-[6px] bg-violet1/12 rounded-full`}
+              className={`font-inter text-xs text-violetprimary leading-6 font-semibold px-4 py-[6px] bg-violetprimary/12 rounded-full`}
             >
               {!filled ? "1. Personal Info" : "2. Vehicle info"}
             </p>
@@ -49,7 +48,7 @@ const Signup = () => {
             <div
               className={`${
                 !filled ? "w-1/2" : "w-full"
-              } h-full bg-violet1 rounded-full`}
+              } h-full bg-violetprimary rounded-full`}
             ></div>
           </div>
           {!filled ? <Personalinfo setFilled={setFilled} /> : <Vehicleinfo />}

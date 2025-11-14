@@ -170,8 +170,8 @@ const Personalinfo = ({ filled, setFilled }) => {
             {/* YES Option */}
             <div className="flex items-center gap-2 justify-center relative">
               <span
-                className={`relative h-6 w-6 border hover:bg-violet1 ${
-                  check === "yes" ? "bg-violet1" : ""
+                className={`relative h-6 w-6 border hover:bg-violetprimary ${
+                  check === "yes" ? "bg-violetprimary" : ""
                 } rounded-lg cursor-pointer`}
                 onClick={() => setCheck("yes")}
               >
@@ -189,7 +189,7 @@ const Personalinfo = ({ filled, setFilled }) => {
                   />
                 )}
               </span>
-              <label className="font-inter font-medium text-base leading-6 text-violet1">
+              <label className="font-inter font-medium text-base leading-6 text-violetprimary">
                 Yes
               </label>
             </div>
@@ -198,8 +198,8 @@ const Personalinfo = ({ filled, setFilled }) => {
 
             <div className="flex items-center gap-2 justify-center relative">
               <span
-                className={`relative h-6 w-6 border hover:bg-violet1 ${
-                  check === "no" ? "bg-violet1" : ""
+                className={`relative h-6 w-6 border hover:bg-violetprimary ${
+                  check === "no" ? "bg-violetprimary" : ""
                 } rounded-lg cursor-pointer`}
                 onClick={() => setCheck("no")}
               >
@@ -217,7 +217,7 @@ const Personalinfo = ({ filled, setFilled }) => {
                   />
                 )}
               </span>
-              <label className="font-inter font-medium text-base leading-6 text-violet1">
+              <label className="font-inter font-medium text-base leading-6 text-violetprimary">
                 No
               </label>
             </div>
@@ -229,7 +229,7 @@ const Personalinfo = ({ filled, setFilled }) => {
             Photo of your selfie *
           </label>
 
-          <article className="flex items-center justify-center relative border-1 border-dashed border-violet1 rounded-xl h-[187px] w-full">
+          <article className="flex items-center justify-center relative border-1 border-dashed border-violetprimary rounded-xl h-[187px] w-full">
             <input
               type="file"
               required
@@ -242,7 +242,7 @@ const Personalinfo = ({ filled, setFilled }) => {
 
             <article className="z-1  w-fit flex items-center justify-center flex-col">
               <AddImage />
-              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violet1">
+              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violetprimary">
                 Click to Upload Front Side of Card
               </p>
 

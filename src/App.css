@@ -6,7 +6,7 @@
   --font-bricolage: "Bricolage Grotesque", sans-serif;
   --font-inter: "Inter", "sans-serif";
   --font-wix: "Wix Madefor Display", sans-serif;
-  --color-violet1: #4b014b;
+  --color-violetprimary: #4b014b;
   --color-mist: #f6c8f6;
   --color-vinegar: #fa881e;
   --color-whitelight: #f6f6f6;
@@ -34,11 +34,11 @@
 }
 
 .label-style {
-  @apply font-inter font-medium text-base leading-6 text-violet1;
+  @apply font-inter font-medium text-base leading-6 text-violetprimary;
 }
 
 .input-style-common {
-  @apply outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79;
+  @apply outline-none p-4 border-1 rounded-lg w-full border-violetprimary font-inter text-sm md:text-base max-w-79;
 }
 
 .button-style {
@@ -50,11 +50,11 @@
 }
 
 .button-style-hover {
-  @apply bg-violet1 z-1 left-1/2 top-1/2 -translate-1/2 w-0 h-0 transition-all duration-500 ease-in-out group-hover:w-81 group-hover:h-16 absolute rounded-xl;
+  @apply bg-violetprimary z-1 left-1/2 top-1/2 -translate-1/2 w-0 h-0 transition-all duration-500 ease-in-out group-hover:w-81 group-hover:h-16 absolute rounded-xl;
 }
 
 .scrolltotop-style {
-  @apply right-3 bottom-3 z-10 rounded-full w-12 h-12 bg-vinegar hover:bg-violet1 transition-all duration-300 ease-in-out fixed items-center justify-center animate-bounce;
+  @apply right-3 bottom-3 z-10 rounded-full w-12 h-12 bg-vinegar hover:bg-violetprimary transition-all duration-300 ease-in-out fixed items-center justify-center animate-bounce;
 }
 
 .link-list-style {
@@ -62,13 +62,21 @@
 }
 
 .cards-style-div {
-  @apply flex flex-col w-full rounded-2xl hover:bg-commonbg transition-all duration-300 ease-in-out gap-3 p-6 items-start border-1 border-violet1/18;
+  @apply flex flex-col w-full rounded-2xl hover:bg-commonbg transition-all duration-300 ease-in-out gap-3 p-6 items-start border-1 border-violetprimary/18;
 }
 .paragraph-gsap-style {
   @apply font-bricolage font-medium text-3xl md:text-4xl xl:text-5xl leading-[132%] tracking-[-0.1%] max-w-310 text-philippine;
 }
 .button-up-style {
-  @apply text-violet1 mt-4 lg:mt-6 font-inter font-semibold text-base leading-[150%] tracking-[-0.3px] flex items-center;
+  @apply text-violetprimary mt-4 lg:mt-6 font-inter font-semibold text-base leading-[150%] tracking-[-0.3px] flex items-center;
+}
+
+.button-style-secondary {
+  @apply rounded-xl w-full flex items-center text-white z-2 relative bg-transparent justify-center h-12 md:h-[61px] overflow-hidden font-medium text-sm sm:text-base leading-[170%] font-inter;
+}
+
+.button-style-secondary-hover {
+  @apply absolute rounded-full bg-violetprimary z-1 -translate-y-[120%] left-[50%] translate-x-[-50%] w-[600px] h-100 transition-all duration-1000 ease-in-out group-hover:translate-y-[-55%];
 }
 
 ::-webkit-scrollbar {
@@ -82,7 +90,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--color-violet1);
+  background: var(--color-violetprimary);
 }
 
 /* Handle on hover */

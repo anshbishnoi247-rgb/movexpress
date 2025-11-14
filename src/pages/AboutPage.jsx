@@ -11,14 +11,12 @@ import { ColorScroll } from "../common/Gsap";
 import { useEffect } from "react";
 
 const AboutPage = () => {
-  
   useEffect(() => {
-
     window.scroll(0, 0);
   }, []);
   return (
     <>
-      <div className={`bg-violet1`}>
+      <div className={`bg-violetprimary`}>
         <Navbar />
         <HeroCommon
           content="About Us"

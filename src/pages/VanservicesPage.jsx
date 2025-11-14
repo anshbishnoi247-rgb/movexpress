@@ -17,7 +17,7 @@ const VanservicesPage = () => {
   }, []);
   return (
     <>
-      <div className={`bg-violet1`}>
+      <div className={`bg-violetprimary`}>
         <Navbar />
         <HeroCommon
           content="Man and Van Services"

@@ -12,7 +12,7 @@ const BlogsPage = () => {
 
   return (
     <>
-      <div className={`bg-violet1`}>
+      <div className={`bg-violetprimary`}>
         <Navbar />
         <HeroCommon
           content="Our Blog and News"

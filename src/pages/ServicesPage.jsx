@@ -10,14 +10,12 @@ import Work from "../components/Work";
 import { useEffect } from "react";
 
 const ServicesPages = () => {
-  
   useEffect(() => {
-
     window.scroll(0, 0);
   }, []);
   return (
     <>
-      <div className={`bg-violet1`}>
+      <div className={`bg-violetprimary`}>
         <Navbar />
         <HeroCommon
           content="MoveXpress Services"

@@ -4,7 +4,7 @@ import { Paragraphsub, TimeHeading } from "../common/Heading";
 
 const HeroCommon = ({ content, button, para, classNameHeading, time }) => {
   return (
-    <section className={`py-15 md:py-[90px] lg:py-[116px]  bg-violet1`}>
+    <section className={`py-15 md:py-[90px] lg:py-[116px]  bg-violetprimary`}>
       <div
         className={`w-fit flex flex-col items-center justify-center gap-4 md:gap-6 px-5 mx-auto text-center`}
       >
@@ -35,7 +35,7 @@ const HeroCommon = ({ content, button, para, classNameHeading, time }) => {
             button={button}
             className={`w-[194px]`}
             subsubclassName={`!bg-mist`}
-            subclassName={`hover:text-violet1`}
+            subclassName={`hover:text-violetprimary`}
           />
         ) : null}
       </div>

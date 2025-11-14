@@ -130,7 +130,9 @@ export const customerlist = [
 
 export const whylist = [
   {
-    svg: <BadgeCheck className=" text-violet1" strokeWidth={1.5} size={56} />,
+    svg: (
+      <BadgeCheck className=" text-violetprimary" strokeWidth={1.5} size={56} />
+    ),
     name: "Many Years of Experience",
     para: "We are an established Company",
   },
@@ -177,6 +179,9 @@ export const blogs = [
     paragraph:
       "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires.....",
     img: Pack,
+    data: {
+      head: "How To Pack Fragile Items for Moving?",
+    },
   },
   {
     url: "how-to-mkae-fragile-items",
@@ -184,6 +189,9 @@ export const blogs = [
     paragraph:
       "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
     img: Booking,
+    data: {
+      head: "How to Make a Booking with Us?",
+    },
   },
   {
     url: "how-to-Declutter-fragile-items",
@@ -191,6 +199,9 @@ export const blogs = [
     paragraph:
       "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
     img: Moving,
+    data: {
+      head: "How to Declutter Before Moving?",
+    },
   },
   {
     url: "how-to-stressful-fragile-items",
@@ -198,6 +209,9 @@ export const blogs = [
     paragraph:
       "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires.....",
     img: Pack,
+    data: {
+      head: "How To Pack Fragile Items for Moving?",
+    },
   },
   {
     url: "how-to-stressful-fragile-items",
@@ -205,6 +219,9 @@ export const blogs = [
     paragraph:
       "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
     img: Booking,
+    data: {
+      head: "How to Make a Booking with Us?",
+    },
   },
   {
     url: "Before-fragile-items",
@@ -212,6 +229,9 @@ export const blogs = [
     paragraph:
       "Moving to a new house combines excitement with significant challenges during the transition. Moving all your belongings to a different location demands..",
     img: Moving,
+    data: {
+      head: "How to Declutter Before Moving?",
+    },
   },
   {
     url: "test-to-pack-fragile-items",
@@ -219,6 +239,9 @@ export const blogs = [
     paragraph:
       "Relocating can be stressful, and packing delicate items can be demanding. Moving delicate items such as glasses, ceramics, electronics, and artwork requires.....",
     img: Pack,
+    data: {
+      head: "How To Pack Fragile Items for Moving?",
+    },
   },
 ];
 

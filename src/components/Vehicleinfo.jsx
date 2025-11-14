@@ -76,7 +76,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
           <label htmlFor="firstname" className="label-style">
             Van Insurance Copy *
           </label>
-          <article className="flex items-center justify-center relative border-1 border-dashed border-violet1 rounded-xl h-[124px] w-full">
+          <article className="flex items-center justify-center relative border-1 border-dashed border-violetprimary rounded-xl h-[124px] w-full">
             <input
               type="file"
               required
@@ -87,7 +87,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <img />
             <article className="z-1 w-fit flex items-center justify-center flex-col">
               <AddImage />
-              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violet1">
+              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violetprimary">
                 Click to Upload Front Side of Card
               </p>
               <p className="font-inter font-normal text-sm leading-[164%] text-[#D9DBDC]">
@@ -102,7 +102,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
           <label htmlFor="firstname" className="label-style">
             Back Of Driving Licence *
           </label>
-          <article className="flex items-center justify-center relative border-1 border-dashed border-violet1 rounded-xl h-[124px] w-full">
+          <article className="flex items-center justify-center relative border-1 border-dashed border-violetprimary rounded-xl h-[124px] w-full">
             <input
               type="file"
               required
@@ -113,7 +113,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <img />
             <article className="z-1  w-fit flex items-center justify-center flex-col">
               <AddImage />
-              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violet1">
+              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violetprimary">
                 Click to Upload Back Side of Card
               </p>
               <p className="font-inter font-normal text-sm leading-[164%] text-[#D9DBDC]">
@@ -128,9 +128,9 @@ const Vehicleinfo = ({ filled, setFilled }) => {
       {/* van insurance */}
       <article className="flex flex-col items-center gap-5 justify-center w-full">
         <article className="flex items-center justify-center w-full">
-          <div className="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violetprimary w-full"></div>
           <LabelHeading content="Van Service" />
-          <div className="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violetprimary w-full"></div>
         </article>
 
         <article className="w-full flex flex-col gap-2 items-start justify-center">
@@ -138,7 +138,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             Front Of Driving Licence *
           </label>
 
-          <article className="flex items-center justify-center relative border-1 border-dashed border-violet1 rounded-xl h-[124px] w-full">
+          <article className="flex items-center justify-center relative border-1 border-dashed border-violetprimary rounded-xl h-[124px] w-full">
             <input
               type="file"
               value={frontinsurancecopy}
@@ -149,7 +149,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <img />
             <article className="z-1 w-fit flex items-center justify-center flex-col">
               <AddImage />
-              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violet1">
+              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violetprimary">
                 Click to Upload Front Side of Card
               </p>
               <p className="font-inter font-normal text-sm leading-[164%] text-[#D9DBDC]">
@@ -166,7 +166,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
           >
             <label
               htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
+              className={`font-inter font-medium text-base leading-6 text-violetprimary`}
             >
               Start Date *
             </label>
@@ -184,7 +184,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
           >
             <label
               htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
+              className={`font-inter font-medium text-base leading-6 text-violetprimary`}
             >
               End Date *
             </label>
@@ -194,7 +194,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
               value={insuranceenddate}
               onChange={(e) => setInsuranceEndDate(e.target.value)}
               placeholder="Enter vehicle registration no"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              className={`outline-none p-4 border-1 rounded-lg w-full border-violetprimary font-inter text-sm md:text-base max-w-79`}
             />
           </div>
         </aritcle>
@@ -203,9 +203,9 @@ const Vehicleinfo = ({ filled, setFilled }) => {
       {/* Transit insurance */}
       <article className="flex flex-col items-center gap-5 justify-center w-full">
         <article className="flex items-center justify-center w-full">
-          <div className="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violetprimary w-full"></div>
           <LabelHeading content="Goods In Transit Insurance" />
-          <div className="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violetprimary w-full"></div>
         </article>
 
         <article className="w-full flex flex-col gap-2 items-start justify-center">
@@ -213,7 +213,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             Goods In Transit Insurance Copy *
           </label>
 
-          <article className="flex items-center justify-center relative border-1 border-dashed border-violet1 rounded-xl h-[124px] w-full">
+          <article className="flex items-center justify-center relative border-1 border-dashed border-violetprimary rounded-xl h-[124px] w-full">
             <input
               type="file"
               required
@@ -224,7 +224,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <img />
             <article className="z-1 w-fit flex items-center justify-center flex-col">
               <AddImage />
-              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violet1">
+              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violetprimary">
                 Click to Upload Front Side of Card
               </p>
               <p className="font-inter font-normal text-sm leading-[164%] text-[#D9DBDC]">
@@ -256,7 +256,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
           >
             <label
               htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
+              className={`font-inter font-medium text-base leading-6 text-violetprimary`}
             >
               End Date *
             </label>
@@ -275,19 +275,19 @@ const Vehicleinfo = ({ filled, setFilled }) => {
       {/* liability insurance */}
       <article className="flex flex-col items-center gap-5 justify-center w-full">
         <article className="flex items-center justify-center w-full">
-          <div className="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violetprimary w-full"></div>
           <LabelHeading content="Public Liability Insurance" />
-          <div className="border-1 border-violet1 w-full"></div>
+          <div className="border-1 border-violetprimary w-full"></div>
         </article>
 
         <article className="w-full flex flex-col gap-2 items-start justify-center">
           <label
             htmlFor="firstname"
-            className="font-inter font-medium text-base leading-6 text-violet1"
+            className="font-inter font-medium text-base leading-6 text-violetprimary"
           >
             Public Liability Insurance Copy *
           </label>
-          <article className="flex items-center justify-center relative border-1 border-dashed border-violet1 rounded-xl h-[124px] w-full">
+          <article className="flex items-center justify-center relative border-1 border-dashed border-violetprimary rounded-xl h-[124px] w-full">
             <input
               type="file"
               value={liabilityinsurance}
@@ -298,7 +298,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
             <img />
             <article className="z-1 w-fit flex items-center justify-center flex-col">
               <AddImage />
-              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violet1">
+              <p className="font-inter mt-2 md:mt-3 mb-1 font-medium text-sm leading-6 text-violetprimary">
                 Click to Upload Front Side of Card
               </p>
               <p className="font-inter font-normal text-sm leading-[164%] text-[#D9DBDC]">
@@ -315,7 +315,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
           >
             <label
               htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
+              className={`font-inter font-medium text-base leading-6 text-violetprimary`}
             >
               Start Date *
             </label>
@@ -325,7 +325,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
               value={liabiltyinsurancestartdate}
               onChange={(e) => setLiabilityInsuranceStartDate(e.target.value)}
               placeholder="Enter vehicle registration no"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              className={`outline-none p-4 border-1 rounded-lg w-full border-violetprimary font-inter text-sm md:text-base max-w-79`}
             />
           </div>
           <div
@@ -333,7 +333,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
           >
             <label
               htmlFor="firtname"
-              className={`font-inter font-medium text-base leading-6 text-violet1`}
+              className={`font-inter font-medium text-base leading-6 text-violetprimary`}
             >
               End Date *
             </label>
@@ -343,7 +343,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
               value={liabilityinsuranceenddate}
               onChange={(e) => setLiabilityInsuranceEndDate(e.target.value)}
               placeholder="Enter vehicle registration no"
-              className={`outline-none p-4 border-1 rounded-lg w-full border-violet1 font-inter text-sm md:text-base max-w-79`}
+              className={`outline-none p-4 border-1 rounded-lg w-full border-violetprimary font-inter text-sm md:text-base max-w-79`}
             />
           </div>
         </aritcle>
@@ -354,7 +354,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
         <div
           onClick={() => setAgree(!agree)}
           className={`w-5 h-5 relative ${
-            agree && "bg-violet1"
+            agree && "bg-violetprimary"
           } border-1 border-midgray rounded-sm overflow-hidden`}
         >
           <input
@@ -364,7 +364,7 @@ const Vehicleinfo = ({ filled, setFilled }) => {
           />
           <Check className="absolute top-1/2 left-1/2 -translate-1/2 text-white h-4 w-4" />
         </div>
-        <label className="font-inter text-sm leading-5 text-violet1/48">
+        <label className="font-inter text-sm leading-5 text-violetprimary/48">
           By clicking the submit button, I agree that I have read{" "}
           <br className="sm:hidden" />
           and understood the{" "}

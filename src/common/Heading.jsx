@@ -57,7 +57,7 @@ export const SubHeading = ({ head, className }) => {
 export const ListHeading = ({ content }) => {
   return (
     <h3
-      className={`font-inter font-semibold text-lg leading-[150%] text-violet1`}
+      className={`font-inter font-semibold text-lg leading-[150%] text-violetprimary`}
     >
       {content}
     </h3>
@@ -91,7 +91,7 @@ export const HeadingStore = ({ content }) => {
 export const SignupHeading = ({ content }) => {
   return (
     <h2
-      className={`font-semibold font-inter text-violet1 text-3xl md:text-4xl lg:text-5xl leading-[140%]`}
+      className={`font-semibold font-inter text-violetprimary text-3xl md:text-4xl lg:text-5xl leading-[140%]`}
     >
       {content}
     </h2>
@@ -100,7 +100,7 @@ export const SignupHeading = ({ content }) => {
 
 export const LabelHeading = ({ content }) => {
   return (
-    <h3 className="font-normal font-inter text-sm leading-[164%] text-violet1 text-nowrap px-4">
+    <h3 className="font-normal font-inter text-sm leading-[164%] text-violetprimary text-nowrap px-4">
       {content}
     </h3>
   );

@@ -3,7 +3,9 @@ import Button from "../common/Button";
 
 const ReadyToBook = () => {
   return (
-    <section className={`py-[100px] md:py-[150px] lg:py-[177px]  bg-violet1`}>
+    <section
+      className={`py-[100px] md:py-[150px] lg:py-[177px]  bg-violetprimary`}
+    >
       <div
         className={`w-fit flex flex-col items-center justify-center gap-6  max-w-[573px] px-5  mx-auto text-center`}
       >
@@ -16,7 +18,7 @@ const ReadyToBook = () => {
           button="Get Instant Quote Now"
           className={`w-[250px] md:w-[309px]`}
           subsubclassName={`!bg-mist`}
-          subclassName={`hover:text-violet1`}
+          subclassName={`hover:text-violetprimary`}
         />
       </div>
     </section>
