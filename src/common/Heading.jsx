@@ -47,7 +47,7 @@ export const Paragraphsub = ({ para, className }) => {
 export const SubHeading = ({ head, className }) => {
   return (
     <h1
-      className={`font-inter ${className} font-medium text-lg sm:text-xl md:text-2xl tracking-[-1px] leading-[150%] text-[#1E1E1E]`}
+      className={`font-inter ${className} font-medium text-lg sm:text-xl md:text-2xl tracking-[-1px] leading-[150%] text-eerieblack`}
     >
       {head}
     </h1>
@@ -117,7 +117,7 @@ export const TimeHeading = ({ content }) => {
 export const WithParagraph = ({ content, className }) => {
   return (
     <p
-      className={`text-inter ${className} font-normal text-paragray text-sm md:text-base leading-[170%]`}
+      className={`font-inter ${className} font-normal text-paragray text-sm md:text-base leading-[170%]`}
     >
       {content}
     </p>
@@ -137,5 +137,18 @@ export const WithCardHeading = ({ content }) => {
     <h2 className="font-figtree text-base md:text-xl lg:text-xl leading-[160%] font-semibold">
       {content}
     </h2>
+  );
+};
+
+import React from "react";
+
+export const ChooseVanHeading = ({ content, paragraphcontent }) => {
+  return (
+    <article className="flex items-center flex-col text-center w-fit mx-auto gap-1">
+      <h3 className="text-xl text-eerieblack font-semibold leading-[150%] font-inter">
+        {content}
+      </h3>
+      <p className="font-inter text-sm text-obsidian">{paragraphcontent}</p>
+    </article>
   );
 };

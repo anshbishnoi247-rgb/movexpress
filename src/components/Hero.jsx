@@ -2,6 +2,7 @@ import { BadgeCheck, ShieldCheck } from "lucide-react";
 
 import { Alert, Gps, Truesthalf, Trustrate, Truststar } from "../common/Icons";
 import Bookvan from "./Bookvan";
+import { useState } from "react";
 
 const Hero = () => {
   return (

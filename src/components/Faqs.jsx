@@ -53,7 +53,7 @@ const Faqs = () => {
                   } transition-all duration-300 ease-in-out`}
                 >
                   <p
-                    className={`font-inter font-normal text-sm sm:text-base leading-[150%] tracking-[-0.3px] text-[#3D3F40]`}
+                    className={`font-inter font-normal text-sm sm:text-base leading-[150%] tracking-[-0.3px] text-obsidian`}
                   >
                     {obj.answer}
                   </p>

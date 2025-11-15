@@ -11,7 +11,9 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={() => window.scroll(0, 0)}
-      className={`${visible > 300 ? "flex" : "hidden"} group scrolltotop-style`}
+      className={`${
+        visible > 300 ? "flex" : "hidden"
+      } group scrolltotop-style cursor-pointer`}
     >
       <ChevronUp
         size={30}

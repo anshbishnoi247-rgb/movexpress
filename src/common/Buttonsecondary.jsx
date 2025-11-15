@@ -1,10 +1,11 @@
-import React from "react";
+import { useState } from "react";
 
-const Buttonsecondary = ({ content, onClick }) => {
+const Buttonsecondary = ({ content, type, icon }) => {
+  const [pageNo, setpageNo] = useState("1");
   return (
-    <div className="overflow-hidden group relative bg-vinegar rounded-xl">
-      <button onClick={onClick} className="button-style-secondary">
-        {content}
+    <div className="overflow-hidden w-full group relative bg-vinegar rounded-xl ">
+      <button type={type} className="button-style-secondary cursor-pointer">
+        {content} {icon ? icon : null}
       </button>
       <div className="button-style-secondary-hover"></div>
     </div>

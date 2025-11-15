@@ -16,7 +16,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
       } bg-mist w-full h-full transition-all duration-300 z-10 linear fixed flex flex-col`}
     >
       <div
-        className={`flex items-center justify-between p-4 w-full max-w-332 mx-auto `}
+        className={`flex items-center justify-between p-4 w-full max-w-324 mx-auto `}
       >
         <Logopamplate />
         <button

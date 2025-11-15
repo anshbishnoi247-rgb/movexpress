@@ -33,7 +33,7 @@ const Signup = () => {
             >
               <SignupHeading content="Sign Up as a Driver" />
 
-              <p className="text-inter text-sm sm:text-base text-violetprimary/72 leading-[130%] md:leading-[164%];">
+              <p className="font-inter text-sm sm:text-base text-violetprimary/72 leading-[130%] md:leading-[164%];">
                 Tell us your pickup and destination
               </p>
             </div>

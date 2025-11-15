@@ -3,11 +3,17 @@ import { Alert, Gps } from "../common/Icons";
 import map from "../assets/images/map.webp";
 import Buttonsecondary from "../common/Buttonsecondary";
 
-const Whereto = () => {
+const Whereto = ({ onClick, onSubmit, pageNo }) => {
   const [startDestination, setstartDestination] = useState("");
   const [finalDestination, setfinalDestination] = useState("");
   return (
-    <form onSubmit="" className="">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit(e);
+      }}
+      className={`${pageNo == 1 ? "block" : "hidden"}`}
+    >
       <div className={`mb-5 md:mb-[33px]`}>
         <label
           className={`font-semibold text-sm sm:font-base leading-6 font-inter`}
@@ -80,7 +86,7 @@ const Whereto = () => {
           1<span className="text-[10px]">miles</span>
         </p>
       </div>
-      <Buttonsecondary onClick="submit" content="Show Quote" />
+      <Buttonsecondary type="submit" content="Show Quote" />
     </form>
   );
 };

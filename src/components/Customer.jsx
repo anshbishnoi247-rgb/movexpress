@@ -37,7 +37,7 @@ const Customer = () => {
                   {obj.name}
                 </h2>
                 <p
-                  className={`font-normal font-inter text-sm leading-[150%] mt-2 mb-[14px] text-[#3D3F40] `}
+                  className={`font-normal font-inter text-sm leading-[150%] mt-2 mb-[14px] text-obsidian `}
                 >
                   Regular Customar
                 </p>
