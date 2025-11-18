@@ -140,8 +140,6 @@ export const WithCardHeading = ({ content }) => {
   );
 };
 
-import React from "react";
-
 export const ChooseVanHeading = ({ content, paragraphcontent }) => {
   return (
     <article className="flex items-center flex-col text-center w-fit mx-auto gap-1">
@@ -150,5 +148,23 @@ export const ChooseVanHeading = ({ content, paragraphcontent }) => {
       </h3>
       <p className="font-inter text-sm text-obsidian">{paragraphcontent}</p>
     </article>
+  );
+};
+
+export const ChooseVanHeadingBox = ({ heading, paragraph, subparagraph }) => {
+  return (
+    <div className="flex flex-col items-start justify-center">
+      <h3 className="font-bold text-sm text-eerieblack font-wix">{heading}</h3>
+      <p className="text-xs text-sleet  font-inter">{paragraph}</p>
+      <p className="text-xs mt-1 font-figtree">{subparagraph}</p>
+    </div>
+  );
+};
+
+export const Tags = ({ tag }) => {
+  return (
+    <p className="text-xs font-outfit bg-violetprimary/10 px-2 py-1 rounded-full">
+      {tag}
+    </p>
   );
 };
