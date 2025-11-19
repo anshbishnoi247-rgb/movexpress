@@ -44,20 +44,24 @@ const ChooseVan = ({ pageNo, onClick }) => {
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
-          <div className="absolute  h-6 w-6 rounded-full bg-violetprimary border-1 right-3 top-3 border-slate-200 transition-all duration-300 flex items-center justify-center">
+          <div
+            className={`${
+              smallVan && "bg-violetprimary "
+            } absolute  h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300 flex items-center justify-center`}
+          >
             <Check size={15} className="text-white" />
           </div>
 
-          <div className="flex items-center gap-3 jsutify-center">
+          <div className="flex items-center gap-3 ">
             <img src={smallvan} className="h-16 w-16 object-cover" />
 
-            <div className="flex flex-col items-start justifu-center">
+            <div className="flex flex-col items-start justify-center">
               <ChooseVanHeadingBox
                 heading="small van"
                 paragraph="Perfect for small moves"
                 subparagraph="Up to 10 cubic feet"
               />
-              <div className="flex items-center gap-1 mt-1 jsutify-center">
+              <div className="flex items-center gap-1 mt-1 justify-center">
                 {["Compact size", "Easy parking", "City friendly"].map(
                   (obj, index) => {
                     return <Tags tag={obj} />;
@@ -89,18 +93,25 @@ const ChooseVan = ({ pageNo, onClick }) => {
             className=" w-full h-full absolute opacity-1 z-10 top-0 left-0"
           />
 
-          <div className="absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300"></div>
+          <div
+            className={`${
+              mediumVan && "bg-violetprimary"
+            } flex justify-center items-center absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300`}
+          >
+            {" "}
+            <Check size={15} className="text-white" />
+          </div>
 
-          <div className="flex items-center gap-3 jsutify-center">
+          <div className="flex items-center gap-3 ">
             <img src={mediumvan} className="h-16 w-16 object-cover" />
 
-            <div className="flex flex-col items-start justifu-center">
+            <div className="flex flex-col items-start justify-center">
               <ChooseVanHeadingBox
                 heading="Medium Van"
                 paragraph="Ideal for medium moves"
                 subparagraph="Up to 20 cubic feet"
               />
-              <div className="flex items-center gap-1 mt-1 jsutify-center">
+              <div className="flex items-center gap-1 mt-1 justify-center">
                 {["Good storage", "Versatile", "Popular choice"].map(
                   (obj, index) => {
                     return <Tags tag={obj} />;
@@ -132,18 +143,25 @@ const ChooseVan = ({ pageNo, onClick }) => {
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
-          <div className="absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300"></div>
+          <div
+            className={`${
+              largeVan && "bg-violetprimary"
+            } flex items-center justify-center absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300`}
+          >
+            {" "}
+            <Check size={15} className="text-white" />
+          </div>
 
-          <div className="flex items-center gap-3 jsutify-center">
+          <div className="flex items-center gap-3">
             <img src={largevan} className="h-16 w-16 object-cover" />
 
-            <div className="flex flex-col items-start justifu-center">
+            <div className="flex flex-col items-start justify-center">
               <ChooseVanHeadingBox
                 heading="Large Van"
                 paragraph="Great for large moves"
                 subparagraph="Up to 35 cubic feet"
               />
-              <div className="flex items-center gap-1 mt-1 jsutify-center">
+              <div className="flex items-center gap-1 mt-1 justify-center">
                 {["Spacious", "Heavy Items", "Long Disatance"].map(
                   (obj, index) => {
                     return <Tags tag={obj} />;
@@ -175,18 +193,25 @@ const ChooseVan = ({ pageNo, onClick }) => {
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
-          <div className="absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300"></div>
+          <div
+            className={`${
+              lutonVan && "bg-violetprimary"
+            } flex items-center justify-center absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300`}
+          >
+            {" "}
+            <Check size={15} className="text-white" />
+          </div>
 
-          <div className="flex items-center gap-3 jsutify-center">
+          <div className="flex items-center gap-3 ">
             <img src={lutonvan} className="h-16 w-16 object-cover" />
 
-            <div className="flex flex-col items-start justifu-center">
+            <div className="flex flex-col items-start justify-center">
               <ChooseVanHeadingBox
                 heading="Luton Van"
                 paragraph="Best for big moves"
                 subparagraph="Up to 50 cubic feet"
               />
-              <div className="flex items-center gap-1 mt-1 jsutify-center">
+              <div className="flex items-center gap-1 mt-1 justify-center">
                 {["Maximum space", "Commercail Grade", "Heavy Duty"].map(
                   (obj, index) => {
                     return <Tags tag={obj} />;
@@ -196,6 +221,7 @@ const ChooseVan = ({ pageNo, onClick }) => {
             </div>
           </div>
         </div>
+
         {/* radio 5 */}
 
         <div
@@ -217,18 +243,21 @@ const ChooseVan = ({ pageNo, onClick }) => {
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
-          <div className="absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300"></div>
+          <div className={`${lutonBoxVan && "bg-violetprimary"} absolute flex items-center justify-center h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300`}>
+            {" "}
+            <Check size={15} className="text-white" />
+          </div>
 
-          <div className="flex items-center gap-3 jsutify-center">
+          <div className="flex items-center gap-3 ">
             <img src={lutonboxvan} className="h-16 w-16 object-cover" />
 
-            <div className="flex flex-col items-start justifu-center">
+            <div className="flex flex-col items-start justify-center">
               <ChooseVanHeadingBox
                 heading="Luton Box Van with Tail Lift"
                 paragraph="Perfect for heavy or bulky items"
                 subparagraph="Up to 60 cubic feet"
               />
-              <div className="flex items-center gap-1 mt-1 jsutify-center">
+              <div className="flex items-center gap-1 mt-1 justify-center">
                 {["Tail Lift", "Heavy Items", "Commercial Grade"].map(
                   (obj, index) => {
                     return <Tags tag={obj} />;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Whereto from "./Whereto";
 import ChooseVan from "./ChooseVan";
@@ -9,6 +9,7 @@ const Bookvan = () => {
   const [pargraph, setPargraph] = useState(
     "Tell us your pickup and destination"
   );
+
   return (
     <aside
       className={`w-full py-6 px-7 bg-white z-5 relative rounded-3xl mb-2 `}
