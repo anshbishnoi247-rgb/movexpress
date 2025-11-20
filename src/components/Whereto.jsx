@@ -3,7 +3,7 @@ import { Alert, Gps } from "../common/Icons";
 import map from "../assets/images/map.webp";
 import Buttonsecondary from "../common/Buttonsecondary";
 
-const Whereto = ({ onClick, onSubmit, pageNo }) => {
+const Whereto = ({ onSubmit, pageNo }) => {
   const [startDestination, setstartDestination] = useState("");
   const [finalDestination, setfinalDestination] = useState("");
   return (

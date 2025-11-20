@@ -3,7 +3,6 @@ import {
   Apple,
   Bag,
   Certified,
-  Clock,
   CoinClock,
   Delivery,
   Expert,
@@ -24,7 +23,7 @@ import {
 import John from "../assets/images/john.webp";
 import Gail from "../assets/images/gail.webp";
 import Sam from "../assets/images/sam.webp";
-import { BadgeCheck } from "lucide-react";
+import { BadgeCheck, Clock, Package } from "lucide-react";
 import Pack from "../assets/images/pack.webp";
 import Moving from "../assets/images/moving.webp";
 import Booking from "../assets/images/booking.webp";
@@ -502,5 +501,18 @@ export const blogssecondarylist = [
   {
     head: "How to Make a Booking with Us?",
     para: "With MovExpress, booking a Man and van service is simple, quick, and efficient. Follow the few steps below to book your van and hit the road quickly...",
+  },
+];
+
+export const timelist = [
+  {
+    svg: <Clock size={14} className="text-slate-500" />,
+    head: "Travel Time",
+    para: "3h 56m",
+  },
+  {
+    svg: <Package size={14} className="text-slate-500" />,
+    head: "Loading/Unloading",
+    para: "0h 30m",
   },
 ];

@@ -9,7 +9,7 @@ import largevan from "../assets/images/large-van.jpg";
 import lutonvan from "../assets/images/luton-van.jpg";
 import lutonboxvan from "../assets/images/luton-box-van.jpg";
 
-const ChooseVan = ({ pageNo, onClick }) => {
+const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
   const [smallVan, setsmallVan] = useState(null);
   const [mediumVan, setmediumVan] = useState(null);
   const [largeVan, setlargeVan] = useState(null);
@@ -17,7 +17,16 @@ const ChooseVan = ({ pageNo, onClick }) => {
   const [lutonBoxVan, setlutonBoxVan] = useState(null);
 
   return (
-    <form className={`${pageNo == 2 ? "block" : "hidden"}`}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit(e);
+      }}
+      onChange={(e) => {
+        localStorage.setItem("choosedvan", e.target.value);
+      }}
+      className={`${pageNo == 2 ? "block" : "hidden"}`}
+    >
       <ChooseVanHeading
         content="Choose Your Perfect Van"
         paragraphcontent="Select the right size for your move"
@@ -40,6 +49,7 @@ const ChooseVan = ({ pageNo, onClick }) => {
           <input
             type="radio"
             name="vehicle"
+            required
             value="smallvan"
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
@@ -64,7 +74,7 @@ const ChooseVan = ({ pageNo, onClick }) => {
               <div className="flex items-center gap-1 mt-1 justify-center">
                 {["Compact size", "Easy parking", "City friendly"].map(
                   (obj, index) => {
-                    return <Tags tag={obj} />;
+                    return <Tags tag={obj} key={index} />;
                   }
                 )}
               </div>
@@ -90,6 +100,7 @@ const ChooseVan = ({ pageNo, onClick }) => {
             type="radio"
             name="vehicle"
             value="mediumvan"
+            required
             className=" w-full h-full absolute opacity-1 z-10 top-0 left-0"
           />
 
@@ -114,7 +125,7 @@ const ChooseVan = ({ pageNo, onClick }) => {
               <div className="flex items-center gap-1 mt-1 justify-center">
                 {["Good storage", "Versatile", "Popular choice"].map(
                   (obj, index) => {
-                    return <Tags tag={obj} />;
+                    return <Tags key={index} tag={obj} />;
                   }
                 )}
               </div>
@@ -139,6 +150,7 @@ const ChooseVan = ({ pageNo, onClick }) => {
           <input
             type="radio"
             name="vehicle"
+            required
             value="largevan"
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
@@ -164,7 +176,7 @@ const ChooseVan = ({ pageNo, onClick }) => {
               <div className="flex items-center gap-1 mt-1 justify-center">
                 {["Spacious", "Heavy Items", "Long Disatance"].map(
                   (obj, index) => {
-                    return <Tags tag={obj} />;
+                    return <Tags key={index} tag={obj} />;
                   }
                 )}
               </div>
@@ -190,6 +202,7 @@ const ChooseVan = ({ pageNo, onClick }) => {
             type="radio"
             name="vehicle"
             value="lutonvan"
+            required
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
@@ -214,7 +227,7 @@ const ChooseVan = ({ pageNo, onClick }) => {
               <div className="flex items-center gap-1 mt-1 justify-center">
                 {["Maximum space", "Commercail Grade", "Heavy Duty"].map(
                   (obj, index) => {
-                    return <Tags tag={obj} />;
+                    return <Tags key={index} tag={obj} />;
                   }
                 )}
               </div>
@@ -239,11 +252,16 @@ const ChooseVan = ({ pageNo, onClick }) => {
           <input
             type="radio"
             name="vehicle"
+            required
             value="lutonboxvan"
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
-          <div className={`${lutonBoxVan && "bg-violetprimary"} absolute flex items-center justify-center h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300`}>
+          <div
+            className={`${
+              lutonBoxVan && "bg-violetprimary"
+            } absolute flex items-center justify-center h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300`}
+          >
             {" "}
             <Check size={15} className="text-white" />
           </div>
@@ -260,7 +278,7 @@ const ChooseVan = ({ pageNo, onClick }) => {
               <div className="flex items-center gap-1 mt-1 justify-center">
                 {["Tail Lift", "Heavy Items", "Commercial Grade"].map(
                   (obj, index) => {
-                    return <Tags tag={obj} />;
+                    return <Tags key={index} tag={obj} />;
                   }
                 )}
               </div>

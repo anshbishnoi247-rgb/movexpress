@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Whereto from "./Whereto";
 import ChooseVan from "./ChooseVan";
+import When from "./When";
 
 const Bookvan = () => {
   const [pageNo, setPageNo] = useState(1);
@@ -35,24 +36,37 @@ const Bookvan = () => {
       </div>
       <div className={`h-[6px] w-full rounded-full bg-[#D5D5D5] mt-4 mb-6`}>
         <div
-          className={`h-full w-${pageNo}/5  rounded-full bg-violetprimary`}
+          style={{ width: `calc(100% / (5 - ${pageNo}))` }}
+          className="h-full rounded-full bg-violetprimary"
         ></div>
       </div>
 
-      <Whereto
-        pageNo={pageNo}
-        onSubmit={(e) => {
-          setPageNo((prev) => prev + 1),
-            setHeading("Choose Your Van"),
-            setPargraph("Select your perfect vehicle");
-        }}
-      />
-      <ChooseVan
-        pageNo={pageNo}
-        onClick={(e) => {
-          setPageNo((prev) => prev - 1);
-        }}
-      />
+      {pageNo == 1 ? (
+        <Whereto
+          pageNo={pageNo}
+          onSubmit={(e) => {
+            setPageNo((prev) => prev + 1),
+              setHeading("Choose Your Van"),
+              setPargraph("Select your perfect vehicle");
+          }}
+        />
+      ) : null}
+
+      {pageNo == 2 ? (
+        <ChooseVan
+          pageNo={pageNo}
+          onClick={(e) => {
+            setPageNo((prev) => prev - 1);
+          }}
+          onSubmit={(e) => {
+            setPageNo((prev) => prev + 1),
+              setHeading("When?"),
+              setPargraph("Pick your preferred date and time");
+          }}
+        />
+      ) : null}
+
+      {pageNo == 3 ? <When pageNo={pageNo} /> : null}
     </aside>
   );
 };

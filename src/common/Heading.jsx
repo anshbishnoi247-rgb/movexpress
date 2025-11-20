@@ -161,10 +161,57 @@ export const ChooseVanHeadingBox = ({ heading, paragraph, subparagraph }) => {
   );
 };
 
-export const Tags = ({ tag }) => {
+export const Tags = ({ tag, key }) => {
   return (
-    <p className="text-xs font-outfit bg-violetprimary/10 px-2 py-1 rounded-full">
+    <p
+      key={key}
+      className="text-xs font-outfit bg-violetprimary/10 px-2 py-1 rounded-full"
+    >
       {tag}
     </p>
+  );
+};
+
+export const HeadingTime = ({ heading, className }) => {
+  return (
+    <h3
+      className={`${className} font-semibold text-lg font-inter text-midnightsecondary`}
+    >
+      {heading}
+    </h3>
+  );
+};
+
+export const TimeParagraph = ({ content }) => {
+  return (
+    <p className="font-semibold font-inter text-violetprimary bg-violetprimary/5 px-2.5 py-0.5 rounded-lg text-sm">
+      {content}
+    </p>
+  );
+};
+
+export const SubTimeParagraph = ({ content }) => {
+  return (
+    <p className={`font-inter text-obsidian font-medium text-sm`}>{content}</p>
+  );
+};
+
+export const TotalTimePargraph = ({ content, className }) => {
+  return (
+    <p className={`${className} font-inter font-bold text-white`}>{content}</p>
+  );
+};
+
+export const EstimationParagraph = ({ content }) => {
+  return (
+    <p className="font-wix text-sm mt-4 border-1 p-3 rounded-lg bg-vineagar/10 border-vinegar">
+      {content}
+    </p>
+  );
+};
+
+export const LabelSecondary = ({ label }) => {
+  return (
+    <label className="text-sm font-semibold text-salute mb-2">{label}</label>
   );
 };
