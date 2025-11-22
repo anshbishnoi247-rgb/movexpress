@@ -12,7 +12,6 @@ const Whereto = ({ onSubmit, pageNo }) => {
         e.preventDefault();
         onSubmit(e);
       }}
-      className={`${pageNo == 1 ? "block" : "hidden"}`}
     >
       <div className={`mb-5 md:mb-[33px]`}>
         <label

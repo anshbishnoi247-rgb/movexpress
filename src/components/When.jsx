@@ -38,7 +38,6 @@ const When = ({ pageNo, onClick, onSubmit }) => {
         e.preventDefault();
         onSubmit(e);
       }}
-      className={`${pageNo == 3 ? "block" : "hidden"}`}
     >
       <ChooseVanHeading
         content="When do you need us?"
@@ -71,7 +70,7 @@ const When = ({ pageNo, onClick, onSubmit }) => {
             return (
               <div
                 key={index}
-                class="py-2 px-3 flex justify-between w-full items-center"
+                className="py-2 px-3 flex justify-between w-full items-center"
               >
                 <div className="flex items-center justify-center gap-1.5">
                   {obj.svg}
@@ -150,7 +149,8 @@ const When = ({ pageNo, onClick, onSubmit }) => {
                   startDate ? "opacity-0" : "opacity-100"
                 } group-hover:opacity-0 transition-all duration-300 ease-linear `}
               />
-              <input onChange={(e)=>setStartDate(e.target.value)}
+              <input
+                onChange={(e) => setStartDate(e.target.value)}
                 required
                 type="date"
                 className={`${
@@ -204,7 +204,7 @@ const When = ({ pageNo, onClick, onSubmit }) => {
         />
         <Buttonsecondary
           type="submit"
-          content="Next: Select Helper"
+          content="Next: Select Items"
           icon={<ArrowRight size={20} />}
         />
       </div>

@@ -3,13 +3,20 @@ import { useEffect, useState } from "react";
 import Whereto from "./Whereto";
 import ChooseVan from "./ChooseVan";
 import When from "./When";
+import WhatMoving from "./WhatMoving";
+import { useNavigate, useSearchParams } from "react-router";
 
 const Bookvan = () => {
+  const navigate = useNavigate();
   const [pageNo, setPageNo] = useState(1);
   const [heading, setHeading] = useState("Where to?");
   const [pargraph, setPargraph] = useState(
     "Tell us your pickup and destination"
   );
+  const [searchParams, setSearchParams] = useSearchParams();
+  const params = searchParams.get("tabname");
+
+  const [tabName, setTabName] = useState("/");
 
   return (
     <aside
@@ -43,8 +50,8 @@ const Bookvan = () => {
 
       {pageNo == 1 ? (
         <Whereto
-          pageNo={pageNo}
           onSubmit={(e) => {
+            navigate("Choosevan");
             setPageNo((prev) => prev + 1),
               setHeading("Choose Your Van"),
               setPargraph("Select your perfect vehicle");
@@ -54,13 +61,14 @@ const Bookvan = () => {
 
       {pageNo == 2 ? (
         <ChooseVan
-          pageNo={pageNo}
           onClick={(e) => {
+            navigate("/");
             setPageNo((prev) => prev - 1);
             setHeading("Choose Your Van"),
               setPargraph("Select your perfect vehicle");
           }}
           onSubmit={(e) => {
+            navigate("When");
             setPageNo((prev) => prev + 1),
               setHeading("When?"),
               setPargraph("Pick your preferred date and time");
@@ -70,7 +78,6 @@ const Bookvan = () => {
 
       {pageNo == 3 ? (
         <When
-          pageNo={pageNo}
           onClick={(e) => {
             setPageNo((prev) => prev - 1);
             setHeading("When?"),
@@ -80,6 +87,16 @@ const Bookvan = () => {
             setPageNo((prev) => prev + 1),
               setHeading("What are you moving?"),
               setPargraph("Choose your moving approach");
+          }}
+        />
+      ) : null}
+
+      {pageNo === 4 ? (
+        <WhatMoving
+          onClick={() => {
+            setPageNo((prev) => prev - 1);
+            setHeading("What are you moving?");
+            setPargraph("Choose your moving approach");
           }}
         />
       ) : null}

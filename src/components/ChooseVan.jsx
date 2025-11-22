@@ -25,7 +25,7 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
       onChange={(e) => {
         localStorage.setItem("choosedvan", e.target.value);
       }}
-      className={`${pageNo == 2 ? "block" : "hidden"}`}
+     
     >
       <ChooseVanHeading
         content="Choose Your Perfect Van"
