@@ -3,6 +3,7 @@ import {
   Apple,
   Bag,
   Certified,
+  Clock,
   CoinClock,
   Delivery,
   Expert,
@@ -20,13 +21,13 @@ import {
   Van,
 } from "./Icons";
 
-import John from "../assets/images/john.webp";
-import Gail from "../assets/images/gail.webp";
-import Sam from "../assets/images/sam.webp";
-import { BadgeCheck, Clock, Package } from "lucide-react";
-import Pack from "../assets/images/pack.webp";
-import Moving from "../assets/images/moving.webp";
+import { BadgeCheck, Clock10, Package } from "lucide-react";
 import Booking from "../assets/images/booking.webp";
+import Gail from "../assets/images/gail.webp";
+import John from "../assets/images/john.webp";
+import Moving from "../assets/images/moving.webp";
+import Pack from "../assets/images/pack.webp";
+import Sam from "../assets/images/sam.webp";
 
 export const navlist = [
   {
@@ -506,7 +507,7 @@ export const blogssecondarylist = [
 
 export const timelist = [
   {
-    svg: <Clock size={14} className="text-slate-500" />,
+    svg: <Clock10 size={14} className="text-slate-500" />,
     head: "Travel Time",
     para: "3h 56m",
   },

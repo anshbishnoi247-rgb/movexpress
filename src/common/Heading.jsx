@@ -215,3 +215,7 @@ export const LabelSecondary = ({ label }) => {
     <label className="text-sm font-semibold text-salute mb-2">{label}</label>
   );
 };
+
+export const PlacholderParagraph = ({ content ,className }) => {
+  return <p className={`${className} text-violetprimary/50 font-inter text-sm md:text-base`}>{content}</p>;
+}; 

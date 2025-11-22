@@ -36,7 +36,7 @@ const Bookvan = () => {
       </div>
       <div className={`h-[6px] w-full rounded-full bg-[#D5D5D5] mt-4 mb-6`}>
         <div
-          style={{ width: `calc(100% / (5 - ${pageNo}))` }}
+          style={{ width: `calc(${pageNo} * 20%)` }}
           className="h-full rounded-full bg-violetprimary"
         ></div>
       </div>
@@ -57,6 +57,8 @@ const Bookvan = () => {
           pageNo={pageNo}
           onClick={(e) => {
             setPageNo((prev) => prev - 1);
+            setHeading("Choose Your Van"),
+              setPargraph("Select your perfect vehicle");
           }}
           onSubmit={(e) => {
             setPageNo((prev) => prev + 1),
@@ -66,7 +68,21 @@ const Bookvan = () => {
         />
       ) : null}
 
-      {pageNo == 3 ? <When pageNo={pageNo} /> : null}
+      {pageNo == 3 ? (
+        <When
+          pageNo={pageNo}
+          onClick={(e) => {
+            setPageNo((prev) => prev - 1);
+            setHeading("When?"),
+              setPargraph("Pick your preferred date and time");
+          }}
+          onSubmit={(e) => {
+            setPageNo((prev) => prev + 1),
+              setHeading("What are you moving?"),
+              setPargraph("Choose your moving approach");
+          }}
+        />
+      ) : null}
     </aside>
   );
 };
