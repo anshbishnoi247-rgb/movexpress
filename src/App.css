@@ -93,6 +93,10 @@
   @apply bg-white p-5 border-1 border-solitude rounded-2xl shadow-sm mt-6 flex flex-col items-start justify-center;
 }
 
+.whatsmovingbtn {
+  @apply border-1 text-xs  transition-all duration-350   text-center rounded-xl py-3;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }

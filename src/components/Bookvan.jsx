@@ -13,10 +13,24 @@ const Bookvan = () => {
   const [pargraph, setPargraph] = useState(
     "Tell us your pickup and destination"
   );
-  const [searchParams, setSearchParams] = useSearchParams();
-  const params = searchParams.get("tabname");
+  const [searchParams] = useSearchParams();
+  const [formSteps, setFormsSteps] = useState("pickup-address");
+  const params = searchParams.get("tab");
 
-  const [tabName, setTabName] = useState("/");
+  useEffect(() => {
+    if (params) {
+      setFormsSteps(params);
+    }
+    if (params == "choose-your-van") {
+      setPageNo(2);
+    } else if (params == "when-moving") {
+      setPageNo(3);
+    } else if (params == "whats-moving") {
+      setPageNo(4);
+    } else {
+      setPageNo(1);
+    }
+  }, [params]);
 
   return (
     <aside
@@ -48,53 +62,61 @@ const Bookvan = () => {
         ></div>
       </div>
 
-      {pageNo == 1 ? (
+      {formSteps == "pickup-address" && (
         <Whereto
-          onSubmit={(e) => {
-            navigate("Choosevan");
-            setPageNo((prev) => prev + 1),
-              setHeading("Choose Your Van"),
-              setPargraph("Select your perfect vehicle");
+          onSubmit={() => {
+            navigate("?tab=choose-your-van");
+            setFormsSteps("choose-your-van");
+
+            setHeading("Choose Your Van");
+            setPargraph("Select your perfect vehicle");
           }}
         />
-      ) : null}
+      )}
 
-      {pageNo == 2 ? (
+      {formSteps == "choose-your-van" ? (
         <ChooseVan
           onClick={(e) => {
-            navigate("/");
-            setPageNo((prev) => prev - 1);
+            navigate("?tab=pickup-address");
+            setFormsSteps("pickup-address");
+
             setHeading("Choose Your Van"),
               setPargraph("Select your perfect vehicle");
           }}
           onSubmit={(e) => {
-            navigate("When");
-            setPageNo((prev) => prev + 1),
-              setHeading("When?"),
+            navigate("?tab=when-moving");
+            setFormsSteps("when-moving");
+
+            setHeading("When?"),
               setPargraph("Pick your preferred date and time");
           }}
         />
       ) : null}
 
-      {pageNo == 3 ? (
+      {formSteps == "when-moving" ? (
         <When
           onClick={(e) => {
-            setPageNo((prev) => prev - 1);
+            navigate("?tab=choose-your-van");
+            setFormsSteps("choose-your-van");
+
             setHeading("When?"),
               setPargraph("Pick your preferred date and time");
           }}
           onSubmit={(e) => {
-            setPageNo((prev) => prev + 1),
-              setHeading("What are you moving?"),
+            navigate("?tab=whats-moving");
+
+            setHeading("What are you moving?"),
               setPargraph("Choose your moving approach");
           }}
         />
       ) : null}
 
-      {pageNo === 4 ? (
+      {formSteps === "whats-moving" ? (
         <WhatMoving
           onClick={() => {
-            setPageNo((prev) => prev - 1);
+            navigate("?tab=when-moving");
+            setFormsSteps("when-moving");
+
             setHeading("What are you moving?");
             setPargraph("Choose your moving approach");
           }}
