@@ -34,7 +34,7 @@ const Bookvan = () => {
 
   return (
     <aside
-      className={`w-full py-6 px-7 bg-white z-5 relative rounded-3xl mb-2 `}
+      className={`w-full lg:py-6 p-4 lg:px-7 bg-white z-5 relative rounded-3xl mb-2 `}
     >
       <div className={`flex items-center justify-between`}>
         <div className={`flex flex-col items-start justify-center`}>
@@ -50,7 +50,7 @@ const Bookvan = () => {
           </p>
         </div>
         <p
-          className={`font-inter text-xs leading-6 font-medium px-4 py-[6px] bg-[#f6f6f6] rounded-full`}
+          className={`font-inter text-xs leading-6 font-medium px-4 py-[6px] text-nowrap bg-[#f6f6f6] rounded-full`}
         >
           {pageNo} of 5
         </p>

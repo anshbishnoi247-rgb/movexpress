@@ -5,9 +5,10 @@ import Buttonsecondary from "../common/Buttonsecondary";
 import { ArrowLeft, ArrowRight, Box, Camera, Truck } from "lucide-react";
 import Fillavan from "./Fillavan";
 import TakePicture from "./TakePicture";
+import Additems from "./Additems";
 
 const WhatMoving = ({ onSubmit, onClick }) => {
-  const [fillvan, setFillVan] = useState(false);
+  const [fillvan, setFillVan] = useState(true);
   const [additems, setAddItems] = useState(false);
   const [camera, setCamera] = useState(false);
 
@@ -23,7 +24,7 @@ const WhatMoving = ({ onSubmit, onClick }) => {
         paragraphcontent="Choose your moving approach"
       />
 
-      <div className="max-w-[544px] m-auto  grid my-4 grid-cols-2 gap-2 ">
+      <div className=" grid my-4 grid-cols-2 gap-2 ">
         <div
           onClick={() => {
             setFillVan(true);
@@ -73,6 +74,7 @@ const WhatMoving = ({ onSubmit, onClick }) => {
       </div>
       {fillvan && <Fillavan />}
       {camera && <TakePicture />}
+      {additems && <Additems />}
 
       <div className="w-full flex flex-col items-start justify-center gap-3 border-t-1 border-slate-200 pt-3 md:mt-6 md:pt-4">
         <Button

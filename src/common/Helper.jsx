@@ -517,3 +517,94 @@ export const timelist = [
     para: "0h 30m",
   },
 ];
+
+export const additemslist = [
+  {
+    name: "Bags",
+    items: [
+      "Large Clothes Storage Bag 90 Litres",
+      "Medium Holdall Bag 70 litres",
+      "Small Holdall Bag 50 litres",
+    ],
+  },
+  {
+    name: "Bathroom",
+    items: ["Bathroom Cabinet", "Shower Screen", "Shower Tray"],
+  },
+  {
+    name: "Bedroom Items",
+    items: [
+      "Bedside",
+      "Cot",
+      "Double Bed & Mattress",
+      "Futon Sofabed",
+      "Playhouse",
+    ],
+  },
+  {
+    name: "Computer Parts",
+    items: ["Desktop Pcs", "Laptop", ""],
+  },
+  {
+    name: "Dining Room",
+    items: ["6 Seater Dining Table", "Carver Chair", "French Dresser"],
+  },
+  {
+    name: "Garage & Garden",
+    items: ["BBQ", "Playhouse", "Wheelbarrow", "Wicker Chair"],
+  },
+  {
+    name: "Kitchen & Hall",
+    items: ["Cooker", "Double Pushchair", "High Chair", "Kitchen Dresser"],
+  },
+  {
+    name: "Living Room",
+    items: [
+      "Bookcase",
+      "Corner Sofa (Five Seater)",
+      "Sideboard, small",
+      "Small Sofa Bed",
+    ],
+  },
+  {
+    name: "Moving Boxes",
+    items: [
+      "Archive Box approx 40x25x34",
+      "Medium Box approx 45x30x30cm",
+      "Small Box approx 30x25x34cm",
+    ],
+  },
+  {
+    name: "Piano",
+    items: ["Baby Grand Piano", "Electric Keyboard"],
+  },
+  {
+    name: "Rucksacks",
+    items: ["Large Rucksack 50-60 litres", "Medium Rucksack 35-50 litres"],
+  },
+  {
+    name: "Sofas",
+    items: ["Corner Sofa (Five Seater)", "Futon Sofa bed", "Small Sofa Bed"],
+  },
+  {
+    name: "Special Items",
+    items: ["Aga Cooker", "Arcade Machine", " Piano, Upright"],
+  },
+  {
+    name: "Suitcases",
+    items: ["Archive Box approx 40x25x34", "Medium Suitcase approx 63x41x27cm"],
+  },
+  {
+    name: "Tables",
+    items: ["Bedside Table", "Big Table", "Coffee Table"],
+  },
+  {
+    name: "Wardrobes",
+    items: [
+      "Double Wardrobe",
+      "Quad Wardrobe",
+      "Single Wardrobe",
+      "Triple Wardrobe",
+    ],
+  },
+];

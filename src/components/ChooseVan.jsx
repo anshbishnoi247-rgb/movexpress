@@ -42,8 +42,8 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
             setlutonBoxVan(false);
           }}
           className={`${
-            smallVan && "border-violetprimary scale-102 bg-violetprimary/5"
-          } relative overflow-hidden z-1 w-full shadow-sm border-slate-200 border-1 p-3 hover:border-vinegar hover:shadow-md rounded-xl transition-all duration-300 ease-in-out`}
+            smallVan && "!border-violetprimary scale-102 bg-violetprimary/5"
+          } choosevan-style-div`}
         >
           <input
             type="radio"
@@ -54,14 +54,12 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
           />
 
           <div
-            className={`${
-              smallVan && "bg-violetprimary "
-            } absolute  h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300 flex items-center justify-center`}
+            className={`${smallVan && "bg-violetprimary "} check-design-common`}
           >
             <Check size={15} className="text-white" />
           </div>
 
-          <div className="flex items-center gap-3 ">
+          <div className="flex max-lg:flex-col items-start lg:items-center gap-3 ">
             <img src={smallvan} className="h-16 w-16 object-cover" />
 
             <div className="flex flex-col items-start justify-center">
@@ -91,9 +89,9 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
             setlutonVan(false);
             setlutonBoxVan(false);
           }}
-          className={`relative ${
-            mediumVan && "border-violetprimary scale-102 bg-violetprimary/5"
-          } overflow-hidden z-1 w-full shadow-sm border-slate-200 border-1 p-3 hover:border-vinegar hover:shadow-md rounded-xl transition-all duration-300 ease-in-out`}
+          className={` ${
+            mediumVan && "!border-violetprimary scale-102 bg-violetprimary/5"
+          } choosevan-style-div`}
         >
           <input
             type="radio"
@@ -104,15 +102,13 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
           />
 
           <div
-            className={`${
-              mediumVan && "bg-violetprimary"
-            } flex justify-center items-center absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300`}
+            className={`${mediumVan && "bg-violetprimary"} check-design-common`}
           >
             {" "}
             <Check size={15} className="text-white" />
           </div>
 
-          <div className="flex items-center gap-3 ">
+          <div className="flex max-lg:flex-col items-start lg:items-center gap-3 ">
             <img src={mediumvan} className="h-16 w-16 object-cover" />
 
             <div className="flex flex-col items-start justify-center">
@@ -143,8 +139,8 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
             setlutonBoxVan(false);
           }}
           className={`${
-            largeVan && "border-violetprimary scale-102 bg-violetprimary/5"
-          } relative overflow-hidden z-1 w-full shadow-sm border-slate-200 border-1 p-3 hover:border-vinegar hover:shadow-md rounded-xl transition-all duration-300 ease-in-out`}
+            largeVan && "!border-violetprimary scale-102 bg-violetprimary/5"
+          } choosevan-style-div`}
         >
           <input
             type="radio"
@@ -155,15 +151,13 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
           />
 
           <div
-            className={`${
-              largeVan && "bg-violetprimary"
-            } flex items-center justify-center absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300`}
+            className={`${largeVan && "bg-violetprimary"} check-design-common`}
           >
             {" "}
             <Check size={15} className="text-white" />
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex max-lg:flex-col items-start lg:items-center gap-3">
             <img src={largevan} className="h-16 w-16 object-cover" />
 
             <div className="flex flex-col items-start justify-center">
@@ -194,8 +188,8 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
             setlutonBoxVan(false);
           }}
           className={`${
-            lutonVan && "border-violetprimary scale-102 bg-violetprimary/5"
-          } relative overflow-hidden z-1 w-full shadow-sm border-slate-200 border-1 p-3 hover:border-vinegar hover:shadow-md rounded-xl transition-all duration-300 ease-in-out`}
+            lutonVan && "!border-violetprimary scale-102 bg-violetprimary/5"
+          } choosevan-style-div`}
         >
           <input
             type="radio"
@@ -206,15 +200,13 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
           />
 
           <div
-            className={`${
-              lutonVan && "bg-violetprimary"
-            } flex items-center justify-center absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300`}
+            className={`${lutonVan && "bg-violetprimary"} check-design-common`}
           >
             {" "}
             <Check size={15} className="text-white" />
           </div>
 
-          <div className="flex items-center gap-3 ">
+          <div className="flex max-lg:flex-col items-start lg:items-center gap-3 ">
             <img src={lutonvan} className="h-16 w-16 object-cover" />
 
             <div className="flex flex-col items-start justify-center">
@@ -245,8 +237,8 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
             setlutonBoxVan(true);
           }}
           className={`${
-            lutonBoxVan && "border-violetprimary scale-102 bg-violetprimary/5"
-          } relative overflow-hidden z-1 w-full shadow-sm border-slate-200 border-1 p-3 hover:border-vinegar hover:shadow-md rounded-xl transition-all duration-300 ease-in-out`}
+            lutonBoxVan && "!border-violetprimary scale-102 bg-violetprimary/5"
+          } choosevan-style-div`}
         >
           <input
             type="radio"
@@ -259,13 +251,13 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
           <div
             className={`${
               lutonBoxVan && "bg-violetprimary"
-            } absolute flex items-center justify-center h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300`}
+            } check-design-common`}
           >
             {" "}
             <Check size={15} className="text-white" />
           </div>
 
-          <div className="flex items-center gap-3 ">
+          <div className="flex max-lg:flex-col items-start lg:items-center gap-3 ">
             <img src={lutonboxvan} className="h-16 w-16 object-cover" />
 
             <div className="flex flex-col items-start justify-center">

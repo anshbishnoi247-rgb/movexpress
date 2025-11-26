@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Minus, Plus } from "lucide-react";
 import {
   Paragraph,
   SubHeading,
@@ -14,6 +14,7 @@ import {
   reviewlist,
   selectlist,
 } from "./Helper";
+import { useState } from "react";
 
 export const WithCard = () => {
   return (
@@ -171,5 +172,84 @@ export const WithCardBlogSecondary = () => {
         })}
       </div>
     </>
+  );
+};
+
+export const AddItemsList = ({
+  item,
+  quantity,
+  quantities,
+  search,
+  setQuantities,
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleChange = (index, value, list) => {
+    setQuantities((prev) => ({
+      ...prev,
+      [item]: {
+        ...(prev[item] || {}),
+        [list]: value,
+      },
+    }));
+  };
+
+  return (
+    <div>
+      {(!search || search == item.toLowerCase()) && (
+        <div
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="flex text-sm text-black/80 shadow-md font-semibold justify-between rounded-xl p-3 hover:bg-blue-300/10"
+        >
+          <h3>{item}</h3>
+          <span
+            className={`transition-all duration-300 ${
+              isOpen ? "rotate-90" : "rotate-0"
+            }`}
+          >
+            <ChevronRight />
+          </span>
+        </div>
+      )}
+      {/* Items */}
+      {isOpen && (
+        <div className="px-3 py-2 flex flex-col gap-2 transition-all duration-500">
+          {quantity.map((list, i) => (
+            <div
+              key={i}
+              className="flex justify-between text-xs shadow-sm items-center bg-blue-50 rounded-lg p-2"
+            >
+              <p>{list}</p>
+
+              <div className="flex gap-2 items-center">
+                <button
+                  type="button"
+                  onClick={() =>
+                    handleChange(
+                      i,
+                      Math.max((quantities[item]?.[list] || 0) - 1, 0),
+                      list
+                    )
+                  }
+                >
+                  <Minus size={10} />
+                </button>
+
+                {quantities[item]?.[list] || 0}
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    handleChange(i, (quantities[item]?.[list] || 0) + 1, list)
+                  }
+                >
+                  <Plus size={10} />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
