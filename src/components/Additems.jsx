@@ -17,8 +17,8 @@ const Additems = () => {
         <input
           type="text"
           onChange={(e) => {
-          setSearch(e.target.value.toLowerCase());
-            console.log(search)
+            setSearch(e.target.value.toLowerCase());
+            console.log(search);
           }}
           placeholder="search for items ...."
           className="w-full outline-none"

@@ -23,12 +23,25 @@ const Bookvan = () => {
     }
     if (params == "choose-your-van") {
       setPageNo(2);
+
+      setHeading("Choose Your Van");
+
+      setPargraph("Select your perfect vehicle");
     } else if (params == "when-moving") {
       setPageNo(3);
+
+      setHeading("When?"), setPargraph("Pick your preferred date and time");
     } else if (params == "whats-moving") {
       setPageNo(4);
+      setHeading("What are you moving?"),
+        setPargraph("Choose your moving approach");
+    } else if (params == "select-helper") {
+      setPageNo(5);
+      setHeading("Select Helper?"), setPargraph("Choose your moving approach");
     } else {
       setPageNo(1);
+      setHeading("Where to ?"),
+        setPargraph("Tell us your pickup and destination");
     }
   }, [params]);
 
@@ -67,9 +80,6 @@ const Bookvan = () => {
           onSubmit={() => {
             navigate("?tab=choose-your-van");
             setFormsSteps("choose-your-van");
-
-            setHeading("Choose Your Van");
-            setPargraph("Select your perfect vehicle");
           }}
         />
       )}
@@ -79,16 +89,10 @@ const Bookvan = () => {
           onClick={(e) => {
             navigate("?tab=pickup-address");
             setFormsSteps("pickup-address");
-
-            setHeading("Choose Your Van"),
-              setPargraph("Select your perfect vehicle");
           }}
           onSubmit={(e) => {
             navigate("?tab=when-moving");
             setFormsSteps("when-moving");
-
-            setHeading("When?"),
-              setPargraph("Pick your preferred date and time");
           }}
         />
       ) : null}
@@ -98,15 +102,10 @@ const Bookvan = () => {
           onClick={(e) => {
             navigate("?tab=choose-your-van");
             setFormsSteps("choose-your-van");
-
-            setHeading("When?"),
-              setPargraph("Pick your preferred date and time");
           }}
           onSubmit={(e) => {
             navigate("?tab=whats-moving");
-
-            setHeading("What are you moving?"),
-              setPargraph("Choose your moving approach");
+            setFormsSteps("whats-moving");
           }}
         />
       ) : null}
@@ -116,9 +115,10 @@ const Bookvan = () => {
           onClick={() => {
             navigate("?tab=when-moving");
             setFormsSteps("when-moving");
-
-            setHeading("What are you moving?");
-            setPargraph("Choose your moving approach");
+          }}
+          onSubmit={(e) => {
+            navigate("?tab=select-helper");
+            setFormsSteps("select-helper");
           }}
         />
       ) : null}

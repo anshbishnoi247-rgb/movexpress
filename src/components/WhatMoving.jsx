@@ -11,6 +11,7 @@ const WhatMoving = ({ onSubmit, onClick }) => {
   const [fillvan, setFillVan] = useState(true);
   const [additems, setAddItems] = useState(false);
   const [camera, setCamera] = useState(false);
+  const [imageValue, setImageValue] = useState();
 
   return (
     <form
@@ -73,7 +74,7 @@ const WhatMoving = ({ onSubmit, onClick }) => {
         </div>
       </div>
       {fillvan && <Fillavan />}
-      {camera && <TakePicture />}
+      {camera && <TakePicture setImageValue={setImageValue} />}
       {additems && <Additems />}
 
       <div className="w-full flex flex-col items-start justify-center gap-3 border-t-1 border-slate-200 pt-3 md:mt-6 md:pt-4">

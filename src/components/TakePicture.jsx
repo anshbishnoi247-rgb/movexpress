@@ -1,10 +1,11 @@
 import { Camera } from "lucide-react";
 
-const TakePicture = () => {
+const TakePicture = ({setImageValue}) => {
   return (
     <div className="p-4 shadow-sm/20 rounded-xl relative">
       <input
         type="file"
+        onChange={(e)=>setImageValue(e.target.value)}
         className="h-full w-full absolute left-0 top-0 outlin-none opacity-0"
       />
       <div className="flex mb-2 items-center gap-2">
