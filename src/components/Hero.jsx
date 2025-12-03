@@ -4,7 +4,7 @@ import { Alert, Gps, Truesthalf, Trustrate, Truststar } from "../common/Icons";
 import Bookvan from "./Bookvan";
 import { useState } from "react";
 
-const Hero = () => {
+const Hero = ({setHide}) => {
   return (
     <section
       className={`max-w-332 mx-auto flex flex-col-reverse md:flex-row justify-between items-center lg:items-end gap-5 md:gap-0 mt-7 sm:mt-10 md:mt-12 xl:mt-16 px-4`}
@@ -74,7 +74,7 @@ const Hero = () => {
         data-aos-anchor-placement="top-bottom"
         className="relative max-w-[644px] w-full"
       >
-        <Bookvan />
+        <Bookvan setHide={setHide} />
         <div
           className={`absolute w-[393px] h-[393px] top-5 -right-[22px] z-1 bg-vinegar hidden md:block blur-[141px] rounded-full`}
         ></div>

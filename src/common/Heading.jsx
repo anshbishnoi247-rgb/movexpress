@@ -216,6 +216,32 @@ export const LabelSecondary = ({ label }) => {
   );
 };
 
-export const PlacholderParagraph = ({ content ,className }) => {
-  return <p className={`${className} text-violetprimary/50 font-inter text-sm md:text-base`}>{content}</p>;
-}; 
+export const PlacholderParagraph = ({ content, className }) => {
+  return (
+    <p
+      className={`${className} text-violetprimary/50 font-inter text-sm md:text-base`}
+    >
+      {content}
+    </p>
+  );
+};
+
+export const AddHelperHeadingBox = ({ paragraph, heading }) => {
+  return (
+    <div className="flex flex-col items-start justify-between gap-1">
+      <h3 className="text-slate-800 text-sm font-bold font-inter">{heading}</h3>
+      <p className="text-sleet font-inter mb-2 text-xs">{paragraph}</p>
+    </div>
+  );
+};
+
+export const QuoteHeadingBox = ({ heading, paragraph }) => {
+  return (
+    <div className="text-center flex flex-col justify-center gap-1 items-center mb-4">
+      <h2 className="leading-[150%] font-semibold text-xl font-inter text-eerieblack">
+        {heading}
+      </h2>
+      <p className="text-obsidian text-sm max-w-md font-inter">{paragraph}</p>
+    </div>
+  );
+};

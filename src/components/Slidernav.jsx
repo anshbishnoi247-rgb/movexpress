@@ -13,7 +13,7 @@ const Slidernav = ({ slidernav, setslidernav }) => {
     <div
       className={` ${
         slidernav ? "translate-y-0" : "-translate-y-full"
-      } bg-mist w-full h-full transition-all duration-300 z-10 linear fixed flex flex-col`}
+      } bg-mist w-full h-full overflow-hidden transition-all duration-300 z-10 linear fixed flex flex-col`}
     >
       <div
         className={`flex items-center justify-between p-4 w-full max-w-324 mx-auto `}

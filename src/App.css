@@ -29,6 +29,7 @@
   --color-solitude: #f6f7f9;
   --color-midnightsecondary: #010528;
   --color-salute: #282b35;
+  --color-flawed: #fffcfb;
 }
 
 .paragraph-text-style {
@@ -56,7 +57,7 @@
 }
 
 .button-style-hover {
-  @apply bg-violetprimary z-1 left-1/2 top-1/2 -translate-1/2 w-0 h-0 transition-all duration-500 ease-in-out group-hover:w-81 group-hover:h-16 absolute rounded-xl;
+  @apply  z-1 left-1/2 top-1/2 -translate-1/2 w-0 h-0 transition-all duration-500 ease-in-out group-hover:w-81 group-hover:h-16 absolute rounded-xl;
 }
 
 .scrolltotop-style {
@@ -94,7 +95,7 @@
 }
 
 .whatsmovingbtn {
-  @apply border-1 text-xs  transition-all duration-350   text-center rounded-xl py-3;
+  @apply border-1 transition-all duration-300 ease-in-out text-center rounded-xl py-3;
 }
 
 .choosevan-style-div {
@@ -102,7 +103,19 @@
 }
 
 .check-design-common {
-  @apply absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300 flex items-center justify-center
+  @apply absolute h-6 w-6 rounded-full border-1 right-3 top-3 border-slate-200 transition-all duration-300 flex items-center justify-center;
+}
+
+.quote-paragraph-style {
+  @apply text-slate-600 font-inter text-xs;
+}
+
+.quote-paragraph-style-secondary {
+  @apply font-medium text-midnight text-xs text-right font-inter;
+}
+
+.cancel-button-style{
+  @apply px-4 py-2 hover:text-midnight text-obsidian font-semibold rounded-xl font-inter bg-slate-100 text-sm md:text-base cursor-pointer transition-all duration-200 ease-in-out hover:bg-slate-200
 }
 
 ::-webkit-scrollbar {

@@ -18,7 +18,9 @@ const Button = ({
         {subicon ? subicon : null} {button}&nbsp; {icon ? icon : null}
       </button>
 
-      <div className={`${subsubclassName} button-style-hover `}></div>
+      <div
+        className={`${subsubclassName} button-style-hover  bg-violetprimary`}
+      ></div>
     </div>
   );
 };

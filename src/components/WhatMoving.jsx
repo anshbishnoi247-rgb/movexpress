@@ -25,7 +25,7 @@ const WhatMoving = ({ onSubmit, onClick }) => {
         paragraphcontent="Choose your moving approach"
       />
 
-      <div className=" grid my-4 grid-cols-2 gap-2 ">
+      <div className="grid my-4 grid-cols-2 gap-2 ">
         <div
           onClick={() => {
             setFillVan(true);
@@ -39,7 +39,7 @@ const WhatMoving = ({ onSubmit, onClick }) => {
           } whatsmovingbtn border-black/20`}
         >
           <Truck className="m-auto " size={20} />
-          <p>Fill a Van </p>
+          <p className="font-inter md:text-sm text-base mt-2">Fill a Van </p>
         </div>
         <div
           onClick={() => {
@@ -55,7 +55,7 @@ const WhatMoving = ({ onSubmit, onClick }) => {
             whatsmovingbtn border-black/20`}
         >
           <Box className="m-auto " size={20} />
-          <p>Add items </p>
+          <p className=" font-inter md:text-sm text-base mt-2">Add items</p>
         </div>
         <div
           onClick={() => {
@@ -70,7 +70,9 @@ const WhatMoving = ({ onSubmit, onClick }) => {
           } whatsmovingbtn border-black/20 col-span-2`}
         >
           <Camera className="m-auto" size={20} />
-          <p>Take Picture/Video</p>
+          <p className=" font-inter md:text-sm text-base mt-2">
+            Take Picture/Video
+          </p>
         </div>
       </div>
       {fillvan && <Fillavan />}

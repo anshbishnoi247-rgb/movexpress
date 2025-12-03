@@ -3,8 +3,8 @@ import Logo from "../assets/images/favicon.webp";
 import Slidernav from "./Slidernav";
 import { useState } from "react";
 
-const Navbar = () => {
-  const [slidernav, setslidernav] = useState(false);
+const Navbar = ({ slidernav, setslidernav }) => {
+ 
 
   return (
     <>
