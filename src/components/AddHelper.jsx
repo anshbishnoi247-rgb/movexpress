@@ -1,13 +1,15 @@
 import { ArrowLeft, ArrowRight, Car, Check, User2, Users2 } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { AddHelperHeadingBox, ChooseVanHeading } from "../common/Heading";
 import Button from "../common/Button";
 import Buttonsecondary from "../common/Buttonsecondary";
+import { InformationContext } from "../context/context";
 
-const AddHelper = ({ onSubmit, onClick,setHide }) => {
+const AddHelper = ({ onSubmit, onClick, setHide }) => {
   const [noHelper, setNoHelper] = useState(null);
   const [oneHelper, setOneHelper] = useState(null);
   const [twoHelper, setTwoHelper] = useState(null);
+  const { helper, setHelper } = useContext(InformationContext);
   return (
     <form
       onSubmit={(e) => {
@@ -15,7 +17,7 @@ const AddHelper = ({ onSubmit, onClick,setHide }) => {
         setHide(false);
       }}
       onChange={(e) => {
-        localStorage.setItem("heplerNeed", e.target.value);
+        setHelper(e.target.value);
       }}
     >
       <ChooseVanHeading
@@ -40,7 +42,7 @@ const AddHelper = ({ onSubmit, onClick,setHide }) => {
             type="radio"
             name="helper"
             required
-            value="nohelper"
+            value="No helper Nedded"
             className="w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
@@ -81,7 +83,7 @@ const AddHelper = ({ onSubmit, onClick,setHide }) => {
             type="radio"
             name="helper"
             required
-            value="onehelper"
+            value="One Helper Nedded"
             className="w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
@@ -124,7 +126,7 @@ const AddHelper = ({ onSubmit, onClick,setHide }) => {
             type="radio"
             name="helper"
             required
-            value="twohelper"
+            value="Two Helper Nedded"
             className="w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 

@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { QuoteHeadingBox } from "../common/Heading";
 import { Calendar, Check, CheckCircle, Map, MapPin, Truck } from "lucide-react";
 import Button from "../common/Button";
+import { InformationContext } from "../context/context";
 
 const QuoteSummary = ({ total, setHide }) => {
+  const {
+    startDestination,
+    finalDestination,
+    choosedvan,
+    helper,
+    loadingunloadingTime,
+    startTime,
+    startDate,
+  } = useContext(InformationContext);
   return (
     <div className="w-full fixed overflow-hidden z-10 bg-opacity-80 backdrop-blur-md bg-black/60 h-screen top-0 left-0 p-3 sm:p-5 flex items-center justify-center">
       <div className="max-w-xl bg-white overflow-y-scroll shadow-xl rounded-xl p-4 md:p-5 w-full border-slate-200 max-h-[85vh] h-fit">
@@ -30,15 +40,13 @@ const QuoteSummary = ({ total, setHide }) => {
             <div className="flex justify-between items-start gap-5 py-1">
               <span className="quote-paragraph-style">From:</span>
               <span className="quote-paragraph-style-secondary">
-                The Quollify App Ltd, Reckford Run, Fenstreet Road, Middleton,
-                Saxmundham
+                {startDestination}
               </span>
             </div>
             <div className="flex justify-between items-start gap-5 py-1">
               <span className="quote-paragraph-style">To:</span>
               <span className="quote-paragraph-style-secondary">
-                Rabbitvision Ltd, Morse Opticians, 14-16 Tan Lane,
-                Caister-on-Sea, Great Yarmouth
+                {finalDestination}
               </span>
             </div>
             <div className="flex justify-between items-center py-1">
@@ -56,14 +64,12 @@ const QuoteSummary = ({ total, setHide }) => {
             <div className="flex justify-between items-center py-1">
               <span className="quote-paragraph-style">Van:</span>
               <span className="quote-paragraph-style-secondary">
-                Luton Box Van with Tail Lift
+                {choosedvan}
               </span>
             </div>
             <div className="flex justify-between items-center py-1">
               <span className="quote-paragraph-style">Helpers:</span>
-              <span className="quote-paragraph-style-secondary">
-                No Help Needed
-              </span>
+              <span className="quote-paragraph-style-secondary">{helper}</span>
             </div>
           </div>
           <div className="space-y-2 pt-2 border-t border-slate-200">
@@ -74,16 +80,21 @@ const QuoteSummary = ({ total, setHide }) => {
             <div className="flex justify-between items-center py-1">
               <span className="quote-paragraph-style">Date:</span>
               <span className="quote-paragraph-style-secondary">
-                24 Dec 2025
+                {startDate}
               </span>
             </div>
             <div className="flex justify-between items-center py-1">
               <span className="quote-paragraph-style">Time:</span>
-              <span className="quote-paragraph-style-secondary">10:00</span>
+              <span className="quote-paragraph-style-secondary">
+                {startTime}
+              </span>
             </div>
             <div className="flex justify-between items-center py-1">
               <span className="quote-paragraph-style">Duration:</span>
-              <span className="quote-paragraph-style-secondary">5h 30m</span>
+              <span className="quote-paragraph-style-secondary">
+                {" "}
+                {loadingunloadingTime}
+              </span>
             </div>
           </div>
         </div>

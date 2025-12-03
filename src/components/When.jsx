@@ -7,7 +7,7 @@ import {
   Triangle,
   Truck,
 } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
   ChooseVanHeading,
   EstimationParagraph,
@@ -21,17 +21,16 @@ import {
 import { timelist } from "../common/Helper";
 import Button from "../common/Button";
 import Buttonsecondary from "../common/Buttonsecondary";
+import { InformationContext } from "../context/context";
 
 const When = ({ pageNo, onClick, onSubmit }) => {
-  const [choosedVan, setchoosedVan] = useState(
-    localStorage.getItem("choosedvan")
-  );
-
   const [inputActive, setInputActive] = useState(false);
   const [inputActiveSecondary, setInputActiveSecondary] = useState(false);
-  const [loadingunloadingTime, setLoadingUnloadingTime] = useState(null);
-  const [startDate, setStartDate] = useState(null);
-  const [startTime, setStartTime] = useState(null);
+  const {loadingunloadingTime, setLoadingUnloadingTime} =
+    useContext(InformationContext);
+  const {startDate, setStartDate} = useContext(InformationContext);
+  const {startTime, setStartTime} = useContext(InformationContext);
+  const { choosedvan, setChoosedVan } = useContext(InformationContext);
   return (
     <form
       onSubmit={(e) => {
@@ -51,15 +50,15 @@ const When = ({ pageNo, onClick, onSubmit }) => {
 
           <HeadingTime
             heading={`${
-              choosedVan === "smallvan"
+              choosedvan === "Small Van"
                 ? "Small Van"
-                : choosedVan === "mediumvan"
+                : choosedvan === "Medium Van"
                 ? "Medium Van"
-                : choosedVan === "largevan"
+                : choosedvan === "Large Van"
                 ? "Large Van"
-                : choosedVan === "lutonvan"
+                : choosedvan === "Luton Van"
                 ? "Luton Van"
-                : choosedVan === "lutonboxvan"
+                : choosedvan === "Luton Box Van"
                 ? "Luton Box Van"
                 : ""
             }- Time Estimation`}

@@ -6,9 +6,8 @@ import When from "./When";
 import WhatMoving from "./WhatMoving";
 import { useNavigate, useSearchParams } from "react-router";
 import AddHelper from "./AddHelper";
-import QuoteSummary from "./QuoteSummary";
 
-const Bookvan = ({setHide}) => {
+const Bookvan = ({ setHide }) => {
   const navigate = useNavigate();
   const [pageNo, setPageNo] = useState(1);
   const [heading, setHeading] = useState("Where to?");
@@ -126,7 +125,8 @@ const Bookvan = ({setHide}) => {
           />
         ) : null}
         {formSteps === "select-helper" ? (
-          <AddHelper setHide={setHide}
+          <AddHelper
+            setHide={setHide}
             onClick={() => {
               navigate("?tab=when-moving");
               setFormsSteps("when-moving");
@@ -134,7 +134,6 @@ const Bookvan = ({setHide}) => {
           />
         ) : null}
       </aside>
-     
     </>
   );
 };

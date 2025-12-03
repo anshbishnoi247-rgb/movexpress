@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Alert, Gps } from "../common/Icons";
 import map from "../assets/images/map.webp";
 import Buttonsecondary from "../common/Buttonsecondary";
+import { InformationContext } from "../context/context";
 
 const Whereto = ({ onSubmit, pageNo }) => {
-  const [startDestination, setstartDestination] = useState("");
-  const [finalDestination, setfinalDestination] = useState("");
+  const { startDestination, setstartDestination } =
+    useContext(InformationContext);
+  const { finalDestination, setfinalDestination } =
+    useContext(InformationContext);
   return (
     <form
       onSubmit={(e) => {
@@ -25,8 +28,7 @@ const Whereto = ({ onSubmit, pageNo }) => {
           <Gps />
           <input
             onChange={(e) => {
-              setstartDestination(e.target.value),
-                console.log(startDestination);
+              setstartDestination(e.target.value);
             }}
             value={startDestination}
             type="text"
@@ -48,8 +50,7 @@ const Whereto = ({ onSubmit, pageNo }) => {
           <Gps />
           <input
             onChange={(e) => {
-              setfinalDestination(e.target.value),
-                console.log(finalDestination);
+              setfinalDestination(e.target.value);
             }}
             value={finalDestination}
             required

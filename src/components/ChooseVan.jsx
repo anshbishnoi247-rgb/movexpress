@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { ChooseVanHeading, ChooseVanHeadingBox, Tags } from "../common/Heading";
 import Buttonsecondary from "../common/Buttonsecondary";
 import Button from "../common/Button";
@@ -8,6 +8,7 @@ import mediumvan from "../assets/images/medium-van.jpg";
 import largevan from "../assets/images/large-van.jpg";
 import lutonvan from "../assets/images/luton-van.jpg";
 import lutonboxvan from "../assets/images/luton-box-van.jpg";
+import { InformationContext } from "../context/context";
 
 const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
   const [smallVan, setsmallVan] = useState(null);
@@ -15,6 +16,7 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
   const [largeVan, setlargeVan] = useState(null);
   const [lutonVan, setlutonVan] = useState(null);
   const [lutonBoxVan, setlutonBoxVan] = useState(null);
+  const { choosedvan, setChoosedVan } = useContext(InformationContext);
 
   return (
     <form
@@ -23,7 +25,7 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
         onSubmit(e);
       }}
       onChange={(e) => {
-        localStorage.setItem("choosedvan", e.target.value);
+        setChoosedVan(e.target.value);
       }}
     >
       <ChooseVanHeading
@@ -49,7 +51,7 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
             type="radio"
             name="vehicle"
             required
-            value="smallvan"
+            value="Small Van"
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
@@ -96,7 +98,7 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
           <input
             type="radio"
             name="vehicle"
-            value="mediumvan"
+            value="Medium Van"
             required
             className=" w-full h-full absolute opacity-1 z-10 top-0 left-0"
           />
@@ -146,7 +148,7 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
             type="radio"
             name="vehicle"
             required
-            value="largevan"
+            value="Large Van"
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
@@ -194,7 +196,7 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
           <input
             type="radio"
             name="vehicle"
-            value="lutonvan"
+            value="Luton Van"
             required
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
@@ -244,7 +246,7 @@ const ChooseVan = ({ pageNo, onClick, onSubmit }) => {
             type="radio"
             name="vehicle"
             required
-            value="lutonboxvan"
+            value="Luton Box Van"
             className=" w-full h-full absolute opacity-0 z-10 top-0 left-0"
           />
 
