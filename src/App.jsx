@@ -12,18 +12,23 @@ import ServicesPage from "./pages/ServicesPage";
 import SignupPage from "./pages/SignupPage";
 import VanservicesPage from "./pages/VanservicesPage";
 import { InformationContext } from "./context/context";
+import { app } from "./FireBase.jsx";
 
 function App() {
   const [startDestination, setstartDestination] = useState("");
   const [finalDestination, setfinalDestination] = useState("");
   const [choosedvan, setChoosedVan] = useState("");
   const [helper, setHelper] = useState("");
-  const [loadingunloadingTime, setLoadingUnloadingTime] = useState(null);
-  const [startDate, setStartDate] = useState(null);
-  const [startTime, setStartTime] = useState(null);
+  const [loadingunloadingTime, setLoadingUnloadingTime] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [imageValue, setImageValue] = useState("");
+  const [quantities, setQuantities] = useState({});
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+
   return (
     <>
       <InformationContext.Provider
@@ -42,6 +47,10 @@ function App() {
           setStartDate,
           startTime,
           setStartTime,
+          imageValue,
+          setImageValue,
+          quantities,
+          setQuantities,
         }}
       >
         <ScrollToTop />

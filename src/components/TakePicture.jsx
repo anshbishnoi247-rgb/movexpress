@@ -1,12 +1,17 @@
 import { Camera } from "lucide-react";
+import { useContext } from "react";
+import { InformationContext } from "../context/context";
 
-const TakePicture = ({ setImageValue }) => {
+const TakePicture = () => {
+  const { imageValue, setImageValue } = useContext(InformationContext);
   return (
     <div className="p-4 shadow-sm/20 rounded-xl relative">
       <input
         type="file"
         required
-        onChange={(e) => setImageValue(e.target.value)}
+        onChange={(e) => {
+          setImageValue(e.target.value);
+        }}
         className="h-full w-full absolute left-0 top-0 outlin-none opacity-0"
       />
       <div className="flex mb-2 items-center gap-2">

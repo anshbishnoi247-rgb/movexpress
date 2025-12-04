@@ -3,6 +3,8 @@ import { QuoteHeadingBox } from "../common/Heading";
 import { Calendar, Check, CheckCircle, Map, MapPin, Truck } from "lucide-react";
 import Button from "../common/Button";
 import { InformationContext } from "../context/context";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../FireBase";
 
 const QuoteSummary = ({ total, setHide }) => {
   const {
@@ -13,7 +15,31 @@ const QuoteSummary = ({ total, setHide }) => {
     loadingunloadingTime,
     startTime,
     startDate,
+    imageValue,
+    quantities,
   } = useContext(InformationContext);
+
+  async function postDetails() {
+    const allDetails = {
+      pickupaddress: startDestination,
+      destinationaddress: finalDestination,
+      vanchoosed: choosedvan,
+      imageofItem: imageValue,
+      addedItems: quantities,
+      loadingunloadingTime: loadingunloadingTime,
+      date: startDate,
+      time: startTime,
+      helperneeded: helper,
+    };
+
+    try {
+      const docRef = await addDoc(collection(db, "bookings"), allDetails);
+      console.log("Document saved with ID:", docRef.id);
+      alert("Data posted successfully!");
+    } catch (error) {
+      console.error("Error saving:", error);
+    }
+  }
   return (
     <div className="w-full fixed overflow-hidden z-10 bg-opacity-80 backdrop-blur-md bg-black/60 h-screen top-0 left-0 p-3 sm:p-5 flex items-center justify-center">
       <div className="max-w-xl bg-white overflow-y-scroll shadow-xl rounded-xl p-4 md:p-5 w-full border-slate-200 max-h-[85vh] h-fit">
@@ -113,6 +139,7 @@ const QuoteSummary = ({ total, setHide }) => {
             subclassName="!h-10 md:!h-10 !text-sm"
             subsubclassName="!bg-vinegar !duration-800"
             type="button"
+            onClick={postDetails}
           />
         </div>
       </div>

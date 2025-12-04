@@ -2,11 +2,7 @@ import Button from "../common/Button";
 import Subfooter from "./Subfooter";
 
 import { ListHeading, ListLink, Paragraph } from "../common/Heading";
-import {
-  footerlist,
-  listcontact,
-  listdicription
-} from "../common/Helper";
+import { footerlist, listcontact, listdicription } from "../common/Helper";
 import { Facebook, Instagram, Message, Twitter } from "../common/Icons";
 import Logopamplate from "../common/Logopamplate";
 
@@ -90,7 +86,7 @@ const Footer = () => {
                 icon={<Message />}
                 button={`Chat with US`}
                 className={`shadow-[0px_5px_5px_0px_#00000026] w-[184px]`}
-                subclassName={`h-[!66px]`}
+                subclassName={`!h-[66px]`}
               />
             </li>
           </ul>

@@ -1,11 +1,12 @@
 import { Package } from "lucide-react";
 import { additemslist } from "../common/Helper";
 import { AddItemsList } from "../common/Card";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Plus, X } from "lucide-react";
+import { InformationContext } from "../context/context";
 
 const Additems = () => {
-  const [quantities, setQuantities] = useState({});
+  const { quantities, setQuantities } = useContext(InformationContext);
   const [search, setSearch] = useState();
 
   return (
@@ -18,7 +19,6 @@ const Additems = () => {
           type="text"
           onChange={(e) => {
             setSearch(e.target.value.toLowerCase());
-            console.log(search);
           }}
           placeholder="search for items ...."
           className="w-full outline-none"
