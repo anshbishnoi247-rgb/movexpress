@@ -19,7 +19,7 @@ const Homepage = () => {
   const [hide, setHide] = useState(true);
 
   return (
-    <main className={`${(slidernav || !hide) ? "overflow-hidden h-screen" : ""}`}>
+    <main className={`${slidernav || !hide ? "overflow-hidden h-screen" : ""}`}>
       <div className={`bg-violetprimary`}>
         <Navbar setslidernav={setslidernav} slidernav={slidernav} />
         <Hero setHide={setHide} />

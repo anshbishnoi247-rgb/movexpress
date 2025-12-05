@@ -12,7 +12,7 @@ import ServicesPage from "./pages/ServicesPage";
 import SignupPage from "./pages/SignupPage";
 import VanservicesPage from "./pages/VanservicesPage";
 import { InformationContext } from "./context/context";
-import { app } from "./FireBase.jsx";
+import { app } from "./fireBaseConfig.js";
 
 function App() {
   const [startDestination, setstartDestination] = useState("");

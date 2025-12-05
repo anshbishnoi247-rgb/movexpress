@@ -4,7 +4,7 @@ import { Calendar, Check, CheckCircle, Map, MapPin, Truck } from "lucide-react";
 import Button from "../common/Button";
 import { InformationContext } from "../context/context";
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "../FireBase";
+import { db } from "../fireBaseConfig";
 
 const QuoteSummary = ({ total, setHide }) => {
   const {
@@ -31,12 +31,11 @@ const QuoteSummary = ({ total, setHide }) => {
       time: startTime,
       helperneeded: helper,
     };
-
+    setHide(true);
     try {
       const docRef = await addDoc(collection(db, "bookings"), allDetails);
       console.log("Document saved with ID:", docRef.id);
       alert("Data posted successfully!");
-      setHide(true);
     } catch (error) {
       console.error("Error saving:", error);
     }

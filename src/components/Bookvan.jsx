@@ -128,8 +128,8 @@ const Bookvan = ({ setHide }) => {
           <AddHelper
             setHide={setHide}
             onClick={() => {
-              navigate("?tab=when-moving");
-              setFormsSteps("when-moving");
+              navigate("?tab=whats-moving");
+              setFormsSteps("whats-moving");
             }}
           />
         ) : null}
