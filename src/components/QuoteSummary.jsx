@@ -36,6 +36,7 @@ const QuoteSummary = ({ total, setHide }) => {
       const docRef = await addDoc(collection(db, "bookings"), allDetails);
       console.log("Document saved with ID:", docRef.id);
       alert("Data posted successfully!");
+      setHide(true);
     } catch (error) {
       console.error("Error saving:", error);
     }
