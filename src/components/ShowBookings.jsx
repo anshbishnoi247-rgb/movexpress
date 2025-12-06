@@ -1,14 +1,13 @@
 import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 import { X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { LoadingIcon } from "../common/Icons";
+import Loading from "../assets/images/loading.gif";
 import { db } from "../fireBaseConfig";
-
+import { Link } from "react-router";
 
 const ShowBookings = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  
 
   const fetchData = async () => {
     setLoading(true);
@@ -20,7 +19,7 @@ const ShowBookings = () => {
         ...doc.data(),
       }));
       setData(bookingsArr);
-      console.log(bookingsArr);
+
       setTimeout(() => {
         setLoading(false);
       }, 1000);
@@ -36,16 +35,17 @@ const ShowBookings = () => {
     try {
       await deleteDoc(userRef);
       alert("data deleted");
-       fetchData();
+      fetchData();
     } catch (err) {
       alert("Something Went Wrong");
     }
   };
 
   return (
-    <section className="bg-gray-700 p-5 h-screen relative">
+    <section className="bg-gray-700 p-5 h-screen relative overflow-x-scroll">
       {loading ? (
-        <LoadingIcon className="top-1/2 left-1/2 absolute -translate-1/2 w-50 h-50" />
+        // <LoadingIcon className="top-1/2 left-1/2 absolute -translate-1/2 w-50 h-50" />
+        <img src={Loading} className="absolute top-0 left-0 w-full h-full" />
       ) : !data ? (
         <p>No data found</p>
       ) : (
@@ -60,22 +60,61 @@ const ShowBookings = () => {
               <th className="py-3 px-4">Start date</th>
               <th className=" text-center">Actions</th>
               <th className="col-span-2-2 flex justify-end items-center py-3 px-4">
-                <X size={18} />
+                <Link to={{ pathname: "/" }}>
+                  <X
+                    size={20}
+                    className="hover:text-red-500 transition-all duration-300 ease-in-out"
+                  />
+                </Link>
               </th>
             </tr>
           </thead>
-
-          <tbody className="bg-gray-100">
+          <tbody className="bg-gray-100 overflow-y-scroll">
             {data.map((obj, index) => (
               <tr key={index} className="border-b hover:bg-gray-200 transition">
-                <td className="py-3 px-4">{obj.pickupaddress ?? "---"}</td>
-                <td className="py-3 px-4">{obj.destinationaddress ?? "---"}</td>
-                <td className="py-3 px-4">{obj.vanchoosed ?? "---"}</td>
                 <td className="py-3 px-4">
-                  {obj.loadingunloadingTime ?? "---"}
+                  <input
+                    type="text"
+                    className="min-w-30 w-full max-w-[150px]"
+                    value={obj.pickupaddress ?? "---"}
+                  />
                 </td>
-                <td className="py-3 px-4">{obj.time ?? "---"}</td>
-                <td className="py-3 px-4">{obj.date ?? "---"}</td>
+                <td className="py-3 px-4">
+                  <input
+                    type="text"
+                    className="w-full max-w-[150px] min-w-30"
+                    value={obj.destinationaddress ?? "---"}
+                  />
+                </td>
+                <td className="py-3 px-4">
+                  {" "}
+                  <input
+                    type="text"
+                    className="w-full max-w-[150px] min-w-30"
+                    value={obj.vanchoosed ?? "---"}
+                  />
+                </td>
+                <td className="py-3 px-4">
+                  <input
+                    type="text"
+                    className="w-full max-w-[150px] min-w-30"
+                    value={obj.loadingunloadingTime ?? "---"}
+                  />
+                </td>
+                <td className="py-3 px-4">
+                  <input
+                    type="text"
+                    className="w-full max-w-[150px] min-w-30"
+                    value={obj.time ?? "---"}
+                  />
+                </td>
+                <td className="py-3 px-4">
+                  <input
+                    type="text"
+                    className="w-full max-w-[150px] min-w-30"
+                    value={obj.date ?? "---"}
+                  />
+                </td>
                 <td className="py-3 px-4 flex  justify-center gap-2 col-span-2 ">
                   <button
                     onClick={() => alert("click on value to update")}
@@ -83,7 +122,6 @@ const ShowBookings = () => {
                   >
                     Update
                   </button>
-
                   <button
                     onClick={() => handleDelete(obj.id)}
                     className="bg-red-600 hover:bg-red-700 cursor-pointer text-white px-3 py-1 text-sm rounded-md"
