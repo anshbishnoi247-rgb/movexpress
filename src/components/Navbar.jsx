@@ -1,11 +1,11 @@
-import { Slidericon } from "../common/Icons";
+import { useContext } from "react";
 import Logo from "../assets/images/favicon.webp";
+import { Slidericon } from "../common/Icons";
 import Slidernav from "./Slidernav";
-import { useState } from "react";
+import { InformationContext } from "../context/context";
 
-const Navbar = ({ slidernav, setslidernav }) => {
- 
-
+const Navbar = () => {
+  const { slidernav, setslidernav } = useContext(InformationContext);
   return (
     <>
       <Slidernav slidernav={slidernav} setslidernav={setslidernav} />

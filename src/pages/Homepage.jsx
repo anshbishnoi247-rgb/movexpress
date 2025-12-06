@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Blogs from "../components/Blogs";
 import Customer from "../components/Customer";
 import Faqs from "../components/Faqs";
@@ -10,18 +10,20 @@ import Services from "../components/Services";
 import Why from "../components/Why";
 import Work from "../components/Work";
 import QuoteSummary from "../components/QuoteSummary";
+import { InformationContext } from "../context/context";
 
 const Homepage = () => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
-  const [slidernav, setslidernav] = useState(false);
+
   const [hide, setHide] = useState(true);
+    const {slidernav, setslidernav} = useContext(InformationContext);
 
   return (
     <main className={`${slidernav || !hide ? "overflow-hidden h-screen" : ""}`}>
       <div className={`bg-violetprimary`}>
-        <Navbar setslidernav={setslidernav} slidernav={slidernav} />
+        <Navbar />
         <Hero setHide={setHide} />
       </div>
       {!hide ? <QuoteSummary hide={hide} setHide={setHide} /> : null}

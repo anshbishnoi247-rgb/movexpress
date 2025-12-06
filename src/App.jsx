@@ -12,7 +12,7 @@ import ServicesPage from "./pages/ServicesPage";
 import SignupPage from "./pages/SignupPage";
 import VanservicesPage from "./pages/VanservicesPage";
 import { InformationContext } from "./context/context";
-import { app } from "./fireBaseConfig.js";
+import ShowBookings from "./components/ShowBookings.jsx";
 
 function App() {
   const [startDestination, setstartDestination] = useState("");
@@ -24,6 +24,7 @@ function App() {
   const [startTime, setStartTime] = useState("");
   const [imageValue, setImageValue] = useState("");
   const [quantities, setQuantities] = useState({});
+  const [slidernav, setslidernav] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -51,6 +52,8 @@ function App() {
           setImageValue,
           quantities,
           setQuantities,
+          slidernav,
+          setslidernav,
         }}
       >
         <ScrollToTop />
@@ -62,6 +65,7 @@ function App() {
           <Route path="/blog/:blogid" element={<BlogDetailsPage />} />
           <Route path="/van" element={<VanservicesPage />} />
           <Route path="/sign-up" element={<SignupPage />} />
+          <Route path="/showData" element={<ShowBookings />} />
         </Routes>
       </InformationContext.Provider>
     </>
