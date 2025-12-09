@@ -15,7 +15,6 @@ const ShowBookings = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
-
   const [edits, setEdits] = useState({});
   const [clickUpdate, setClickUpdate] = useState(false);
 
@@ -60,7 +59,7 @@ const ShowBookings = () => {
 
     try {
       const docRef = doc(db, "bookings", id);
-      
+
       await updateDoc(docRef, edits[id]);
 
       alert("Data updated");
@@ -68,7 +67,6 @@ const ShowBookings = () => {
       setEdits((prev) => ({ ...prev, [id]: {} }));
 
       fetchData();
-
     } catch (err) {
       alert("Update failed");
       console.error(err);
